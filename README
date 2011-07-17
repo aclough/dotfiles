@@ -8,5 +8,8 @@ rc.lua is derived from a GPLed file.
 
 Files:
 rc.lua -- my configuration for the Awesome window manager.  For use as a WM
-replacement in GNOME.
+replacement in GNOME.  The file lives in ~/config/awesome
 .vimrc -- vim configuartion
+.xsession -- An xsession for running Awesome by itself
+sakura.conf -- A configuation for the sakura terminal emulator.  The file lives
+in ~/config/sakura
