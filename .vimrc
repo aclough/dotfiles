@@ -19,10 +19,11 @@ set ruler                      " statusline showing current cursor position
 set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
 set nofoldenable               " But don't start with things folded
-"set backup                     " Create ~ backup files when saving
 "set winheight=34              " Accordian mode
 "set winminheight=5
 set laststatus=2               " Always use status lines
+filetype plugin on             " autocomplete
+filetype plugin indent on
 "set tags=~/project/tags        " Use this tags file
 "set csto=0                     " Integrate cscope with ctags
 "set cscopetag
@@ -38,13 +39,6 @@ map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-,> gT
 map <C-.> gt
-"map <C-c> "*y<CR>
-filetype plugin on             " autocomplete
-filetype plugin indent on
-map <up>    :wincmd k<CR>
-map <down>  :wincmd j<CR>
-map <right> :wincmd l<CR>
-map <left>  :wincmd h<CR>
 
 " alt-right and alt-left to cycle buffers in a split
 map <A-right> :bnext<CR>
@@ -58,3 +52,38 @@ map <A-down> :tabnext<CR>
 map <A-up>   :tabprevious<CR>
 map <down> :tabnext<CR>
 map <up>   :tabprevious<CR>
+
+"place in vimrc
+onoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR>
+onoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR>
+vnoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR><Esc>gv
+vnoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR><Esc>gv
+
+" Selection by indentatino function
+" use 'vai' to select an indentation or block including blank lines
+" use 'vii' to do the same, but without blank lines
+function! IndTxtObj(inner)
+  let curline = line(".")
+  let lastline = line("$")
+  let i = indent(line(".")) - &shiftwidth * (v:count1 - 1)
+  let i = i < 0 ? 0 : i
+  if getline(".") !~ "^\\s*$"
+    let p = line(".") - 1
+    let nextblank = getline(p) =~ "^\\s*$"
+    while p > 0 && ((i == 0 && !nextblank) || (i > 0 && ((indent(p) >= i && !(nextblank && a:inner)) || (nextblank && !a:inner))))
+      -
+      let p = line(".") - 1
+      let nextblank = getline(p) =~ "^\\s*$"
+    endwhile
+    normal! 0V
+    call cursor(curline, 0)
+    let p = line(".") + 1
+    let nextblank = getline(p) =~ "^\\s*$"
+    while p <= lastline && ((i == 0 && !nextblank) || (i > 0 && ((indent(p) >= i && !(nextblank && a:inner)) || (nextblank && !a:inner))))
+      +
+      let p = line(".") + 1
+      let nextblank = getline(p) =~ "^\\s*$"
+    endwhile
+    normal! $
+  endif
+endfunction
