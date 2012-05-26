@@ -3,13 +3,16 @@ running quickly.  The intent is to check the folder out into my home direcotry,
 and then create simlinks from actual dotfile locations to the contents of the
 folder.
 
-Feel free to use anything in here in any way, except to the extent that the
-rc.lua is derived from a GPLed file.
+Feel free to use anything in here in any way, except to the extent that any
+of these are GPL.
 
 Files:
 rc.lua -- my configuration for the Awesome window manager.  For use as a WM
 replacement in GNOME.  The file lives in ~/config/awesome
+xmonad.hs -- my configuration for the XMonad window manager.  Also for use in Gnome.
+It should live in ~/.xmonad
 .vimrc -- vim configuartion
+yi.hs -- A configuration for the Yi text editor.  Lives in ~/.yi
 .xsession -- An xsession for running Awesome by itself
 sakura.conf -- A configuation for the sakura terminal emulator.  The file lives
 in ~/config/sakura

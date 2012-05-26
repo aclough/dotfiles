@@ -12,9 +12,10 @@ main = xmonad $ gnomeConfig
     }
     `additionalKeysP`
         [ ("M-p", spawn "dmenu_run")
+        , ("M-c", kill)
         , ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
         , ("M-;", spawn "gnome-terminal")
-        , ("M-b", spawn "chromium-browser")
+        , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
@@ -24,6 +25,6 @@ main = xmonad $ gnomeConfig
         , ("M-M1-i", shiftToNext >> nextWS)
         , ("M-t", sendMessage ToggleStruts)
         , ("M-x m", spawn "banshee")
-        , ("M-x e", spawn "emacs")
-        , ("M-x x", spawn "gvim ~/.xmonad/xmonad.hs")
+        , ("M-e", spawn "emacs")
+        , ("M-x", spawn "emacs ~/.xmonad/xmonad.hs")
         ]        
