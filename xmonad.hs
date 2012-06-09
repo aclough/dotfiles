@@ -3,14 +3,17 @@ import XMonad.Config.Gnome
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
+import System.IO
 import XMonad.Actions.Submap
+import qualified XMonad.StackSet as W
 
+myWorkspaces = map show [1..9]
 
 main = xmonad $ gnomeConfig
     { terminal = "gnome-terminal"
     , modMask = mod4Mask -- se the mod key to the windows key
     }
-    `additionalKeysP`
+    `additionalKeysP`(
         [ ("M-p", spawn "dmenu_run")
         , ("M-c", kill)
         , ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
@@ -23,8 +26,7 @@ main = xmonad $ gnomeConfig
         , ("M-S-i", shiftToNext)
         , ("M-M1-u", shiftToPrev >> prevWS)
         , ("M-M1-i", shiftToNext >> nextWS)
-        , ("M-t", sendMessage ToggleStruts)
-        , ("M-x m", spawn "banshee")
         , ("M-e", spawn "emacs")
-        , ("M-x", spawn "emacs ~/.xmonad/xmonad.hs")
+        , ("M-x m", spawn "banshee")
         ]        
+        ++ [ ("M1-" ++ tag, windows $ W.greedyView tag) | tag <- myWorkspaces ])
