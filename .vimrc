@@ -1,3 +1,10 @@
+" Configuration notes, plugins to install
+"   Pathogen, for managing other plugins
+"   ctrlp, for textmate-like find
+"   nerdtree, for file navigation
+"   buffergator, for buffer navigation
+"   easymotion, for, well, easy motion
+"   fugative, for git integration
 set mouse=a                    " turn on mouse
 set scrolloff=3                " when scrolling always show 3 bottom lines
 set showcmd                    " show command
@@ -19,9 +26,8 @@ set ruler                      " statusline showing current cursor position
 set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
 set nofoldenable               " But don't start with things folded
-"set winheight=34              " Accordian mode
-"set winminheight=5
 set laststatus=2               " Always use status lines
+set encoding=utf-8             " Needed for powerline, but also a good idea
 filetype plugin on             " autocomplete
 filetype plugin indent on
 "set tags=~/project/tags        " Use this tags file
@@ -30,30 +36,31 @@ filetype plugin indent on
 "set textwidth=80               " Maximum text width before wrap, gq to auto
 "set list                       " show whitespace characters
 "set listchars=tab:>-,trail:-   " modifies previous line
+"
+call pathogen#infect() "use pathogen to get other plugins
+
 iabbrev #b /*****************************
 iabbrev #e *****************************/
 iabbrev teh the
-map <C-H> <C-W>h
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
+
+map <C-H> :tabprevious<CR>
+map <C-L> :tabnext<CR>
+map <C-J> <C-w>w
+map <C-K> <C-w>W
 map <C-,> gT
 map <C-.> gt
 
-" alt-right and alt-left to cycle buffers in a split
-map <A-right> :bnext<CR>
-map <A-left>  :bprevious<CR>
-" compensate for terminal
-map <right> :bnext<CR>
-map <left>  :bprevious<CR>
+map Y y$
+map Q @@
 
-" alt-up and alt-down to cycle tabs in a split
-map <A-down> :tabnext<CR>
-map <A-up>   :tabprevious<CR>
+
+" Use arrows to cycle tabs and windows
 map <down> :tabnext<CR>
 map <up>   :tabprevious<CR>
+map <left>    <C-w>w
+map <right>   <C-w>W
 
-"place in vimrc
+"Block text objects
 onoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR>
 onoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR>
 vnoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR><Esc>gv
