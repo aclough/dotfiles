@@ -14,7 +14,7 @@ set ignorecase                 " Normally ignore case when searching
 set smartcase                  " Do The Right Thing with case when searching
 set hlsearch                   " Highlight searched terms
 set hidden
-set wildmenu                   " Show possilbe tab completions
+set wildmenu                   " Show possible tab completions
 set background=dark            " dark background
 set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
@@ -42,31 +42,33 @@ call pathogen#infect() "use pathogen to get other plugins
 iabbrev #b /*****************************
 iabbrev #e *****************************/
 iabbrev teh the
-
-map <C-H> :tabprevious<CR>
-map <C-L> :tabnext<CR>
+"For easier split window management
 map <C-J> <C-w>w
-map <C-K> <C-w>W
-map <C-,> gT
-map <C-.> gt
+map <C-K> <C-W>W
 
-map Y y$
+"For easier tab management
+map <C-H> gT
+map <C-L> gt
+
+"Map Q to repeat the last recorded macro
 map Q @@
 
+"Make Y behave like other captials
+map Y y$
 
-" Use arrows to cycle tabs and windows
-map <down> :tabnext<CR>
-map <up>   :tabprevious<CR>
-map <left>    <C-w>w
-map <right>   <C-w>W
+"Force Saving Files that Require Root Permission
+cmap w!! %!sudo tee > /dev/null %
 
-"Block text objects
+"Reload vimrc when its saved
+au BufWritePost .vimrc so ~/.vimrc
+
+"For selecting by indentation
 onoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR>
 onoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR>
 vnoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR><Esc>gv
 vnoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR><Esc>gv
 
-" Selection by indentatino function
+" Selection by indentation function
 " use 'vai' to select an indentation or block including blank lines
 " use 'vii' to do the same, but without blank lines
 function! IndTxtObj(inner)
