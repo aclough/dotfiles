@@ -20,7 +20,7 @@ set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
 set nocompatible               " Don't emulate vi bugs
 set tabstop=4                  " 4 space tabs
-set expandtab				   " expand tabs to spaces
+set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
 set ruler                      " statusline showing current cursor position
 set foldcolumn=1               " have a fold status-column
@@ -34,10 +34,14 @@ filetype plugin indent on
 "set csto=0                     " Integrate cscope with ctags
 "set cscopetag
 "set textwidth=80               " Maximum text width before wrap, gq to auto
-"set list                       " show whitespace characters
-"set listchars=tab:>-,trail:-   " modifies previous line
+set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 "
 call pathogen#infect() "use pathogen to get other plugins
+
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+colorscheme jellybeans
 
 iabbrev #b /*****************************
 iabbrev #e *****************************/
