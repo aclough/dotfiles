@@ -28,6 +28,7 @@ set foldmethod=indent          " automatically have everything folded by colum
 set nofoldenable               " But don't start with things folded
 set laststatus=2               " Always use status lines
 set encoding=utf-8             " Needed for powerline, but also a good idea
+set clipboard=unnamed          " Uses system clipboard by default
 filetype plugin on             " autocomplete
 filetype plugin indent on
 "set tags=~/project/tags        " Use this tags file
