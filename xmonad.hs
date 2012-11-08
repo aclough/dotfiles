@@ -9,15 +9,21 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
+myManageHook :: [ManageHook]
+myManageHook =
+        [ resource =? "Do"  --> doIgnore ]
+
 main = xmonad $ gnomeConfig
     { terminal = "terminator"
     , modMask = mod4Mask -- use the mod key to the windows key
+    , manageHook = manageHook gnomeConfig <+> composeAll myManageHook 
     }
     `additionalKeysP`(
-        [ ("M-p", spawn "dmenu_run")
-        , ("M-M1-p", spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+        [ ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
         , ("M-c", kill)
-        , ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
+        , ("M-M1-p", spawn "yeganesh -")
+        , ("M-n", spawn "yeganesh -x")
+        , ("M-p", spawn "gnome-do")
         , ("M-;", spawn "terminator")
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
@@ -25,9 +31,12 @@ main = xmonad $ gnomeConfig
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)
         , ("M-S-i", shiftToNext)
+        , ("M-M1-j", windows W.swapDown)
+        , ("M-M1-k", windows W.swapUp)
         , ("M-M1-u", shiftToPrev >> prevWS)
         , ("M-M1-i", shiftToNext >> nextWS)
-        , ("M-e", spawn "emacs")
-        , ("M-x m", spawn "banshee")
+        , ("M-y", nextScreen)
+        , ("M-M1-y", shiftNextScreen >> nextScreen)
         ]
-        ++ [ ("M1-" ++ tag, windows $ W.greedyView tag) | tag <- myWorkspaces ])
+        -- ++ [ ("M1-" ++ tag, windows $ W.greedyView tag) | tag <- myWorkspaces ]
+    )
