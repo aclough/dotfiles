@@ -12,12 +12,14 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
-myManageHook :: [ManageHook]
-myManageHook =
-        [ resource =? "Do"  --> doIgnore ]
+myManageHook = composeAll [
+          (resource   =? "Do")  --> doIgnore
+        , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
+        ]
 
-myLayout =  minimize (avoidStruts ( tiled ||| Full |||  Mirror tiled ))
+myLayout =  minimize (avoidStruts (layouts))
   where
+    layouts =  tiled ||| Full |||  Mirror tiled 
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
 
 myHandleEventHook = minimizeEventHook
@@ -25,7 +27,7 @@ myHandleEventHook = minimizeEventHook
 main = xmonad $ gnomeConfig
     { terminal = "terminator"
     , modMask = mod4Mask -- use the mod key to the windows key
-    , manageHook = manageHook gnomeConfig <+> composeAll myManageHook 
+    , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
     , handleEventHook = myHandleEventHook
     }
