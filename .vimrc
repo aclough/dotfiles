@@ -23,7 +23,7 @@ set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
 set ruler                      " statusline showing current cursor position
-set foldcolumn=1               " have a fold status-column
+"set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
 set nofoldenable               " But don't start with things folded
 set laststatus=2               " Always use status lines

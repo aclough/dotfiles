@@ -9,15 +9,20 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
+myManageHook :: [ManageHook]
+myManageHook =
+        [ resource =? "Do"  --> doIgnore ]
+
 main = xmonad $ gnomeConfig
     { terminal = "gnome-terminal"
-    , modMask = mod4Mask -- se the mod key to the windows key
+    , modMask = mod4Mask -- use the mod key to the windows key
+    , manageHook = manageHook gnomeConfig <+> composeAll myManageHook 
     }
     `additionalKeysP`(
-        [ ("M-p", spawn "dmenu_run")
-        , ("M-M1-p", spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+        [ ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
         , ("M-c", kill)
-        , ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
+        , ("M-M1-p", spawn "yeganesh -x")
+        , ("M-p", spawn "gnome-do")
         , ("M-;", spawn "gnome-terminal")
         , ("M-b", spawn "chromium-browser")
         , ("M-v", spawn "nautilus ~")
