@@ -8,6 +8,8 @@ import System.IO
 import XMonad.Actions.Submap
 import XMonad.Layout.Minimize
 import XMonad.Layout.LimitWindows
+import XMonad.Layout.LayoutHints
+import XMonad.Layout.HintedGrid
 import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
@@ -19,24 +21,25 @@ myManageHook = composeAll [
 
 myLayout =  minimize (avoidStruts (layouts))
   where
-    layouts =  tiled ||| Full |||  Mirror tiled 
+    layouts =  tiled ||| Grid False ||| Full
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
 
-myHandleEventHook = minimizeEventHook
+myHandleEventHook = hintsEventHook <+> minimizeEventHook
+
+myTerminal = "terminator"
 
 main = xmonad $ gnomeConfig
-    { terminal = "terminator"
+    { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
     , handleEventHook = myHandleEventHook
     }
     `additionalKeysP`(
-        [ ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
-        , ("M-c", kill)
+        [ ("M-c", kill)
         , ("M-n", spawn "gnome-do")
-        , ("M-;", spawn "terminator")
-        , ("M-b", spawn "google-chrome")
+        , ("M-;", spawn myTerminal)
+        , ("M-b", spawn "firefox")
         , ("M-v", spawn "nautilus ~")
         , ("M-m", withFocused minimizeWindow)
         , ("M-M1-m", sendMessage RestoreNextMinimizedWin)
@@ -44,12 +47,14 @@ main = xmonad $ gnomeConfig
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)
         , ("M-S-i", shiftToNext)
-        , ("M-M1-j", windows W.swapDown)
-        , ("M-M1-k", windows W.swapUp)
         , ("M-M1-u", shiftToPrev >> prevWS)
         , ("M-M1-i", shiftToNext >> nextWS)
+        , ("M-M1-j", windows W.swapDown)
+        , ("M-M1-k", windows W.swapUp)
         , ("M-y", nextScreen)
+        , ("M-S-y", shiftNextScreen)
         , ("M-M1-y", shiftNextScreen >> nextScreen)
         ]
-        -- ++ [ ("M1-" ++ tag, windows $ W.greedyView tag) | tag <- myWorkspaces ]
+        -- Shifts a window to specifiec workspace, and sets that workspace in screen
+        -- ++ [ ("M-M1-" ++ tag, () >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
     )
