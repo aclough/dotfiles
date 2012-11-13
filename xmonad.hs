@@ -21,8 +21,8 @@ main = xmonad $ gnomeConfig
     `additionalKeysP`(
         [ ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
         , ("M-c", kill)
-        , ("M-M1-p", spawn "yeganesh -x")
-        , ("M-p", spawn "gnome-do")
+        , ("M-M1-p", spawn "dmenu_run")
+        , ("M-n", spawn "gnome-do")
         , ("M-;", spawn "gnome-terminal")
         , ("M-b", spawn "chromium-browser")
         , ("M-v", spawn "nautilus ~")
