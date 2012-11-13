@@ -16,3 +16,4 @@ yi.hs -- A configuration for the Yi text editor.  Lives in ~/.yi
 .xsession -- An xsession for running Awesome by itself
 sakura.conf -- A configuation for the sakura terminal emulator.  The file lives
 in ~/config/sakura
+config.fish -- Configuration file for the fish shell.  Lives in .config/fish
