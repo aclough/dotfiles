@@ -1,3 +1,4 @@
+set PATH $PATH /home/aclough/bin
 set fish_git_dirty_color red
 function parse_git_dirty
          git diff --quiet HEAD ^&-
