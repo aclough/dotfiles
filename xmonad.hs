@@ -1,42 +1,61 @@
 import XMonad
 import XMonad.Config.Gnome
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.Minimize
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import System.IO
 import XMonad.Actions.Submap
+import XMonad.Layout.Minimize
+import XMonad.Layout.LimitWindows
+import XMonad.Layout.LayoutHints
+import XMonad.Layout.HintedGrid
 import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
-myManageHook :: [ManageHook]
-myManageHook =
-        [ resource =? "Do"  --> doIgnore ]
+myManageHook = composeAll [
+          (resource   =? "Do")  --> doIgnore
+        , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
+        ]
+
+myLayout =  minimize (avoidStruts (layouts))
+  where
+    layouts =  tiled ||| Grid False ||| Full
+    tiled = limitWindows 6 $ Tall 1 0.03 0.5
+
+myHandleEventHook = hintsEventHook <+> minimizeEventHook
+
+myTerminal = "gnome-terminal"
 
 main = xmonad $ gnomeConfig
-    { terminal = "gnome-terminal"
+    { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
-    , manageHook = manageHook gnomeConfig <+> composeAll myManageHook 
+    , manageHook = myManageHook <+> manageHook gnomeConfig
+    , layoutHook = myLayout
+    , handleEventHook = myHandleEventHook
     }
     `additionalKeysP`(
-        [ ("M-S-q", spawn "gnome-session-save --gui --logout-dialog")
-        , ("M-c", kill)
-        , ("M-M1-p", spawn "dmenu_run")
+        [ ("M-c", kill)
         , ("M-n", spawn "gnome-do")
-        , ("M-;", spawn "gnome-terminal")
-        , ("M-b", spawn "chromium-browser")
+        , ("M-;", spawn myTerminal)
+        , ("M-b", spawn "firefox")
         , ("M-v", spawn "nautilus ~")
+        , ("M-m", withFocused minimizeWindow)
+        , ("M-M1-m", sendMessage RestoreNextMinimizedWin)
         , ("M-u", prevWS)
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)
         , ("M-S-i", shiftToNext)
-        , ("M-M1-j", windows W.swapDown)
-        , ("M-M1-k", windows W.swapUp)
         , ("M-M1-u", shiftToPrev >> prevWS)
         , ("M-M1-i", shiftToNext >> nextWS)
+        , ("M-M1-j", windows W.swapDown)
+        , ("M-M1-k", windows W.swapUp)
         , ("M-y", nextScreen)
+        , ("M-S-y", shiftNextScreen)
         , ("M-M1-y", shiftNextScreen >> nextScreen)
         , ("M-x m", spawn "banshee")
         ]
-        ++ [ ("M1-" ++ tag, windows $ W.greedyView tag) | tag <- myWorkspaces ]
+        -- Shifts a window to specifiec workspace, and sets that workspace in screen
+        -- ++ [ ("M-M1-" ++ tag, () >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
     )
