@@ -1,3 +1,4 @@
+set PATH $PATH /home/aclough/bin
 set fish_git_dirty_color red
 function parse_git_dirty
          git diff --quiet HEAD ^&-
@@ -17,4 +18,8 @@ function fish_prompt
          else
             printf '%s@%s %s%s%s $ '  (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
          end
+end
+
+function sscreen
+    mosh --server='athrun mosh_project mosh-server' aclough@linux.mit.edu --  screen -r
 end

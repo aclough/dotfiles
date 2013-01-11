@@ -26,7 +26,7 @@ myLayout =  minimize (avoidStruts (layouts))
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook
 
-myTerminal = "terminator"
+myTerminal = "gnome-terminal"
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
@@ -54,6 +54,7 @@ main = xmonad $ gnomeConfig
         , ("M-y", nextScreen)
         , ("M-S-y", shiftNextScreen)
         , ("M-M1-y", shiftNextScreen >> nextScreen)
+        , ("M-x m", spawn "banshee")
         ]
         -- Shifts a window to specifiec workspace, and sets that workspace in screen
         -- ++ [ ("M-M1-" ++ tag, () >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
