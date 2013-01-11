@@ -19,9 +19,9 @@ set background=dark            " dark background
 set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
 set nocompatible               " Don't emulate vi bugs
-set tabstop=4                  " 4 space tabs
+set tabstop=2                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
-set shiftwidth=4               " use 4 spaces when indented
+set shiftwidth=2               " use 4 spaces when indented
 set ruler                      " statusline showing current cursor position
 "set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
@@ -31,10 +31,11 @@ set encoding=utf-8             " Needed for powerline, but also a good idea
 set clipboard=unnamed          " Uses system clipboard by default
 filetype plugin on             " autocomplete
 filetype plugin indent on
-"set tags=~/project/tags        " Use this tags file
-"set csto=0                     " Integrate cscope with ctags
+set complete=.,w,b,u,t,i       " Autocomplete via tags
+set tags=./tags,../tags,../../tags    " Use this tags file
+"set csto=0                    " Integrate cscope with ctags
 "set cscopetag
-"set textwidth=80               " Maximum text width before wrap, gq to auto
+"set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 "
 call pathogen#infect() "use pathogen to get other plugins
