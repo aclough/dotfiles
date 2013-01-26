@@ -4,8 +4,6 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.Minimize
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
-import System.IO
-import XMonad.Actions.Submap
 import XMonad.Layout.Minimize
 import XMonad.Layout.LimitWindows
 import XMonad.Layout.LayoutHints
@@ -26,7 +24,7 @@ myLayout =  minimize (avoidStruts (layouts))
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook
 
-myTerminal = "gnome-terminal"
+myTerminal = "sakura"
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
