@@ -24,7 +24,7 @@ myLayout =  minimize (avoidStruts (layouts))
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook
 
-myTerminal = "sakura"
+myTerminal = "terminator"
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
@@ -37,7 +37,7 @@ main = xmonad $ gnomeConfig
         [ ("M-c", kill)
         , ("M-n", spawn "gnome-do")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "firefox")
+        , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
         , ("M-m", withFocused minimizeWindow)
         , ("M-M1-m", sendMessage RestoreNextMinimizedWin)

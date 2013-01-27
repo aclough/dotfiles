@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 lua5.2 gcc g++ subversion git autoconf libncurses-dev synaptic hal sakura cabal-install
+sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 lua5.2 gcc g++ subversion git autoconf libncurses-dev synaptic hal terminator cabal-install mosh clang
 
 sudo /usr/share/doc/libdvdread4/install-css.sh 
 
@@ -17,8 +17,8 @@ mkdir .xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
-mkdir ~/.config/sakura
-ln -s ~/dotfiles/sakura.conf ~/.config/sakura
+mkdir ~/.config/terminator
+ln -s ~/dotfiles/terminator ~/.config/terminator/config # Used different name to avoid confusion
 
 cd ~
 mkdir .vim
