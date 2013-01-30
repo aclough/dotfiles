@@ -2,13 +2,9 @@
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
-# Adding any extra repos I need
-sudo add-apt-repository ppa:nuvola-player-builders/stable
-sudo apt-get update
-
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
-  subversion git synaptic hal terminator mosh calibre sshfs nuvolaplayer
+  subversion git synaptic hal terminator mosh calibre sshfs
 
 # Programming tools
 sudo apt-get install lua5.2 gcc g++ autoconf libncurses-dev clang cabal-install \
@@ -45,6 +41,7 @@ mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 mkdir ~/.config/terminator
 ln -s ~/dotfiles/terminator ~/.config/terminator/config # Used different name to avoid confusion
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
 # Install all my vim addons
 mkdir ~/.vim
