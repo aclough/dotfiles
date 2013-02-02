@@ -7,15 +7,16 @@ Feel free to use anything in here in any way, except to the extent that any
 of these are GPL.
 
 Files:
-rc.lua -- my configuration for the Awesome window manager.  For use as a WM
-  replacement in GNOME.  The file lives in ~/config/awesome
-xmonad.hs -- my configuration for the XMonad window manager.  Also for use in Gnome.
-  It should live in ~/.xmonad
+setup.sh -- Script to do a first pass at setting up a new Ubuntu computer.  Does many
+  things, including taking care of the softlinks for these configuration files and
+  installing the relevant application they correspond to.
+
+config.fish -- Configuration file for the fish shell.  Lives in .config/fish
+.gitconfig -- Configuaration for git, lives in ~/.gitconfig
 .vimrc -- vim configuartion
-yi.hs -- A configuration for the Yi text editor.  Lives in ~/.yi
-.xsession -- An xsession for running Awesome by itself
 sakura.conf -- A configuation for the sakura terminal emulator.  The file lives
   in ~/config/sakura
-config.fish -- Configuration file for the fish shell.  Lives in .config/fish
 terminator.config -- Configuration for Terminator.  Actually should link to 
-  ~/.config/terminator/config but renamed to keep it straight.
+  ~/.config/terminator/config but renamed to disambiguate
+xmonad.hs -- my configuration for the XMonad window manager.  Also for use in Gnome.
+  It should live in ~/.xmonad
