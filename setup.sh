@@ -4,7 +4,8 @@
 
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
-  subversion git synaptic hal terminator mosh calibre sshfs
+  subversion git synaptic hal terminator mosh calibre sshfs gnome-do \
+  gnome-session-fallback
 
 # Programming tools
 sudo apt-get install lua5.2 gcc g++ autoconf libncurses-dev clang cabal-install \
@@ -27,8 +28,10 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 
 # Install the fish shell fom the git head
 mkdir ~/workspace
-cd workspace git clone https://github.com/fish-shell/fish-shell.git
+cd workspace 
+git clone https://github.com/fish-shell/fish-shell.git
 cd fish-shell
+autoconf
 ./configure
 make
 sudo checkinstall -D make install
