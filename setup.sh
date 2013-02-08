@@ -5,7 +5,7 @@
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   subversion git synaptic hal terminator mosh calibre sshfs gnome-do \
-  gnome-session-fallback
+  gnome-session-fallback gmrun
 
 # Programming tools
 sudo apt-get install lua5.2 gcc g++ autoconf libncurses-dev clang cabal-install \
