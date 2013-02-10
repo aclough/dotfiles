@@ -21,5 +21,5 @@ function fish_prompt
 end
 
 function sscreen
-    mosh --server='athrun mosh_project mosh-server' aclough@linux.mit.edu --  screen -r
+    mosh --server='athrun mosh_project mosh-server' aclough@linux.mit.edu --  screen -R -x
 end
