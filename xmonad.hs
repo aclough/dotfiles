@@ -36,6 +36,7 @@ main = xmonad $ gnomeConfig
     `additionalKeysP`(
         [ ("M-c", kill)
         , ("M-n", spawn "gnome-do")
+        , ("M-M1-n", spawn "gmrun")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
