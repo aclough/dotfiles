@@ -4,6 +4,9 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.Minimize
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
+import XMonad.Actions.GridSelect
+import XMonad.Actions.WindowMenu
+import XMonad.Actions.UpdatePointer
 import XMonad.Layout.Minimize
 import XMonad.Layout.LimitWindows
 import XMonad.Layout.LayoutHints
@@ -17,28 +20,32 @@ myManageHook = composeAll [
         , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
         ]
 
-myLayout =  minimize (avoidStruts (layouts))
+myLayout =  minimize $ avoidStruts (layouts)
   where
-    layouts =  tiled ||| Grid False ||| Full
+    layouts =  tiled ||| Full
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook
 
-myTerminal = "terminator"
+myTerminal = "gnome-terminal"
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
+    , logHook = updatePointer Nearest >> logHook gnomeConfig
     , handleEventHook = myHandleEventHook
     }
     `additionalKeysP`(
         [ ("M-c", kill)
+        , ("M-g", goToSelected defaultGSConfig)
+        , ("M-M1-g", windowMenu)
         , ("M-n", spawn "gnome-do")
-        , ("M-M1-n", spawn "gmrun")
+        , ("M-M1-n", spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+        , ("M-S-n", spawn "gmrun")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "google-chrome")
+        , ("M-b", spawn "firefox")
         , ("M-v", spawn "nautilus ~")
         , ("M-m", withFocused minimizeWindow)
         , ("M-M1-m", sendMessage RestoreNextMinimizedWin)
@@ -53,8 +60,7 @@ main = xmonad $ gnomeConfig
         , ("M-y", nextScreen)
         , ("M-S-y", shiftNextScreen)
         , ("M-M1-y", shiftNextScreen >> nextScreen)
-        , ("M-x m", spawn "banshee")
         ]
         -- Shifts a window to specifiec workspace, and sets that workspace in screen
-        -- ++ [ ("M-M1-" ++ tag, () >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
+        ++ [ ("M-M1-" ++ tag, (windows $ W.shift tag) >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
     )
