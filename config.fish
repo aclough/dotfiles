@@ -1,4 +1,5 @@
-set PATH $PATH /home/aclough/.cabal/bin /home/aclough/bin
+set -x GOPATH $HOME/go
+set PATH $PATH $HOME/bin $HOME/go/bin
 set fish_git_dirty_color red
 function parse_git_dirty
          git diff --quiet HEAD ^&-
@@ -13,10 +14,10 @@ function parse_git_branch
 end
 
 function fish_prompt
-         if test -z (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
-            printf '%s@%s %s%s%s (%s) $ ' (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
-         else
+         if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
             printf '%s@%s %s%s%s $ '  (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+         else
+            printf '%s@%s %s%s%s (%s) $ ' (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
          end
 end
 
