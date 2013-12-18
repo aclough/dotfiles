@@ -10,7 +10,6 @@ import XMonad.Actions.UpdatePointer
 import XMonad.Layout.Minimize
 import XMonad.Layout.LimitWindows
 import XMonad.Layout.LayoutHints
-import XMonad.Layout.HintedGrid
 import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
@@ -20,7 +19,7 @@ myManageHook = composeAll [
         , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
         ]
 
-myLayout =  minimize $ avoidStruts (layouts)
+myLayout = minimize $ avoidStruts (layouts)
   where
     layouts =  tiled ||| Full
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
