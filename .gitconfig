@@ -2,3 +2,5 @@
   autosetuprebase = always
 [color]
   ui = true
+[user]
+	email = andrew.clough@gmail.com
