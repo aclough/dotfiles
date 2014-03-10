@@ -5,7 +5,7 @@
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   subversion git synaptic mosh calibre sshfs gnome-do \
-  gnome-session-fallback gmrun python-boto fish
+  gnome-session-fallback gmrun python-boto fish libudev1:i386
 
 
 # Programming tools
