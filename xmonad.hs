@@ -44,7 +44,7 @@ main = xmonad $ gnomeConfig
         , ("M-M1-n", spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
         , ("M-S-n", spawn "gmrun")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "firefox")
+        , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
         , ("M-m", withFocused minimizeWindow)
         , ("M-M1-m", sendMessage RestoreNextMinimizedWin)
