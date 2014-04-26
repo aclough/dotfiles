@@ -5,7 +5,7 @@
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   subversion git synaptic mosh calibre sshfs gnome-do \
-  gnome-session-fallback gmrun python-boto fish libudev1:i386
+  gnome-session-fallback gmrun python-boto fish libudev1:i386 gnome-tweak-tool
 
 
 # Programming tools
@@ -49,3 +49,5 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/jeetsukumaran/vim-buffergator.git
 git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-fugitive.git
+
+gnome-tweak-tool
