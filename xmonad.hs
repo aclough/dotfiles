@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Config.Gnome
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.Minimize
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.GridSelect
@@ -24,7 +25,7 @@ myLayout = minimize $ avoidStruts (layouts)
     layouts =  tiled ||| Full
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
 
-myHandleEventHook = hintsEventHook <+> minimizeEventHook
+myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHook
 
 myTerminal = "gnome-terminal"
 
@@ -33,8 +34,9 @@ main = xmonad $ gnomeConfig
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
-    , logHook = updatePointer Nearest >> logHook gnomeConfig
+    , logHook = updatePointer Nearest >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
+    , startupHook = ewmhDesktopsStartup >> startupHook gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
