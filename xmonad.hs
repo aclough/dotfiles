@@ -43,7 +43,7 @@ main = xmonad $ gnomeConfig
         , ("M-g", goToSelected defaultGSConfig)
         , ("M-M1-g", windowMenu)
         , ("M-n", spawn "gnome-do")
-        , ("M-M1-n", spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
+        , ("M-M1-n", spawn "dmenu_run")
         , ("M-S-n", spawn "gmrun")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
