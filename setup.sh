@@ -25,6 +25,11 @@ mkdir ~/bin
 # Enable DVD playback
 sudo /usr/share/doc/libdvdread4/install-css.sh 
 
+# Enable Amazon instant video
+sudo add-apt-repository mjblenner/ppa-hal
+sudo apt-get update
+sudo apt-get install hal
+
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/.vimrc ~
 mkdir ~/.xmonad
