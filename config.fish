@@ -1,6 +1,16 @@
 set -x GOPATH $HOME/go
-set PATH $PATH $HOME/bin $HOME/go/bin
+set PATH $PATH $HOME/bin $HOME/go/bin /opt/ros/indigo/bin
 set fish_git_dirty_color red
+
+#set -x ROS_ROOT /opt/ros/indigo/share/ros
+#set -x ROS_PACKAGE_PATH /opt/ros/indigo/share:/opt/ros/indigo/stacks
+#set -x ROS_MASTER_URI http://localhost:11311
+#set -x ROS_DISTRO indigo
+#set -x ROS_ETC_DIR /opt/ros/indigo/etc/ros
+
+bash /opt/ros/indigo/setup.sh
+. ~/workspace/ros/tools/rosbash/rosfish
+
 function parse_git_dirty
          git diff --quiet HEAD ^&-
          if test $status = 1
@@ -22,5 +32,5 @@ function fish_prompt
 end
 
 function sscreen
-    mosh --server='athrun mosh_project mosh-server' aclough@all-night-tool.mit.edu --  screen -R -x
+    mosh --server='athrun mosh_project mosh-server' aclough@apollo-dome-landing.mit.edu --  screen -R -x
 end
