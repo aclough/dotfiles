@@ -68,6 +68,9 @@ cmap w!! %!sudo tee > /dev/null %
 "Reload vimrc when its saved
 au BufWritePost .vimrc so ~/.vimrc
 
+"Select most recent paste (e.g. for indenting python)
+nnoremap gp `[v`]
+
 "For selecting by indentation
 onoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR>
 onoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR>
