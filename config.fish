@@ -34,3 +34,11 @@ end
 function sscreen
     mosh --server='athrun mosh_project mosh-server' aclough@apollo-dome-landing.mit.edu --  screen -R -x
 end
+
+function fn
+    find -name $argv
+end
+
+function fng
+    find -name $argv[1] | xargs grep $argv[2]
+end
