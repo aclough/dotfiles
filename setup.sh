@@ -25,6 +25,9 @@ mkdir ~/bin
 # Enable DVD playback
 sudo /usr/share/doc/libdvdread4/install-css.sh 
 
+# Maybe add advanced Radeon drivers and kernel (if this is my desktop and I don't mind breakage)
+#sudo apt-add-repository ppa:oibaf/graphics-drivers
+
 # Enable Amazon instant video
 sudo add-apt-repository mjblenner/ppa-hal
 sudo apt-get update
