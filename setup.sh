@@ -19,7 +19,7 @@ sudo apt-get remove unity-lens-shopping
 mkdir ~/bin
 
 # Enable DVD playback
-sudo /usr/share/doc/libdvdread4/install-css.sh 
+sudo /usr/share/doc/libdvdread4/install-css.sh
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo apt-add-repository ppa:oibaf/graphics-drivers
@@ -49,9 +49,9 @@ ln -s ~/.vim/jellybeans.vim/colors/jellybeans.vim ~/.vim/colors/jellybeans.vim
 mkdir bundle
 cd bundle
 git clone https://github.com/kien/ctrlp.vim.git
-git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/jeetsukumaran/vim-buffergator.git
 git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-fugitive.git
+git clone https://github.com/bling/vim-airline.git
 
 gnome-tweak-tool
