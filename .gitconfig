@@ -4,3 +4,5 @@
   ui = true
 [user]
 	email = andrew.clough@gmail.com
+[push]
+	default = simple
