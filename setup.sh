@@ -4,17 +4,13 @@
 
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
-  subversion git synaptic mosh calibre sshfs gnome-do \
-  gnome-session-fallback gmrun python-boto fish libudev1:i386 gnome-tweak-tool
+  subversion synaptic mosh calibre sshfs gnome-do bcache-tools \
+  gnome-panel gmrun python-boto fish gnome-tweak-tool
 
 
 # Programming tools
-sudo apt-get install lua5.2 gcc g++ autoconf libncurses-dev clang cabal-install \
+sudo apt-get install lua5.2 gcc g++ autoconf clang cabal-install \
   texlive-latex-base golang checkinstall ipython
-
-# Emacs
-sudo apt-get install emacs24 emacs-goodies-el emacs24-el pymacs golang-mode \
-  yaml-mode ghc-mod auctex
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
@@ -25,7 +21,7 @@ mkdir ~/bin
 # Enable DVD playback
 sudo /usr/share/doc/libdvdread4/install-css.sh 
 
-# Maybe add advanced Radeon drivers and kernel (if this is my desktop and I don't mind breakage)
+# Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo apt-add-repository ppa:oibaf/graphics-drivers
 
 # Enable Amazon instant video
