@@ -5,8 +5,6 @@ import XMonad.Hooks.Minimize
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
-import XMonad.Actions.GridSelect
-import XMonad.Actions.WindowMenu
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.Minimize
 import XMonad.Layout.LimitWindows
@@ -40,8 +38,6 @@ main = xmonad $ gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
-        , ("M-g", goToSelected defaultGSConfig)
-        , ("M-M1-g", windowMenu)
         , ("M-n", spawn "gnome-do")
         , ("M-M1-n", spawn "dmenu_run")
         , ("M-S-n", spawn "gmrun")
