@@ -30,7 +30,7 @@ sudo apt-get update
 sudo apt-get install hal flashplugin-installer
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
-ln -s ~/dotfiles/.vimrc ~
+ln -s ~/dotfiles/vimrc ~/.vimrc
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 mkdir ~/.config/fish
