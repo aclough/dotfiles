@@ -48,6 +48,7 @@ colorscheme jellybeans
 iabbrev #b /*****************************
 iabbrev #e *****************************/
 iabbrev teh the
+
 "For easier split window management
 map <C-J> <C-w>w
 map <C-K> <C-W>W

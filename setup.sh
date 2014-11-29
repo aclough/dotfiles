@@ -53,5 +53,6 @@ git clone https://github.com/jeetsukumaran/vim-buffergator.git
 git clone https://github.com/Lokaltog/vim-easymotion.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/bling/vim-airline.git
+git clone https://github.com/zah/nimrod.vim.git
 
 gnome-tweak-tool
