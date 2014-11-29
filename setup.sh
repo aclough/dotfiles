@@ -10,7 +10,7 @@ sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
 
 # Programming tools
 sudo apt-get install lua5.2 gcc g++ autoconf clang cabal-install \
-  texlive-latex-base golang checkinstall ipython
+  texlive-latex-base golang checkinstall ipython exuberant-ctags
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
