@@ -72,6 +72,9 @@ cmap w!! %!sudo tee > /dev/null %
 "Reload vimrc when its saved
 au BufWritePost .vimrc so ~/.vimrc
 
+"Get rid of trailing whitespace before each save
+autocmd BufWritePre * :%s/\s\+$//e
+
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
 
