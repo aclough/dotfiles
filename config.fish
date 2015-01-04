@@ -1,15 +1,17 @@
-set -x GOPATH $HOME/go
-set PATH $PATH $HOME/bin $HOME/go/bin /opt/ros/indigo/bin
+set PATH $PATH $HOME/bin
 set fish_git_dirty_color red
 
-#set -x ROS_ROOT /opt/ros/indigo/share/ros
-#set -x ROS_PACKAGE_PATH /opt/ros/indigo/share:/opt/ros/indigo/stacks
-#set -x ROS_MASTER_URI http://localhost:11311
-#set -x ROS_DISTRO indigo
-#set -x ROS_ETC_DIR /opt/ros/indigo/etc/ros
+set -x ROSPATH /opt/ros/indigo
+set -x CMAKE_PREFIX_PATH $ROSPATH
+set -x CPATH $ROSPATH/include
+set -x LD_LIBRARY_PATH $ROSPATH/lib:$ROSPATH/lib/x86_64-linux-gnu
+set PATH $PATH $ROSPATH/bin
+set -x ROS_PACKAGE_PATH $ROSPATH/share:$ROSPATH/stacks  # not in rosbash
+set -x PKG_CONFIG $ROSPATH/lib/pkgconfig:$ROSPATH/lib/x86_64-linux-gnu/pkgconfig
+set -x PYTHONPATH $ROSPATH/lib/python2.7/dist-packages
+set -x ROS_DISTRO indigo
 
-bash /opt/ros/indigo/setup.sh
-. ~/workspace/ros/tools/rosbash/rosfish
+. ~/workspace/rosfish
 
 function parse_git_dirty
          git diff --quiet HEAD ^&-
@@ -19,7 +21,7 @@ function parse_git_dirty
 end
 function parse_git_branch
          # git branch outputs lines, the current branch is prefixed with a *
-         set -l branch (git branch --color ^&- | awk '/\*/ {print $2}') 
+         set -l branch (git branch --color ^&- | awk '/\*/ {print $2}')
          echo $branch (parse_git_dirty)
 end
 
