@@ -1,3 +1,5 @@
+set -x EDITOR vim
+
 set PATH $PATH $HOME/bin
 set fish_git_dirty_color red
 

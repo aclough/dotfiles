@@ -13,15 +13,16 @@ set incsearch                  " incrimental search
 set ignorecase                 " Normally ignore case when searching
 set smartcase                  " Do The Right Thing with case when searching
 set hlsearch                   " Highlight searched terms
+set lazyredraw                 " Don't redraw screen for intermediate macro steps
 set hidden
 set wildmenu                   " Show possible tab completions
 set background=dark            " dark background
 set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
 set nocompatible               " Don't emulate vi bugs
-set tabstop=2                  " 4 space tabs
+set tabstop=2                  " Number of spaces a tab expands to
 set expandtab                  " expand tabs to spaces
-set shiftwidth=2               " use 4 spaces when indented
+set shiftwidth=2               " Number of spaces of indentation to use
 set ruler                      " statusline showing current cursor position
 "set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
@@ -32,13 +33,16 @@ set clipboard=unnamed          " Uses system clipboard by default
 filetype plugin on             " autocomplete
 filetype plugin indent on
 set complete=.,w,b,u,t,i       " Autocomplete via tags
-set tags=./tags,../tags,../../tags    " Use this tags file
+set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set csto=0                    " Integrate cscope with ctags
 "set cscopetag
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 "
 call pathogen#infect() "use pathogen to get other plugins
+
+" For fugative
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
