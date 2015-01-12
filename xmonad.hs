@@ -16,6 +16,7 @@ myWorkspaces = map show [1..9]
 myManageHook = composeAll [
           (resource   =? "Do")  --> doIgnore
         , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
+        , (className  =? "Eclipse")           --> doShift "8"
         ]
 
 myLayout = minimize $ avoidStruts (layouts)
@@ -25,14 +26,14 @@ myLayout = minimize $ avoidStruts (layouts)
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHook
 
-myTerminal = "gnome-terminal"
+myTerminal = "terminator"
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
-    , logHook = updatePointer Nearest >> logHook gnomeConfig >> ewmhDesktopsLogHook
+    , logHook = updatePointer (Relative 0.5 0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
     , startupHook = ewmhDesktopsStartup >> startupHook gnomeConfig
     }

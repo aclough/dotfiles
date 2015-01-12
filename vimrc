@@ -48,6 +48,7 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 colorscheme jellybeans
+autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
 
 iabbrev #b /*****************************
 iabbrev #e *****************************/
