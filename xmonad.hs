@@ -26,7 +26,7 @@ myLayout = minimize $ avoidStruts (layouts)
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHook
 
-myTerminal = "terminator"
+myTerminal = "gnome-terminal"
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
@@ -43,6 +43,7 @@ main = xmonad $ gnomeConfig
         , ("M-M1-n", spawn "dmenu_run")
         , ("M-S-n", spawn "gmrun")
         , ("M-;", spawn myTerminal)
+        , ("M-M1-;", spawn "terminator")
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
         , ("M-m", withFocused minimizeWindow)
