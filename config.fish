@@ -39,6 +39,10 @@ function sscreen
     mosh --server='athrun mosh_project mosh-server' aclough@apollo-dome-landing.mit.edu --  screen -R -x
 end
 
+function mastyle
+    astyle -s2 -a -S -H -U -c -n --lineend=linux $argv
+end
+
 function fn
     find -name $argv
 end
