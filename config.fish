@@ -48,5 +48,5 @@ function fn
 end
 
 function fng
-    find -name $argv[1] | xargs grep $argv[2]
+    find -name $argv[1] -print0 2> /dev/null | xargs -0 grep $argv[2]
 end
