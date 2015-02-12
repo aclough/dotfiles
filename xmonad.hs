@@ -25,7 +25,7 @@ myLayout = minimize $ avoidStruts (layouts)
     layouts =  tiled ||| Full
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
 
-myHandleEventHook = hintsEventHook `mappend` minimizeEventHook `mappend` ewmhDesktopsEventHook
+myHandleEventHook = hintsEventHook <> minimizeEventHook <> ewmhDesktopsEventHook
 
 myTerminal = "gnome-terminal"
 
