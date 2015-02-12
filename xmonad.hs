@@ -1,3 +1,4 @@
+import Data.Monoid
 import XMonad
 import XMonad.Config.Gnome
 import XMonad.Hooks.ManageDocks
@@ -24,7 +25,7 @@ myLayout = minimize $ avoidStruts (layouts)
     layouts =  tiled ||| Full
     tiled = limitWindows 6 $ Tall 1 0.03 0.5
 
-myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHook
+myHandleEventHook = hintsEventHook `mappend` minimizeEventHook `mappend` ewmhDesktopsEventHook
 
 myTerminal = "gnome-terminal"
 
