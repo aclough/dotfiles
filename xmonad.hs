@@ -8,7 +8,7 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.Minimize
-import XMonad.Layout.LimitWindows
+import XMonad.Layout.MultiColumns
 import XMonad.Layout.LayoutHints
 import qualified XMonad.StackSet as W
 
@@ -22,8 +22,8 @@ myManageHook = composeAll [
 
 myLayout = minimize $ avoidStruts (layouts)
   where
-    layouts =  tiled ||| Full
-    tiled = limitWindows 6 $ Tall 1 0.03 0.5
+    layouts =  multi ||| Full
+    multi = multiCol [1] 2 0.03 (-0.5)
 
 myHandleEventHook = hintsEventHook <> minimizeEventHook <> ewmhDesktopsEventHook
 
