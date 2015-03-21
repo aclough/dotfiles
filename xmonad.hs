@@ -7,7 +7,7 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.Minimize
-import XMonad.Layout.LimitWindows
+import XMonad.Layout.MultiColumns
 import XMonad.Layout.LayoutHints
 import qualified XMonad.StackSet as W
 
@@ -20,8 +20,8 @@ myManageHook = composeAll [
 
 myLayout = minimize $ avoidStruts (layouts)
   where
-    layouts =  tiled ||| Full
-    tiled = limitWindows 6 $ Tall 1 0.03 0.5
+    layouts =  multi ||| Full
+    multi = multiCol [1] 3 0.03 (-0.5)
 
 myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHook
 
@@ -32,15 +32,13 @@ main = xmonad $ gnomeConfig
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
-    , logHook = updatePointer Nearest >> logHook gnomeConfig >> ewmhDesktopsLogHook
+    , logHook = updatePointer (Relative 0.1 0.1) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
     , startupHook = ewmhDesktopsStartup >> startupHook gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
-        , ("M-n", spawn "gnome-do")
-        , ("M-M1-n", spawn "dmenu_run")
-        , ("M-S-n", spawn "gmrun")
+        , ("M-n", spawn "yeganesh_run.sh")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
