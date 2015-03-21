@@ -20,9 +20,9 @@ set background=dark            " dark background
 set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
 set nocompatible               " Don't emulate vi bugs
-set tabstop=2                  " Number of spaces a tab expands to
+set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
-set shiftwidth=2               " Number of spaces of indentation to use
+set shiftwidth=4               " use 4 spaces when indented
 set ruler                      " statusline showing current cursor position
 "set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
