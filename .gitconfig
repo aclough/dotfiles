@@ -6,3 +6,10 @@
 	email = andrew.clough@gmail.com
 [push]
 	default = simple
+[alias]
+    st = status
+    br = branch
+    co = checkout
+    ci = commit -a
+    ca = commit --amend
+    cia = commit -a --amend
