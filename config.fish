@@ -3,17 +3,21 @@ set -x EDITOR vim
 set PATH $PATH $HOME/bin
 set fish_git_dirty_color red
 
-set -x ROSPATH /opt/ros/indigo
+set -x ROS_DISTRO indigo
+set -x ROSPATH /opt/ros/$ROS_DISTRO
+set -x ROS_ROOT $ROSPATH/share/ros
+set -x ROS_ETC_DIR $ROSPATH/etc/ros
+set -x ROS_WORKSPACE /home/aclough/ros
+set -x ROS_PACKAGE_PATH $ROSPATH/share:$ROSPATH/stacks:$ROS_WORKSPACE/share  # not in rosbash
+set -x ROS_MASTER_URI http://localhost:11311
 set -x CMAKE_PREFIX_PATH $ROSPATH
 set -x CPATH $ROSPATH/include
 set -x LD_LIBRARY_PATH $ROSPATH/lib:$ROSPATH/lib/x86_64-linux-gnu
 set PATH $PATH $ROSPATH/bin
-set -x ROS_PACKAGE_PATH $ROSPATH/share:$ROSPATH/stacks  # not in rosbash
 set -x PKG_CONFIG $ROSPATH/lib/pkgconfig:$ROSPATH/lib/x86_64-linux-gnu/pkgconfig
 set -x PYTHONPATH $ROSPATH/lib/python2.7/dist-packages
-set -x ROS_DISTRO indigo
 
-. ~/workspace/rosfish
+. ~/dotfiles/rosfish
 
 function parse_git_dirty
          git diff --quiet HEAD ^&-
