@@ -54,11 +54,12 @@ mkdir colors
 ln -s ~/.vim/jellybeans.vim/colors/jellybeans.vim ~/.vim/colors/jellybeans.vim
 mkdir bundle
 cd bundle
-git clone https://github.com/kien/ctrlp.vim.git
-git clone https://github.com/jeetsukumaran/vim-buffergator.git
-git clone https://github.com/Lokaltog/vim-easymotion.git
-git clone https://github.com/tpope/vim-fugitive.git
-git clone https://github.com/bling/vim-airline.git
-git clone https://github.com/zah/nimrod.vim.git
+git clone --depth=1 https://github.com/kien/ctrlp.vim.git
+git clone --depth=1 https://github.com/jeetsukumaran/vim-buffergator.git
+git clone --depth=1 https://github.com/Lokaltog/vim-easymotion.git
+git clone --depth=1 https://github.com/tpope/vim-fugitive.git
+git clone --depth=1 https://github.com/bling/vim-airline.git
+git clone --depth=1 https://github.com/zah/nimrod.vim.git
+git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.vim
 
 gnome-tweak-tool
