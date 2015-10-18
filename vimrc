@@ -62,7 +62,7 @@ map <C-H> gT
 map <C-L> gt
 
 "Resist the tempation to guess in the face of ambiguous tags
-map <C-]> :tj <C-r><C-w><CR>
+map <C-]> g<C-]>
 
 "Map Q to repeat the last recorded macro
 map Q @@
