@@ -27,7 +27,12 @@ myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHo
 
 myTerminal = "gnome-terminal"
 
-main = xmonad $ gnomeConfig
+main = do
+  spawn "unity-settings-daemon -r"
+  spawn "gnome-panel"
+  spawn "pidof nm-applet || nm-applet"
+  spawn "gnome-screensaver"
+  xmonad $ gnomeConfig
     { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
