@@ -4,9 +4,7 @@
 
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
-  subversion synaptic mosh calibre sshfs bcache-tools \
-  gnome-panel python-boto fish gnome-tweak-tool
-
+  synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool
 
 # Programming tools
 sudo apt-get install lua5.2 gcc g++ autoconf clang cabal-install \
@@ -67,4 +65,5 @@ git clone --depth=1 https://github.com/bling/vim-airline.git
 git clone --depth=1 https://github.com/zah/nimrod.vim.git
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.vim
 
+# For swapping escape and cap locks
 gnome-tweak-tool
