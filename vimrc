@@ -38,7 +38,10 @@ set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags 
 "set cscopetag
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
-"
+
+" Consider .ino files to be .cpp
+au BufRead,BufNewFile *.ino setfiletype cpp
+
 call pathogen#infect() "use pathogen to get other plugins
 
 " For fugative
