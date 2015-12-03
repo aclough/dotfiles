@@ -23,14 +23,6 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 # Get cabal going
 cabal update
 
-# Maybe add advanced Radeon drivers and kernel (if this is my desktop)
-#sudo apt-add-repository ppa:oibaf/graphics-drivers
-
-# Fix for getting Gnome and XMonad playing nicely together
-sudo apt-add-repository ppa:gekkio/xmonad
-sudo apt-get update
-sudo apt-get install gnome-session-xmonad
-
 # Install yeganesh
 cabal install yeganesh
 
