@@ -5,7 +5,7 @@
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
-  python-gpgme pip sudo apt-get install lua5.2 gcc g++ autoconf clang \
+  python-gpgme python-pip sudo apt-get install lua5.2 gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags
 
 # Remove the shopping lense
