@@ -23,6 +23,9 @@ cabal update
 # Install yeganesh
 cabal install yeganesh
 
+# Add ctypesgen for RHR firmware interface
+sudo pip install ctypesgen
+
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
 mkdir ~/.xmonad
