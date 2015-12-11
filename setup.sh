@@ -5,11 +5,8 @@
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
-  python-gpgme #For dropbox
-
-# Programming tools
-sudo apt-get install lua5.2 gcc g++ autoconf clang cabal-install \
-  golang ipython exuberant-ctags
+  python-gpgme pip sudo apt-get install lua5.2 gcc g++ autoconf clang \
+  cabal-install golang ipython exuberant-ctags
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
@@ -20,9 +17,6 @@ mkdir ~/bin
 # Enable DVD playback
 sudo /usr/share/doc/libdvdread4/install-css.sh
 
-# Get cabal going
-cabal update
-
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo apt-add-repository ppa:oibaf/graphics-drivers
 
@@ -30,6 +24,9 @@ cabal update
 sudo apt-add-repository ppa:gekkio/xmonad
 sudo apt-get update
 sudo apt-get install gnome-session-xmonad
+
+# Get cabal going
+cabal update
 
 # Install yeganesh
 cabal install yeganesh
