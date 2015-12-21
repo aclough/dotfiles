@@ -5,8 +5,9 @@
 # Utilities and misc
 sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
-  python-gpgme python-pip sudo apt-get install lua5.2 gcc g++ autoconf clang \
-  cabal-install golang ipython exuberant-ctags python-rosinstall
+  python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
+  cabal-install golang ipython exuberant-ctags python-rosinstall tree \
+  gwp
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
@@ -20,7 +21,7 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo apt-add-repository ppa:oibaf/graphics-drivers
 
-# Fix for getting Gnome and XMonad playing nicely together
+# Fix for getting Gnome and XMonad playing nicely together post 14.04
 sudo apt-add-repository ppa:gekkio/xmonad
 sudo apt-get update
 sudo apt-get install gnome-session-xmonad
