@@ -26,6 +26,7 @@ cabal install yeganesh
 
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
+sudo pip install snakeviz
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
