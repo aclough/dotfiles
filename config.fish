@@ -3,6 +3,8 @@ set -x EDITOR vim
 set PATH $PATH $HOME/bin
 set fish_git_dirty_color red
 
+set -x _JAVA_AWT_WM_NONREPARENTING 1
+
 set -x CMAKE_PREFIX_PATH $ROSPATH
 set -x CPATH $ROSPATH/include
 set -x LD_LIBRARY_PATH $ROSPATH/lib:$ROSPATH/lib/x86_64-linux-gnu
