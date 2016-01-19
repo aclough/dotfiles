@@ -49,6 +49,9 @@ if $COLORTERM == 'gnome-terminal'
 endif
 colorscheme jellybeans
 
+"Use dark grey indent color
+let g:indentLine_color_term = 239
+
 iabbrev #b /*****************************
 iabbrev #e *****************************/
 iabbrev teh the
