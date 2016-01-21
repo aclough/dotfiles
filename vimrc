@@ -45,7 +45,7 @@ au BufRead,BufNewFile *.ino setfiletype cpp
 call pathogen#infect() "use pathogen to get other plugins
 
 " Use silver searcher with vim.ack
-let g:ackprg = 'ag --vimgrep'
+let g:ackprg = 'ag'
 
 " For fugative
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
