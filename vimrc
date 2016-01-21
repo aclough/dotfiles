@@ -38,8 +38,11 @@ set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags 
 "set cscopetag
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
-"
+
 call pathogen#infect() "use pathogen to get other plugins
+
+"Use Silver Searcher with vim.ack
+let g:ackprg = 'ag --vimgrep'
 
 " For fugative
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
