@@ -49,3 +49,11 @@ end
 function fng
     find -name $argv[1] -print0 2> /dev/null | xargs -0 grep $argv[2]
 end
+
+function a
+    ag --color-line-number '0;32' --color-match '0;31' --color-path '0;33' $argv
+end
+
+function v
+    vim -p $argv
+end
