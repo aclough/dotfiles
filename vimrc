@@ -20,7 +20,7 @@ set background=dark            " dark background
 set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
 set nocompatible               " Don't emulate vi bugs
-set tabstop=4                  " 4 space tabs
+set tabstop=8                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
 set ruler                      " statusline showing current cursor position
