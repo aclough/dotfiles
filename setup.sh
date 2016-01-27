@@ -12,6 +12,9 @@ sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
 
+# Might want python math
+# pip install numpy sklearn
+
 # I'll want it later
 mkdir ~/bin
 
