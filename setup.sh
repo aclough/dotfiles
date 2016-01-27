@@ -29,6 +29,11 @@ sudo apt-add-repository ppa:gekkio/xmonad
 sudo apt-get update
 sudo apt-get install gnome-session-xmonad
 
+# Install rust
+sudo apt-add-repository ppa:hansjorg/rust
+sudo apt-get update
+sudo apt-get install rust-stable cargo-stable
+
 # Get cabal going
 cabal update
 
@@ -64,7 +69,7 @@ git clone --depth=1 https://github.com/Lokaltog/vim-easymotion.git
 git clone --depth=1 https://github.com/tpope/vim-fugitive.git
 git clone --depth=1 https://github.com/bling/vim-airline.git
 git clone --depth=1 https://github.com/zah/nimrod.vim.git
-git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.vim
+git clone --depth=1 https://github.com/rust-lang/rust.vim.git
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
 
