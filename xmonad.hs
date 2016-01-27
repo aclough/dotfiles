@@ -1,12 +1,10 @@
 import XMonad
 import XMonad.Config.Gnome
 import XMonad.Hooks.ManageDocks
-import XMonad.Hooks.Minimize
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
-import XMonad.Layout.Minimize
 import XMonad.Layout.MultiColumns
 import XMonad.Layout.LayoutHints
 import qualified XMonad.StackSet as W
@@ -18,12 +16,12 @@ myManageHook = composeAll [
         , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
         ]
 
-myLayout = minimize $ avoidStruts (layouts)
+myLayout = avoidStruts (layouts)
   where
     layouts =  multi ||| Full
     multi = multiCol [1] 3 0.03 (-0.5)
 
-myHandleEventHook = hintsEventHook <+> minimizeEventHook <+> ewmhDesktopsEventHook
+myHandleEventHook = hintsEventHook <+> ewmhDesktopsEventHook
 
 myTerminal = "gnome-terminal"
 
@@ -42,8 +40,6 @@ main = xmonad $ gnomeConfig
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
-        , ("M-m", withFocused minimizeWindow)
-        , ("M-M1-m", sendMessage RestoreNextMinimizedWin)
         , ("M-u", prevWS)
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)
