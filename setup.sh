@@ -72,6 +72,7 @@ git clone --depth=1 https://github.com/zah/nimrod.vim.git
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
+git clone --depth=1 https://github.com/luochen1990/rainbow.git
 
 
 # For swapping escape and cap locks
