@@ -7,7 +7,7 @@ sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
   python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags gcc-avr avr-libc \
-  python-rosinstall tree gpw silversearcher-ag
+  python-rosinstall tree gpw silversearcher-ag python-numpy python-scipy
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
@@ -27,6 +27,7 @@ cabal install yeganesh
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
 sudo pip install snakeviz
+sudo pip install sympy
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
@@ -60,6 +61,7 @@ git clone --depth=1 https://github.com/zah/nimrod.vim.git
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.vim
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
+git clone --depth=1 https://github.com/luochen1990/rainbow.git
 
 # For swapping escape and cap locks
 gnome-tweak-tool
