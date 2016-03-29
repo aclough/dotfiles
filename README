@@ -1,7 +1,7 @@
 This is a collection of my dotfiles and scripts, created for getting a new computer up and
-running quickly.  The intent is to check the folder out into my home direcotry,
-and then create simlinks from actual dotfile locations to the contents of the
-folder as well as linking some scripts from ~/bin.
+running quickly.  The intent is to check the folder out into my home directory
+then run setup.sh to download other software, create symlinks, etc.
 
 Feel free to use anything in here in any way, except to the extent that any
-of these are GPL.
+of these have some specific liscence.  Which is currently none of them and hopefully
+I'll remember to change this README if that should change.
