@@ -7,7 +7,7 @@ sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
   python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags python-rosinstall tree \
-  gwp gitg silversearcher-ag nim
+  gwp gitg silversearcher-ag nim pylint
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
@@ -73,6 +73,7 @@ git clone --depth=1 https://github.com/rust-lang/rust.vim.git
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
 git clone --depth=1 https://github.com/luochen1990/rainbow.git
+git clone --depth=1 https://github.com/scrooloose/syntastic.git
 
 
 # For swapping escape and cap locks
