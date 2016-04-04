@@ -12,6 +12,17 @@ set PATH $PATH $ROSPATH/bin
 set -x PKG_CONFIG $ROSPATH/lib/pkgconfig:$ROSPATH/lib/x86_64-linux-gnu/pkgconfig
 set -x PYTHONPATH $ROSPATH/lib/python2.7/dist-packages
 
+set -x RIGHTPICK $HOME/rhr/pick
+set -x PATH $PATH $RIGHTPICK/build/deploy/bin $RIGHTPICK/build/externals/bin
+set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH $RIGHTPICK/build/externals/lib $RIGHTPICK/build/deploy/lib
+set -x PKG_CONFIG_PATH $PKG_CONFIG_PATH $RIGHTPICK/build/externals/lib/pkgconfig
+set -x PYTHONPATH $PYTHONPATH $RIGHTPICK/build/deploy/lib/python2.7/dist-packages
+set -x PYTHONPATH $PYTHONPATH $RIGHTPICK/build/deploy/lib/python2.7/site-packages
+set -x PYTHONPATH $PYTHONPATH $RIGHTPICK/build/externals/lib/python2.7/dist-packages
+set -x PYTHONPATH $PYTHONPATH $RIGHTPICK/build/externals/lib/python2.7/site-packages
+set -x LCM_JAR $RIGHTPICK/build/depoy/share/java/lcmtypes_RightPick.jar
+set -x CLASSPATH $CLASSPATH $LCM_JAR
+
 . ~/dotfiles/rosfish
 
 function parse_git_dirty
