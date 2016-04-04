@@ -78,7 +78,6 @@ git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.vim
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
 git clone --depth=1 https://github.com/luochen1990/rainbow.git
-git clone --depth=1 https://github.com/scrooloose/syntastic.git
 
 # For swapping escape and cap locks
 gnome-tweak-tool

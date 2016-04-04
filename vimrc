@@ -47,15 +47,6 @@ let g:ackprg = 'ag --vimgrep'
 " For fugative
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-" For Syntastic
-set statusline+=%{SyntasticStatuslineFlag()}
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-map <C-Y> :SyntasticCheck<CR>
-
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
