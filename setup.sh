@@ -3,11 +3,16 @@
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 # Utilities and misc
-sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
+sudo apt install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
   python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags python-rosinstall tree \
-  gwp gitg silversearcher-ag nim pylint
+  gwp gitg silversearcher-ag nim pylint linux-tools-common
+
+# Get Chrome
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
