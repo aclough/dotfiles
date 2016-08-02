@@ -68,3 +68,16 @@ end
 function v
     vim -p $argv
 end
+
+# Ubuntu .bashrc compatibility
+function ll
+    ls -alF
+end
+
+function la
+    ls -A
+end
+
+function l
+    ls -CF
+end
