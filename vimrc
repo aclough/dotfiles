@@ -44,6 +44,9 @@ call pathogen#infect() "use pathogen to get other plugins
 "Use Silver Searcher with vim.ack
 let g:ackprg = 'ag --vimgrep'
 
+" Use Rainbow parens
+let g:rainbow_active = 1
+
 " For fugative
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
