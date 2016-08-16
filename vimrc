@@ -20,9 +20,9 @@ set background=dark            " dark background
 set backspace=indent,eol,start " make backspace more flexible
 syntax on                      " Syntax highlighting on
 set nocompatible               " Don't emulate vi bugs
-set tabstop=2                  " 4 space tabs
+set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
-set shiftwidth=2               " use 4 spaces when indented
+set shiftwidth=4               " use 4 spaces when indented
 set ruler                      " statusline showing current cursor position
 "set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
@@ -83,7 +83,7 @@ cmap w!! %!sudo tee > /dev/null %
 au BufWritePost .vimrc so ~/.vimrc
 
 "Get rid of trailing whitespace before each save
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
