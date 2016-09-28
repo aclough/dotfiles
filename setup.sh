@@ -7,7 +7,8 @@ sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
   synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
   python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags python-rosinstall tree \
-  gwp gitg silversearcher-ag nim pylint linux-tools-common gdb python2.7-dbg
+  gwp gitg silversearcher-ag nim pylint linux-tools-common gdb python2.7-dbg \
+  python-dumbnet
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
