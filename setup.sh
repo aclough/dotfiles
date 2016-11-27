@@ -3,11 +3,12 @@
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 # Utilities and misc
-sudo apt install vlc xmonad vim-gtk suckless-tools libdvdread4 \
-  synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
-  python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
-  cabal-install golang ipython exuberant-ctags python-rosinstall tree \
-  gwp gitg silversearcher-ag nim pylint linux-tools-common screen
+sudo apt install vlc xmonad vim-gtk suckless-tools \
+  synaptic mosh calibre fish gnome-tweak-tool \
+  python-pip lua5.2 gcc g++ autoconf clang \
+  cabal-install golang ipython exuberant-ctags tree \
+  gitg silversearcher-ag nim pylint linux-tools-common screen \
+  python-numpy python-scipy python-matplotlib
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -18,7 +19,7 @@ sudo dpkg -i google-chrome*.deb
 sudo apt-get remove unity-lens-shopping
 
 # Might want python math
-# pip install numpy sklearn
+# pip install scikit-learn
 
 # I'll want it later
 mkdir ~/bin
