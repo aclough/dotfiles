@@ -3,24 +3,27 @@
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 # Utilities and misc
-sudo apt-get install vlc xmonad vim-gtk suckless-tools libdvdread4 \
-  synaptic mosh calibre sshfs bcache-tools fish gnome-tweak-tool \
+
+sudo apt install vlc xmonad vim-gtk suckless-tools \
+  synaptic mosh sshfs fish gnome-tweak-tool \
   python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
-  cabal-install golang ipython exuberant-ctags python-rosinstall tree \
-  gwp gitg silversearcher-ag nim pylint linux-tools-common gdb python2.7-dbg \
-  python-dumbnet
+  cabal-install golang ipython exuberant-ctags tree \
+  gitg silversearcher-ag pylint linux-tools-common gdb python2.7-dbg \
+  python-dumbnet python-dev python-numpy python-scipy python-matplotlib
+
+# Get Chrome
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
 
-# Might want python math
-# pip install numpy sklearn
-
 # I'll want it later
-mkdir ~/bin
+mkdir ~/bin ~/rhr
 
 # Enable DVD playback
-sudo /usr/share/doc/libdvdread4/install-css.sh
+# sudo /usr/share/doc/libdvdread4/install-css.sh
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo apt-add-repository ppa:oibaf/graphics-drivers
@@ -75,7 +78,6 @@ git clone --depth=1 https://github.com/jeetsukumaran/vim-buffergator.git
 git clone --depth=1 https://github.com/Lokaltog/vim-easymotion.git
 git clone --depth=1 https://github.com/tpope/vim-fugitive.git
 git clone --depth=1 https://github.com/bling/vim-airline.git
-git clone --depth=1 https://github.com/zah/nimrod.vim.git
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.vim
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
