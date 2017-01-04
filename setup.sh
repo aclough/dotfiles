@@ -5,7 +5,7 @@
 # Utilities and misc
 
 sudo apt install vlc xmonad vim-gtk suckless-tools \
-  synaptic mosh sshfs fish gnome-tweak-tool \
+  synaptic mosh sshfs fish gnome-tweak-tool cmake gcc-avr arduino \
   python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags tree \
   gitg silversearcher-ag pylint linux-tools-common gdb python2.7-dbg \
