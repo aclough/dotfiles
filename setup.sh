@@ -1,11 +1,13 @@
 #!/bin/bash
 
+set -e
+
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 # Utilities and misc
 sudo apt install vlc xmonad vim-gtk suckless-tools \
-  synaptic mosh calibre fish gnome-tweak-tool \
-  python-pip lua5.2 gcc g++ autoconf clang \
+  synaptic mosh calibre fish \
+  python-pip lua5.2 gcc g++ autoconf clang rustc \
   cabal-install golang ipython exuberant-ctags tree \
   gitg silversearcher-ag nim pylint linux-tools-common screen \
   python-numpy python-scipy python-matplotlib
@@ -15,17 +17,20 @@ sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
+# Don't use touchpad if I've got another pointer availabile
+gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
+
+# Swap caplocks and escape
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
+
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
 
 # Might want python math
-# pip install scikit-learn
+pip install scikit-learn
 
 # I'll want it later
-mkdir ~/bin
-
-# Enable DVD playback
-sudo /usr/share/doc/libdvdread4/install-css.sh
+mkdir -p ~/bin
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo apt-add-repository ppa:oibaf/graphics-drivers
@@ -34,11 +39,6 @@ sudo /usr/share/doc/libdvdread4/install-css.sh
 sudo apt-add-repository ppa:gekkio/xmonad
 sudo apt-get update
 sudo apt-get install gnome-session-xmonad
-
-# Install rust
-sudo apt-add-repository ppa:hansjorg/rust
-sudo apt-get update
-sudo apt-get install rust-stable cargo-stable
 
 # Get cabal going
 cabal update
@@ -80,6 +80,3 @@ git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.git
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
 git clone --depth=1 https://github.com/luochen1990/rainbow.git
-
-# For swapping escape and cap locks
-gnome-tweak-tool
