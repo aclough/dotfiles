@@ -70,6 +70,12 @@ map <C-K> <C-W>W
 map <C-H> gT
 map <C-L> gt
 
+map <C-J> J
+map H <Plug>(easymotion-b)
+map L <Plug>(easymotion-w)
+map J <Plug>(easymotion-j)
+map K <Plug>(easymotion-k)
+
 "Resist the tempation to guess in the face of ambiguous tags
 map <C-]> g<C-]>
 
