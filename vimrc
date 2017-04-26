@@ -48,7 +48,7 @@ set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 
 call pathogen#infect() "use pathogen to get other plugins
 
-" Use Silver Searcher with vim.ack
+"Use Silver Searcher with vim.ack
 let g:ackprg = 'ag --vimgrep'
 
 " Use Rainbow parens
@@ -100,6 +100,9 @@ au BufWritePost .vimrc so ~/.vimrc
 
 "Get rid of trailing whitespace before each save
 autocmd BufWritePre * :%s/\s\+$//e
+
+"Treat .ino like .cpp
+au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
