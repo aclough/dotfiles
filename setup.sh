@@ -22,6 +22,9 @@ sudo apt-get remove unity-lens-shopping
 # I'll want it later
 mkdir ~/bin ~/rhr
 
+# We need to add an interface for local UDP multicast
+sudo echo "post-up route add -net 224.0.0.0/4 dev lo" >> /etc/network/interfaces
+
 # Enable DVD playback
 # sudo /usr/share/doc/libdvdread4/install-css.sh
 
