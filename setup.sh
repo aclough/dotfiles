@@ -4,10 +4,13 @@
 
 # Utilities and misc
 
-sudo apt install vim-gtk fish gnome-tweak-tool cmake gcc-avr arduino \
-  python-gpgme python-pip lua5.2 gcc g++ autoconf clang ipython exuberant-ctags \
-  tree gitg silversearcher-ag pylint linux-tools-common gdb python2.7-dbg \
-  python-dumbnet python-dev python-numpy python-scipy python-matplotlib
+sudo apt install vim-gtk fish cmake gcc-avr arduino python-gpgme python-pip \
+  lua5.2 gcc g++ autoconf clang ipython exuberant-ctags tree gitg \
+  silversearcher-ag pylint linux-tools-common gdb python2.7-dbg python-dumbnet \
+  python-dev python-numpy python-scipy python-matplotlib
+
+# Swap caplocks and escape
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 
 sudo pip install snakeviz
 
@@ -42,6 +45,3 @@ git clone --depth=1 https://github.com/bling/vim-airline.git
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
 git clone --depth=1 https://github.com/luochen1990/rainbow.git
-
-# For swapping escape and cap locks
-gnome-tweak-tool
