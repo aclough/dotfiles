@@ -4,61 +4,22 @@
 
 # Utilities and misc
 
-sudo apt install vlc xmonad vim-gtk suckless-tools \
-  synaptic mosh sshfs fish gnome-tweak-tool cmake gcc-avr arduino \
-  python-gpgme python-pip lua5.2 gcc g++ autoconf clang \
-  cabal-install golang ipython exuberant-ctags tree \
-  gitg silversearcher-ag pylint linux-tools-common gdb python2.7-dbg \
+sudo apt install vim-gtk fish gnome-tweak-tool cmake gcc-avr arduino \
+  python-gpgme python-pip lua5.2 gcc g++ autoconf clang ipython exuberant-ctags \
+  tree gitg silversearcher-ag pylint linux-tools-common gdb python2.7-dbg \
   python-dumbnet python-dev python-numpy python-scipy python-matplotlib
 
-# Get Chrome
-sudo apt-get install libxss1 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
-
-# Remove the shopping lense
-sudo apt-get remove unity-lens-shopping
+sudo pip install snakeviz
 
 # I'll want it later
 mkdir ~/bin ~/rhr
 
-# We need to add an interface for local UDP multicast
-sudo echo "post-up route add -net 224.0.0.0/4 dev lo" >> /etc/network/interfaces
-
-# Enable DVD playback
-# sudo /usr/share/doc/libdvdread4/install-css.sh
-
-# Maybe add advanced Radeon drivers and kernel (if this is my desktop)
-#sudo apt-add-repository ppa:oibaf/graphics-drivers
-
-# Fix for getting Gnome and XMonad playing nicely together post 14.04
-sudo apt-add-repository ppa:gekkio/xmonad
-sudo apt-get update
-sudo apt-get install gnome-session-xmonad
-
-# Get cabal going
-cabal update
-
-# Install yeganesh
-cabal install yeganesh
-
-# Add ctypesgen for RHR firmware interface
-sudo pip install ctypesgen
-sudo pip install snakeviz
-sudo pip install sympy
-
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/screenrc ~/.screenrc
-mkdir ~/.xmonad
-ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
-ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
-ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
-ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
 ln -s ~/dotfiles/pickb.sh ~/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/bin/pickt.sh
 
