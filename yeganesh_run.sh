@@ -1,2 +1,3 @@
 #!/bin/bash
-dmenu_path | ~/.cabal/bin/yeganesh
+exe=`~/.cabal/bin/yeganesh -x`
+eval "exec $exe"
