@@ -17,7 +17,7 @@ myManageHook = composeAll [
 
 myLayout = avoidStruts (layouts)
   where
-    layouts =  tiled ||| Mirror tiled ||| Full
+    layouts =  tiled ||| Full
     tiled = Tall 1 (3/100) (1/2)
 
 myHandleEventHook = hintsEventHook <+> ewmhDesktopsEventHook
