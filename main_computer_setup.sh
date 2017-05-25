@@ -34,3 +34,4 @@ ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
+ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
