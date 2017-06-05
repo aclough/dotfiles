@@ -4,7 +4,7 @@ sudo apt update
 sudo apt-get dist-upgrade
 cd ~/.vim/jellybeans.vim
 git pull
-cd ~/.vim/vimpathogen
+cd ~/.vim/vim-pathogen
 git pull
 cd ~/.vim/bundle/ack.vim/
 git pull
