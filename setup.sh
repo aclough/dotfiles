@@ -17,6 +17,12 @@ sudo pip install snakeviz
 # I'll want it later
 mkdir ~/bin ~/rhr
 
+# Get the code
+cd ~/rhr
+git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpick.git pick
+git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git firmware
+
+
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/screenrc ~/.screenrc
