@@ -30,6 +30,9 @@ cabal install yeganesh
 sudo pip install ctypesgen
 sudo pip install sympy
 
+unlink ~/bin/pickb.sh
+ln -s ~/dotfiles/pickbc.sh ~/bin/pickb.sh
+
 ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
