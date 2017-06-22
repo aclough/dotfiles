@@ -5,13 +5,6 @@ set fish_git_dirty_color red
 
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
-set -x CMAKE_PREFIX_PATH $ROSPATH
-set -x CPATH $ROSPATH/include
-set -x LD_LIBRARY_PATH $ROSPATH/lib:$ROSPATH/lib/x86_64-linux-gnu
-set PATH $PATH $ROSPATH/bin
-set -x PKG_CONFIG $ROSPATH/lib/pkgconfig:$ROSPATH/lib/x86_64-linux-gnu/pkgconfig
-set -x PYTHONPATH $ROSPATH/lib/python2.7/dist-packages
-
 set -x RIGHTPICK $HOME/rhr/pick
 set -x RIGHTPICK_ROOT $RIGHTPICK
 set -x RIGHTPICK_DEPLOY $RIGHTPICK/build/deploy
@@ -29,8 +22,6 @@ set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_EXTERNALS/lib/python2.7/site-packages
 
 set -x LCM_JAR $RIGHTPICK/build/depoy/share/java/lcmtypes_RightPick.jar
 set -x CLASSPATH $CLASSPATH $LCM_JAR
-
-. ~/dotfiles/rosfish
 
 function parse_git_dirty
          git diff --quiet HEAD ^&-
