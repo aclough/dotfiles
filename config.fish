@@ -1,6 +1,6 @@
 set -x EDITOR vim
 
-set PATH $PATH $HOME/bin $HOME/.cargo/env $HOME/.cargo/bin
+set PATH $PATH $HOME/bin $HOME/.cargo/bin
 set fish_git_dirty_color red
 
 set -x _JAVA_AWT_WM_NONREPARENTING 1
@@ -12,7 +12,7 @@ set -x RIGHTPICK_EXTERNALS $RIGHTPICK/build/externals
 set -x RIGHTPICK_CONFIG $RIGHTPICK_DEPLOY/config
 set -x RIGHTPICK_RESULTS $RIGHTPICK/results
 set -x RIGHTPICK_SW $RIGHTPICK/software
-set -x PATH $PATH $RIGHTPICK_DEPLOY/bin $RIGHTPICK_EXTERNALS/bin
+set -x PATH $PATH $RIGHTPICK_DEPLOY/bin
 set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH $RIGHTPICK_EXTERNALS/lib $RIGHTPICK/build/deploy/lib
 set -x PKG_CONFIG_PATH $PKG_CONFIG_PATH $RIGHTPICK_EXTERNALS/lib/pkgconfig
 set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_DEPLOY/lib/python2.7/dist-packages
