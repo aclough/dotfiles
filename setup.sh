@@ -4,6 +4,9 @@
 
 # Utilities and misc
 
+sudo apt-add-repository ppa:fish-shell/release-2
+sudo update
+
 sudo apt install vim-gtk fish cmake gcc-avr arduino python-gpgme python-pip \
   lua5.2 gcc g++ autoconf clang ipython exuberant-ctags tree gitg \
   silversearcher-ag pylint linux-tools-common gdb python2.7-dbg python-dumbnet \
