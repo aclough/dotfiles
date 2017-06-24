@@ -4,13 +4,22 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
+# To make the fish version I get more up to date
+sudo apt-add-repository ppa:fish-shell/release-2
+# Fix for getting Gnome and XMonad playing nicely together post 14.04
+sudo apt-add-repository ppa:gekkio/xmonad
+# Maybe add advanced Radeon drivers and kernel (if this is my desktop)
+#sudo apt-add-repository ppa:oibaf/graphics-drivers
+
+sudo apt update
+
 # Utilities and misc
 sudo apt install vlc xmonad vim-gtk suckless-tools \
   synaptic mosh calibre fish \
   python-pip lua5.2 gcc g++ autoconf clang rustc \
   cabal-install golang ipython exuberant-ctags tree \
   gitg silversearcher-ag nim pylint linux-tools-common screen \
-  python-numpy python-scipy python-matplotlib
+  python-numpy python-scipy python-matplotlib gnome-session-xmonad
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -31,14 +40,6 @@ pip install scikit-learn
 
 # I'll want it later
 mkdir -p ~/bin
-
-# Maybe add advanced Radeon drivers and kernel (if this is my desktop)
-#sudo apt-add-repository ppa:oibaf/graphics-drivers
-
-# Fix for getting Gnome and XMonad playing nicely together post 14.04
-sudo apt-add-repository ppa:gekkio/xmonad
-sudo apt-get update
-sudo apt-get install gnome-session-xmonad
 
 # Get cabal going
 cabal update
