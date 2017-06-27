@@ -5,7 +5,6 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
-import XMonad.Layout.MultiColumns
 import XMonad.Layout.LayoutHints
 import qualified XMonad.StackSet as W
 
@@ -18,8 +17,8 @@ myManageHook = composeAll [
 
 myLayout = avoidStruts (layouts)
   where
-    layouts =  multi ||| Full
-    multi = multiCol [1] 3 0.03 (-0.5)
+    layouts =  tiled ||| Full
+    tiled = Tall 1 (3/100) (1/2)
 
 myHandleEventHook = hintsEventHook <+> ewmhDesktopsEventHook
 

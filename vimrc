@@ -7,6 +7,7 @@
 "   fugative, for git integration
 set mouse=a                    " turn on mouse
 set scrolloff=3                " when scrolling always show 3 bottom lines
+set sidescrolloff=5            " And leave 5 spaces to the side
 set showcmd                    " show command
 set showmatch
 set incsearch                  " incrimental search
@@ -23,16 +24,19 @@ set nocompatible               " Don't emulate vi bugs
 set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
+set autoindent                 " Indent new lines to match the previous one
 set ruler                      " statusline showing current cursor position
 "set foldcolumn=1               " have a fold status-column
 set foldmethod=indent          " automatically have everything folded by colum
 set nofoldenable               " But don't start with things folded
 set laststatus=2               " Always use status lines
 set encoding=utf-8             " Needed for powerline, but also a good idea
+set nrformats-=octal           " Interpret 08 as 8
 set clipboard=unnamed          " Uses system clipboard by default
 filetype plugin on             " autocomplete
 filetype plugin indent on
-set complete=.,w,b,u,t,i       " Autocomplete via tags
+set complete-=i                " Autocomplete via tags
+set autoread                   " Mirror non-local changes
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set csto=0                    " Integrate cscope with ctags
 "set cscopetag
@@ -70,6 +74,10 @@ map <C-K> <C-W>W
 map <C-H> gT
 map <C-L> gt
 
+"Easymotion
+map H <Plug>(easymotion-b)
+map L <Plug>(easymotion-w)
+
 "Resist the tempation to guess in the face of ambiguous tags
 map <C-]> g<C-]>
 
@@ -99,6 +107,10 @@ onoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR>
 onoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR>
 vnoremap <silent>ai :<C-u>cal IndTxtObj(0)<CR><Esc>gv
 vnoremap <silent>ii :<C-u>cal IndTxtObj(1)<CR><Esc>gv
+
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
+endif
 
 " Selection by indentation function
 " use 'vai' to select an indentation or block including blank lines
