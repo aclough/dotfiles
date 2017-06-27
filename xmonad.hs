@@ -21,7 +21,7 @@ myLayout = avoidStruts (layouts)
     layouts =  multi ||| Full
     multi = multiCol [1] 3 0.03 (-0.5)
 
-myHandleEventHook = hintsEventHook <+> ewmhDesktopsEventHook
+myHandleEventHook = hintsEventHook
 
 myTerminal = "gnome-terminal"
 
