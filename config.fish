@@ -1,6 +1,6 @@
 set -x EDITOR vim
 
-set PATH $PATH $HOME/bin $HOME/.cargo/bin
+set PATH $PATH $HOME/bin
 set fish_git_dirty_color red
 
 set -x _JAVA_AWT_WM_NONREPARENTING 1
