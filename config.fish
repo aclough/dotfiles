@@ -16,9 +16,6 @@ set -x PATH $PATH $RIGHTPICK_DEPLOY/bin
 set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH $RIGHTPICK_EXTERNALS/lib $RIGHTPICK/build/deploy/lib
 set -x PKG_CONFIG_PATH $PKG_CONFIG_PATH $RIGHTPICK_EXTERNALS/lib/pkgconfig
 set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_DEPLOY/lib/python2.7/dist-packages
-set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_DEPLOY/lib/python2.7/site-packages
-set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_EXTERNALS/lib/python2.7/dist-packages
-set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_EXTERNALS/lib/python2.7/site-packages
 
 set -x LCM_JAR $RIGHTPICK/build/depoy/share/java/lcmtypes_RightPick.jar
 set -x CLASSPATH $CLASSPATH $LCM_JAR
