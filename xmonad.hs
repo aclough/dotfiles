@@ -20,7 +20,7 @@ myLayout = avoidStruts (layouts)
     layouts =  tiled ||| Full
     tiled = Tall 1 (3/100) (1/2)
 
-myHandleEventHook = hintsEventHook <+> ewmhDesktopsEventHook
+myHandleEventHook = hintsEventHook
 
 myTerminal = "gnome-terminal"
 
