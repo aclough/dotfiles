@@ -14,4 +14,4 @@
     ca = commit --amend
     cia = commit -a --amend
 [help]
-    autocorrect = 20
+    autocorrect = 5
