@@ -35,6 +35,10 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
 
+# Enable DVDs
+sudo apt-get install libdvd-pkg
+sudo dpkg-reconfigure libdvd-pkg
+
 # Might want python math
 pip install scikit-learn
 
