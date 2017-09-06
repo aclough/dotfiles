@@ -21,8 +21,7 @@ sudo apt install vlc xmonad neovim suckless-tools \
   python-pip python3-pip gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags tree \
   gitg silversearcher-ag nim pylint linux-tools-common screen \
-  python-numpy python-scipy python-matplotlib gnome-session-xmonad \
-  neovim
+  python-numpy python-scipy python-matplotlib gnome-session-xmonad
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -59,8 +58,6 @@ rustup component add rust-src
 mkdir -p ~/bin
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/nvimrc ~/.config/nvim/init.vim
 ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
@@ -76,29 +73,5 @@ ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s ~/dotfiles/nvimrc ~/.config/nvim/init.vim
-ln -s ~/.vim/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload
+nvim -c PlugInstall
 
-
-# Install all my vim addons
-mkdir ~/.vim
-cd ~/.vim
-git clone https://github.com/tpope/vim-pathogen.git
-mkdir autoload
-ln -s ~/.vim/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload
-git clone https://github.com/nanotech/jellybeans.vim.git
-mkdir colors
-ln -s ~/.vim/jellybeans.vim/colors/jellybeans.vim ~/.vim/colors/jellybeans.vim
-mkdir bundle
-cd bundle
-git clone --depth=1 https://github.com/kien/ctrlp.vim.git
-git clone --depth=1 https://github.com/jeetsukumaran/vim-buffergator.git
-git clone --depth=1 https://github.com/Lokaltog/vim-easymotion.git
-git clone --depth=1 https://github.com/tpope/vim-fugitive.git
-git clone --depth=1 https://github.com/bling/vim-airline.git
-git clone --depth=1 https://github.com/zah/nimrod.vim.git
-git clone --depth=1 https://github.com/rust-lang/rust.vim.git rust.git
-git clone --depth=1 https://github.com/Yggdroot/indentLine.git
-git clone --depth=1 https://github.com/mileszs/ack.vim.git
-git clone --depth=1 https://github.com/luochen1990/rainbow.git
-
-# Install nvim addons
