@@ -1,4 +1,4 @@
-set -x EDITOR vim
+set -x EDITOR nvim
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin
 set fish_git_dirty_color red
@@ -49,7 +49,7 @@ function a
 end
 
 function v
-    vim -p $argv
+    nvim -p $argv
 end
 
 # Ubuntu .bashrc compatibility
