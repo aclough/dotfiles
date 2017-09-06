@@ -53,20 +53,6 @@ let g:ctrlp_map = '<c-p>'
 map H <Plug>(easymotion-b)
 map L <Plug>(easymotion-w)
 
-" Extract 
-" mappings for putting
-nmap p <Plug>(extract-put)
-nmap P <Plug>(extract-Put)
-
-" mappings for cycling
-map s <Plug>(extract-sycle)
-map S <Plug>(extract-Sycle)
-map <c-s> <Plug>(extract-cycle)
-
-" mappings for visual
-vmap p <Plug>(extract-put)
-vmap P <Plug>(extract-Put)
-
 "For easier split window management
 map <C-J> <C-w>w
 map <C-K> <C-W>W
