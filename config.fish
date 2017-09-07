@@ -1,6 +1,6 @@
 set -x EDITOR nvim
 
-set PATH $PATH $HOME/bin $HOME/.cargo/bin
+set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/.nimble/bin
 set fish_git_dirty_color red
 
 

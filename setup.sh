@@ -20,7 +20,7 @@ sudo apt install vlc xmonad neovim suckless-tools \
   synaptic mosh calibre fish python-dev python3-dev \
   python-pip python3-pip gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags tree \
-  gitg silversearcher-ag nim pylint linux-tools-common screen \
+  gitg silversearcher-ag pylint linux-tools-common screen \
   python-numpy python-scipy python-matplotlib gnome-session-xmonad
 
 # Get Chrome
@@ -53,6 +53,9 @@ cabal install yeganesh
 curl https://sh.rustup.rs -sSf | sh
 cargo install racer # For nvim completion
 rustup component add rust-src
+
+# Nim
+curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
 # I'll want it later
 mkdir -p ~/bin
