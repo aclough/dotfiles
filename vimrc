@@ -96,8 +96,8 @@ au BufWritePost .vimrc so ~/.vimrc
 "Get rid of trailing whitespace before each save
 "autocmd BufWritePre * :%s/\s\+$//e
 
-"Treat .ino like .cpp
-au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
+"Treat .ino, .pde, lcm like .cpp
+au BufRead,BufNewFile *.lcm,*.pde,*.ino set filetype=cpp
 
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
