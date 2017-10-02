@@ -15,7 +15,7 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 sudo pip install snakeviz
 
 # I'll want it later
-mkdir ~/bin ~/rhr
+mkdir ~/.local/bin ~/rhr
 
 # Get the code
 cd ~/rhr
@@ -29,8 +29,8 @@ ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/pickb.sh ~/bin/pickb.sh
-ln -s ~/dotfiles/pickt.sh ~/bin/pickt.sh
+ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
+ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 
 # Install all my vim addons
 mkdir ~/.vim

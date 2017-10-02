@@ -30,13 +30,13 @@ cabal install yeganesh
 sudo pip install ctypesgen
 sudo pip install sympy
 
-unlink ~/bin/pickb.sh
-ln -s ~/dotfiles/pickbc.sh ~/bin/pickb.sh
+unlink ~/.local/bin/pickb.sh
+ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh
 
-ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
-ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
-ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
+ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
+ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
+ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
-ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
-ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
+ln -s ~/dotfiles/yeganesh_run.sh ~/.local/bin/yeganesh_run.sh
+ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
