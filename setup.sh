@@ -51,3 +51,4 @@ git clone --depth=1 https://github.com/bling/vim-airline.git
 git clone --depth=1 https://github.com/Yggdroot/indentLine.git
 git clone --depth=1 https://github.com/mileszs/ack.vim.git
 git clone --depth=1 https://github.com/luochen1990/rainbow.git
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
