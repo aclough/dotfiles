@@ -102,7 +102,8 @@ au BufWritePost .vimrc so ~/.vimrc
 "autocmd BufWritePre * :%s/\s\+$//e
 
 "Treat .ino, .pde, lcm like .cpp
-au BufRead,BufNewFile *.lcm,*.pde,*.ino set filetype=cpp
+au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
+au BufRead,BufNewFile *.lcm set filetype=java
 
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
