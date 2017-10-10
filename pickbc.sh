@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 rm /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_aardvark.json
 rm /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_eyehand.json
 rm /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_eurosort.json
