@@ -21,7 +21,8 @@ sudo apt install vlc xmonad neovim suckless-tools \
   python-pip python3-pip gcc g++ autoconf clang \
   cabal-install golang ipython exuberant-ctags tree \
   gitg silversearcher-ag pylint linux-tools-common screen \
-  python-numpy python-scipy python-matplotlib gnome-session-xmonad
+  python-numpy python-scipy python-matplotlib gnome-session-xmonad \
+  emacs42
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -59,6 +60,9 @@ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
 # I'll want it later
 mkdir -p ~/bin
+
+# Spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
