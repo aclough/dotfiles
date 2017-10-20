@@ -89,6 +89,9 @@ map <C-]> g<C-]>
 "Map Q to repeat the last recorded macro
 map Q @@
 
+"Always a mistype
+nmap q: <silent>
+
 "Make Y behave like other captials
 map Y y$
 
