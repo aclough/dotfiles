@@ -1,4 +1,4 @@
-sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install
+sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps
 
 # We need to add an interface for local UDP multicast
 sudo echo "post-up route add -net 224.0.0.0/4 dev lo" >> /etc/network/interfaces
