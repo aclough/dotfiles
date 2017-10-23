@@ -38,10 +38,10 @@ filetype plugin indent on
 set complete-=i                " Autocomplete via tags
 set autoread                   " Mirror non-local changes
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
-"set csto=0                    " Integrate cscope with ctags
-"set cscopetag
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
+
+let mapleader = " "
 
 call pathogen#infect() "use pathogen to get other plugins
 
