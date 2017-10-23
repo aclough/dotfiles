@@ -22,4 +22,5 @@ cd ~/.vim/bundle/vim-easymotion/
 git pull
 cd ~/.vim/bundle/vim-fugitive/
 git pull
-
+cd ~/.vim/bundle/syntastic/
+git pull
