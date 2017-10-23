@@ -1,3 +1,7 @@
+cd ~
+scp packages.righthandrobotics.com:/srv/packages/server-install.deb .
+./rhr/pick/software/server-install.sh
+
 sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps
 
 # We need to add an interface for local UDP multicast
