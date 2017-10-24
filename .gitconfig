@@ -1,15 +1,16 @@
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 [color]
-  ui = true
+    ui = true
 [user]
-	email = andrew.clough@gmail.com
+    email = andrew.clough@gmail.com
 [push]
-	default = simple
+    default = simple
 [alias]
     st = status
     br = branch
     co = checkout
+    c = commit
     ci = commit -a
     ca = commit --amend
     cia = commit -a --amend
