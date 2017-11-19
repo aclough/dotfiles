@@ -48,6 +48,13 @@ let g:indentLine_color_term = 238
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard'],
+        \ 2: ['.hg', 'ht --cwd %s locate -I .'],
+        \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
 
 " Easymotion
 map H <Plug>(easymotion-b)
