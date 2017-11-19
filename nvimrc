@@ -13,6 +13,7 @@ set clipboard=unnamed          " Uses system clipboard by default
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 
+let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
@@ -82,6 +83,7 @@ au BufWritePost .vimrc so ~/.vimrc
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
+au BufRead,BufNewFile *.lcm set filetype=java
 
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
