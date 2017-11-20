@@ -57,6 +57,8 @@ let g:ctrlp_user_command = {
     \ 'fallback': 'find %s -type f'
     \ }
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Easymotion
 map H <Plug>(easymotion-b)
 map L <Plug>(easymotion-w)
@@ -79,7 +81,7 @@ map Q @@
 map Y y$
 
 "Reload vimrc when its saved
-au BufWritePost .vimrc so ~/.vimrc
+au BufWritePost .nvimrc so ~/.nvimrc
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
