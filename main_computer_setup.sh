@@ -36,6 +36,7 @@ sudo pip install sympy
 
 unlink ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh
+ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickb_plus.sh
 
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
