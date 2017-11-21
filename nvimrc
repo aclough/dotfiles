@@ -13,6 +13,7 @@ set clipboard=unnamed          " Uses system clipboard by default
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 
+let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
@@ -48,6 +49,15 @@ let g:indentLine_color_term = 238
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard'],
+        \ 2: ['.hg', 'ht --cwd %s locate -I .'],
+        \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Easymotion
 map H <Plug>(easymotion-b)
@@ -71,10 +81,11 @@ map Q @@
 map Y y$
 
 "Reload vimrc when its saved
-au BufWritePost .vimrc so ~/.vimrc
+au BufWritePost .nvimrc so ~/.nvimrc
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
+au BufRead,BufNewFile *.lcm set filetype=java
 
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]

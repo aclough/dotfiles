@@ -18,10 +18,11 @@ sudo apt update
 # Utilities and misc
 sudo apt install vlc xmonad neovim suckless-tools \
   synaptic mosh calibre fish python-dev python3-dev \
-  python-pip python3-pip gcc g++ autoconf clang \
+  python-pip python3-pip gcc g++ autoconf clang curl \
   cabal-install golang ipython exuberant-ctags tree \
-  gitg silversearcher-ag pylint linux-tools-common screen \
-  python-numpy python-scipy python-matplotlib gnome-session-xmonad
+  gitg silversearcher-ag nim pylint linux-tools-common screen \
+  python-numpy python-scipy python-matplotlib gnome-session-xmonad\
+  boinc-client-opencl boinc-manager
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7
