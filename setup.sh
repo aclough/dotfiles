@@ -52,6 +52,7 @@ cabal install yeganesh
 
 # Rust
 curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
 cargo install racer # For nvim completion
 rustup component add rust-src
 
