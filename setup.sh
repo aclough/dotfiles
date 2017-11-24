@@ -9,25 +9,27 @@ sudo apt-add-repository ppa:fish-shell/release-2
 # Fix for getting Gnome and XMonad playing nicely together post 14.04
 sudo apt-add-repository ppa:gekkio/xmonad
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
-#sudo apt-add-repository ppa:oibaf/graphics-drivers
+#sudo add-apt-repository ppa:paulo-miguel-dias/pkppa
 # Neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
 
 sudo apt update
 
 # Utilities and misc
-sudo apt install vlc xmonad neovim suckless-tools \
-  synaptic mosh calibre fish python-dev python3-dev \
-  python-pip python3-pip gcc g++ autoconf clang curl \
-  cabal-install golang ipython exuberant-ctags tree \
-  gitg silversearcher-ag nim pylint linux-tools-common screen \
-  python-numpy python-scipy python-matplotlib gnome-session-xmonad\
-  boinc-client-opencl boinc-manager
+sudo apt install\
+  fish mosh calibre vlc neovim curl suckless-tools screen\
+  xmonad gnome-session-xmonad cabal-install \
+  gcc g++ autoconf clang golang\
+  ipython python-dev python3-dev python-pip python3-pip pylint\
+  python-numpy python-scipy python-matplotlib\
+  exuberant-ctags tree gitg linux-tools-common\
+  boinc-client-opencl boinc-manager\
+  mesa-vulkan-drivers
 
 # Get Chrome
-sudo apt-get install libxss1 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
+#sudo apt-get install libxss1 libappindicator1 libindicator7
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo dpkg -i google-chrome*.deb
 
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
