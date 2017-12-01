@@ -17,6 +17,9 @@ set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH $RIGHTPICK_EXTERNALS/lib $RIGHTPICK/buil
 set -x PKG_CONFIG_PATH $PKG_CONFIG_PATH $RIGHTPICK_EXTERNALS/lib/pkgconfig
 set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_DEPLOY/lib/python2.7/dist-packages
 
+set -x _ASSET_TEST_KNOWLEDGE /home/aclough/outside_knowledge
+set -x _RHR_KNOWLEDGE_SELF_NAME rhr-rp-004
+
 set -x LCM_JAR $RIGHTPICK/build/depoy/share/java/lcmtypes_RightPick.jar
 set -x CLASSPATH $CLASSPATH $LCM_JAR
 
