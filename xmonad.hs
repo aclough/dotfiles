@@ -29,7 +29,7 @@ main = xmonad $ gnomeConfig
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = myManageHook <+> manageHook gnomeConfig
     , layoutHook = myLayout
-    , logHook = updatePointer (Relative 0.1 0.1) >> logHook gnomeConfig >> ewmhDesktopsLogHook
+    , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
     , startupHook = ewmhDesktopsStartup >> startupHook gnomeConfig
     }
