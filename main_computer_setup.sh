@@ -1,11 +1,5 @@
 cd ~
-scp packages.righthandrobotics.com:/srv/packages/server-install.deb .
-./rhr/pick/software/server-install.sh
-
 sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps
-
-# We need to add an interface for local UDP multicast
-sudo echo "post-up route add -net 224.0.0.0/4 dev lo" >> /etc/network/interfaces
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
