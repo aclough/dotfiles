@@ -54,7 +54,7 @@ end
 
 # Ubuntu .bashrc compatibility
 function ll
-    ls -alF
+    ls -alFt
 end
 
 function la

@@ -1,7 +1,7 @@
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 [color]
-  ui = true
+    ui = true
 [user]
 	email = andrew.clough@gmail.com
 [push]
@@ -10,8 +10,9 @@
     st = status
     br = branch
     co = checkout
+    c = commit
     ci = commit -a
     ca = commit --amend
     cia = commit -a --amend
 [help]
-	autocorrect = 20
+	autocorrect = 5
