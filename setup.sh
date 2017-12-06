@@ -24,7 +24,7 @@ sudo apt install\
   python-numpy python-scipy python-matplotlib\
   exuberant-ctags tree gitg linux-tools-common\
   boinc-client-opencl boinc-manager\
-  mesa-vulkan-drivers
+  mesa-vulkan-drivers clinfo opencl-headers mesa-common-dev
 
 # Get Chrome
 #sudo apt-get install libxss1 libappindicator1 libindicator7
