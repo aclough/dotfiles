@@ -1,5 +1,7 @@
 cd ~
-sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps
+sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps tree \
+    lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
+    python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
@@ -30,7 +32,6 @@ sudo pip install sympy
 
 unlink ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh
-ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickb_plus.sh
 
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh

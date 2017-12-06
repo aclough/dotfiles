@@ -4,15 +4,11 @@
 
 # Utilities and misc
 
-sudo apt install vim-gtk fish cmake gcc-avr arduino python-gpgme python-pip \
-  lua5.2 gcc g++ autoconf clang ipython exuberant-ctags tree gitg \
-  silversearcher-ag pylint linux-tools-common gdb python2.7-dbg python-dumbnet \
-  python-dev python-numpy python-scipy python-matplotlib
+sudo apt install vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint
+  
 
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
-
-sudo pip install snakeviz
 
 # I'll want it later
 mkdir ~/.local/bin ~/rhr
@@ -31,6 +27,7 @@ ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
+ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickb_plus.sh
 
 # Install all my vim addons
 mkdir ~/.vim
