@@ -30,6 +30,7 @@ Plug 'zah/nimrod.vim'
 "Plug 'baabelfish/nvim-nim' Need to get nimble installed first
 Plug 'rust-lang/rust.vim'
 Plug 'dag/vim-fish'
+Plug 'w0rp/ale'
 
 " All nvim related completors
 Plug 'roxma/nvim-completion-manager'
@@ -45,8 +46,6 @@ set termguicolors
 colorscheme jellybeans
 "Use dark grey indent color for indentLine
 let g:indentLine_color_term = 238
-" For fugative
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = {
