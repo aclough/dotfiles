@@ -74,6 +74,7 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
+ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
 
 # Nvim options
