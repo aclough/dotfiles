@@ -29,6 +29,8 @@ ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickb_plus.sh
 
+ls -s ~/dotfiles/theanorc ~/.theanorc
+
 # Install all my vim addons
 mkdir ~/.vim
 cd ~/.vim

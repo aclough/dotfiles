@@ -1,0 +1,22 @@
+[global]
+floatX = float64
+device=cuda0
+#device=gpu
+#device=cpu
+#force_device=True
+mode=FAST_RUN
+linker=c
+#optimizer_excluding=more_mem
+optimizer=fast_compile
+exception_verbosity=high
+
+[nvcc]
+fastmath=True
+flags= -arch=sm_50 -D_FORCE_INLINES
+#flags=-D_FORCE_INLINES
+
+[gpuarray]
+preallocate=0.8
+
+[dnn]
+enabled=False
