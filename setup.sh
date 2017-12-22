@@ -30,6 +30,7 @@ ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickb_plus.sh
 
 ln -s ~/dotfiles/theanorc ~/.theanorc
+ln -s ~/rhr/firmware/attiny841.conf ~/.avrduderc
 
 # Install all my vim addons
 mkdir ~/.vim
