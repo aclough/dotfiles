@@ -1,21 +1,12 @@
 set -x EDITOR vim
 
-set PATH $PATH $HOME/.local/bin
 set fish_git_dirty_color red
 
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
-set -x RIGHTPICK $HOME/rhr/pick
-set -x RIGHTPICK_ROOT $RIGHTPICK
-set -x RIGHTPICK_DEPLOY $RIGHTPICK/build/deploy
-set -x RIGHTPICK_EXTERNALS $RIGHTPICK/build/externals
-set -x RIGHTPICK_CONFIG $RIGHTPICK_DEPLOY/config
-set -x RIGHTPICK_RESULTS $RIGHTPICK/results
-set -x RIGHTPICK_SW $RIGHTPICK/software
-set -x PATH $PATH $RIGHTPICK_DEPLOY/bin
-set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH $RIGHTPICK_EXTERNALS/lib $RIGHTPICK/build/deploy/lib
-set -x PKG_CONFIG_PATH $PKG_CONFIG_PATH $RIGHTPICK_EXTERNALS/lib/pkgconfig
-set -x PYTHONPATH $PYTHONPATH $RIGHTPICK_DEPLOY/lib/python2.7/dist-packages
+source ~/rhr/pick/build/deploy/env.fish
+
+set PATH $PATH $HOME/.local/bin
 
 #set -x _ASSET_TEST_KNOWLEDGE /home/aclough/outside_knowledge
 #set -x _RHR_KNOWLEDGE_SELF_NAME rhr-rp-004
@@ -79,3 +70,4 @@ end
 function l
     ls -CF
 end
+
