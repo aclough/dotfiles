@@ -4,7 +4,7 @@ set fish_git_dirty_color red
 
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
-source ~/rhr/pick/build/deploy/env.fish
+source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
 set PATH $PATH $HOME/.local/bin
 
