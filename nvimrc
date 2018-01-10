@@ -24,6 +24,7 @@ Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
+Plug 'majutsushi/tagbar'       " Tag management
 
 " Basic langauge stuff
 Plug 'zah/nimrod.vim'
@@ -78,6 +79,8 @@ map Q @@
 
 "Make Y behave like other captials
 map Y y$
+
+map <Leader>t :TagbarToggle<CR>
 
 "Reload vimrc when its saved
 au BufWritePost .nvimrc so ~/.nvimrc
