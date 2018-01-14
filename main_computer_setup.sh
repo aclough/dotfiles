@@ -1,7 +1,8 @@
 cd ~
 sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps tree \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
-    python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet
+    python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
+    python3-nose
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
@@ -29,6 +30,8 @@ cabal install yeganesh
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
 sudo pip install sympy
+# For Neovim
+pip3 install --user neovim jedi mistune psutil setproctitle
 
 unlink ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh

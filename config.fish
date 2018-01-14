@@ -55,7 +55,7 @@ function a
 end
 
 function v
-    vim -p $argv
+    nvim $argv
 end
 
 # Ubuntu .bashrc compatibility
