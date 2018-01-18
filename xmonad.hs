@@ -11,18 +11,24 @@ import qualified XMonad.StackSet as W
 myWorkspaces = map show [1..9]
 
 myManageHook = composeAll [
-          (resource   =? "Do")  --> doIgnore
-        , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
+         (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
         ]
 
-myLayout = avoidStruts (layouts)
-  where
-    layouts =  tiled ||| Full
-    tiled = Tall 3 0.03 (-0.5)
 
 myHandleEventHook = hintsEventHook
 
 myTerminal = "gnome-terminal"
+
+myLayout = tiled ||| Full
+  where
+    -- default tiling algorithm partitions the screen into two panes
+    tiled   = Tall nmaster delta ratio
+    -- The default number of windows in the master pane
+    nmaster = 1
+    -- Default proportion of screen occupied by master pane
+    ratio   = 1/2
+    -- Percent of screen to increment by when resizing panes
+    delta   = 3/100
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
@@ -37,7 +43,7 @@ main = xmonad $ gnomeConfig
         [ ("M-c", kill)
         , ("M-n", spawn "yeganesh_run.sh")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "googe-chrome --force-device-scale-factor=1.4")
+        , ("M-b", spawn "google-chrome --force-device-scale-factor=1.4")
         , ("M-v", spawn "nautilus ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
