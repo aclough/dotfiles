@@ -19,7 +19,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
 Plug 'bling/vim-airline'       " Status line that gives the mode
 Plug 'luochen1990/rainbow'     " Rainbow parens
-Plug 'cyansprite/Extract'      " Provides yank ring
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'kien/ctrlp.vim'          " Search functionality
@@ -28,15 +27,15 @@ Plug 'majutsushi/tagbar'       " Tag management
 
 " Basic langauge stuff
 Plug 'zah/nimrod.vim'
-"Plug 'baabelfish/nvim-nim' Need to get nimble installed first
+Plug 'baabelfish/nvim-nim'
 Plug 'rust-lang/rust.vim'
 Plug 'dag/vim-fish'
 Plug 'w0rp/ale'
 
 " All nvim related completors
 Plug 'roxma/nvim-completion-manager'
-Plug 'racer-rust/vim-racer'
-Plug 'roxma/nvim-cm-racer'
+Plug 'racer-rust/vim-racer'       " Rust autocomplete
+Plug 'roxma/nvim-cm-racer'        " Integrate race wth NCM
 Plug 'neovimhaskell/haskell-vim'  " Do I need to configure nvim for this more?
 call plug#end()
 
