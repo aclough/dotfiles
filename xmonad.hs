@@ -37,7 +37,7 @@ main = xmonad $ gnomeConfig
         [ ("M-c", kill)
         , ("M-n", spawn "yeganesh_run.sh")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "firefox")
+        , ("M-b", spawn "googe-chrome --force-device-scale-factor=1.4")
         , ("M-v", spawn "nautilus ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)

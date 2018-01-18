@@ -27,9 +27,9 @@ sudo apt install\
   mesa-vulkan-drivers clinfo opencl-headers mesa-common-dev
 
 # Get Chrome
-#sudo apt-get install libxss1 libappindicator1 libindicator7
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#sudo dpkg -i google-chrome*.deb
+sudo apt-get install libxss1 libappindicator1 libindicator7 gconf-service libgconf-2-4
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
