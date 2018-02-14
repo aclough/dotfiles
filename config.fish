@@ -7,6 +7,7 @@ set -x _JAVA_AWT_WM_NONREPARENTING 1
 source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
 set PATH $PATH $HOME/.local/bin
+set -x GOPATH /home/aclough/workspace/go
 
 #set -x _ASSET_TEST_KNOWLEDGE /home/aclough/outside_knowledge
 #set -x _RHR_KNOWLEDGE_SELF_NAME rhr-rp-004
