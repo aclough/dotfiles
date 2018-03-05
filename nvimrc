@@ -18,7 +18,6 @@ let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
-Plug 'luochen1990/rainbow'     " Rainbow parens
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'bling/vim-airline'       " Status line that gives the mode
 Plug 'tpope/vim-fugitive'      " Git integration
