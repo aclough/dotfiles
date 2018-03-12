@@ -3,6 +3,7 @@
 set -e
 
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_chappie.json
+rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_distrisort.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_eyehand.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_hbc.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_julia.json
