@@ -14,9 +14,7 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 mkdir ~/.local/bin ~/rhr
 
 # Get the code
-cd ~/rhr
-git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpick.git pick
-git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git firmware
+git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpick.git ~/rhr/pick
 
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it

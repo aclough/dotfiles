@@ -33,6 +33,9 @@ sudo pip install sympy
 # For Neovim
 pip3 install --user neovim jedi mistune psutil setproctitle
 
+# Get more code
+git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git ~/rhr/firmware
+
 unlink ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh
 
