@@ -56,7 +56,11 @@ function a
 end
 
 function v
-    nvim $argv
+    if type -p nvim
+        nvim $argv
+    else
+        vim $argv
+    end
 end
 
 # Ubuntu .bashrc compatibility
