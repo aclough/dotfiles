@@ -7,7 +7,7 @@ set -x _JAVA_AWT_WM_NONREPARENTING 1
 source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
 set PATH $PATH $HOME/.local/bin
-set -x PYTHONPATH "/home/aclough/.local/lib/python3.5/site-packages:/home/aclough/rhr/pick/build/deploy/lib/python3.5/site-packages"
+set -x PYTHONPATH "/home/aclough/.local/lib/python3.5/site-packages"
 set -x GOPATH /home/aclough/workspace/go
 
 #set -x _ASSET_TEST_KNOWLEDGE /home/aclough/outside_knowledge
