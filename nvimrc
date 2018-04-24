@@ -90,6 +90,9 @@ au BufWritePost nvimrc so ~/dotfiles/nvimrc
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 au BufRead,BufNewFile *.lcm set filetype=java
 
+"Use smaller stops for c++
+autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
 
