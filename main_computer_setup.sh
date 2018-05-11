@@ -2,7 +2,7 @@ cd ~
 sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps tree \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
-    python3-nose
+    python3-nose ubuntu-desktop
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
