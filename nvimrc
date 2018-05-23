@@ -19,8 +19,10 @@ let mapleader = " "
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
-Plug 'bling/vim-airline'       " Status line that gives the mode
+Plug 'itchyny/lightline.vim'   " Lightweight statusline
 Plug 'tpope/vim-fugitive'      " Git integration
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
