@@ -12,18 +12,22 @@ set shiftwidth=4               " use 4 spaces when indented
 set clipboard=unnamed          " Uses system clipboard by default
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
+set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 
 let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
-Plug 'bling/vim-airline'       " Status line that gives the mode
+Plug 'itchyny/lightline.vim'   " Status line that gives the mode
 Plug 'luochen1990/rainbow'     " Rainbow parens
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
-Plug 'majutsushi/tagbar'       " Tag management
+Plug 'jeetsukumaran/vim-buffergator' " Buffer management
+Plug 'dag/vim-fish'            " Fish bindings
 
 " Basic langauge stuff
 Plug 'zah/nimrod.vim'
@@ -58,6 +62,13 @@ let g:ctrlp_user_command = {
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+let g:ale_linters = {
+    \'python':['pyflakes'],
+    \'cpp':['clang-check'],
+    \'rust': ['cargo'],
+    \'haskell': ['stack-build', 'hlint'],
+    \}
+
 " Easymotion
 map H <Plug>(easymotion-b)
 map L <Plug>(easymotion-w)
@@ -82,7 +93,7 @@ map Y y$
 map <Leader>t :TagbarToggle<CR>
 
 "Reload vimrc when its saved
-au BufWritePost .nvimrc so ~/.nvimrc
+au BufWritePost nvimrc so ~/dotfiles/nvimrc
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
