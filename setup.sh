@@ -10,6 +10,8 @@ sudo apt-add-repository ppa:fish-shell/release-2
 sudo apt-add-repository ppa:gekkio/xmonad
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo add-apt-repository ppa:paulo-miguel-dias/pkppa
+# Sway
+# sudo add-apt-repository ppa:s.noack/ppa
 # Neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
 
