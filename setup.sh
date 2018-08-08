@@ -17,7 +17,7 @@ sudo apt update
 
 # Utilities and misc
 sudo apt install\
-  fish mosh calibre vlc neovim curl suckless-tools screen\
+  fish mosh calibre vlc neovim curl suckless-tools screen fonts-firacode \
   xmonad gnome-session-xmonad cabal-install \
   gcc g++ autoconf clang golang\
   ipython python-dev python3-dev python-pip python3-pip pylint\
