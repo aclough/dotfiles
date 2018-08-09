@@ -77,3 +77,7 @@ function l
     ls -CF
 end
 
+function i
+    ipython
+end
+

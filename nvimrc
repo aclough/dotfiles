@@ -17,7 +17,7 @@ set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'nanotech/jellybeans.vim' " Colorscheme
+Plug 'nanotech/jellybeans.vim' " Color scheme
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'itchyny/lightline.vim'   " Lightweight statusline
 Plug 'tpope/vim-fugitive'      " Git integration
@@ -37,7 +37,7 @@ call plug#end()
 set background = "dark"
 set termguicolors
 colorscheme jellybeans
-"Use dark grey indent color for indentLine
+"Use dark gray indent color for indentLine
 let g:indentLine_color_term = 238
 
 let g:ctrlp_map = '<c-p>'
@@ -74,13 +74,13 @@ map <C-K> <C-W>W
 map <C-H> gT
 map <C-L> gt
 
-"Resist the tempation to guess in the face of ambiguous tags
+"Resist the temptation to guess in the face of ambiguous tags
 map <C-]> g<C-]>
 
 "Map Q to repeat the last recorded macro
 map Q @@
 
-"Make Y behave like other captials
+"Make Y behave like other capitals
 map Y y$
 
 map <Leader>t :TagbarToggle<CR>
@@ -93,7 +93,7 @@ au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
 au BufRead,BufNewFile *.lcm set filetype=java
 
 "Use smaller stops for c++
-autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2
+"autocmd Filetype cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 "Select most recent paste (e.g. for indenting python)
 nnoremap gp `[v`]
