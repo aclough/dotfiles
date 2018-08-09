@@ -26,7 +26,10 @@ Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
+
+" Language specific
 Plug 'dag/vim-fish'            " Fish bindings
+Plug 'rust-lang/rust.vim'
 Plug 'w0rp/ale'
 
 Plug 'roxma/nvim-completion-manager'
