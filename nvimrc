@@ -27,10 +27,9 @@ Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
-Plug 'dag/vim-fish'            " Fish bindings
 
 " Basic langauge stuff
-Plug 'zah/nimrod.vim'
+Plug 'dag/vim-fish'
 Plug 'baabelfish/nvim-nim'
 Plug 'rust-lang/rust.vim'
 Plug 'dag/vim-fish'
