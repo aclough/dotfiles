@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+unset PYTHONPATH
 
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_chappie.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_distrisort.json
