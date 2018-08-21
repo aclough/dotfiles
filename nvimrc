@@ -21,7 +21,6 @@ Plug 'nanotech/jellybeans.vim' " Color scheme
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'itchyny/lightline.vim'   " Lightweight statusline
 Plug 'tpope/vim-fugitive'      " Git integration
-Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
