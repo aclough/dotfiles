@@ -81,3 +81,7 @@ function i
     ipython
 end
 
+function alert
+    paplay /usr/share/sounds/freedesktop/stereo/complete.oga
+end
+
