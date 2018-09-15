@@ -14,6 +14,8 @@ sudo apt-add-repository ppa:gekkio/xmonad
 # sudo add-apt-repository ppa:s.noack/ppa
 # Neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
+# Revert nautilus to previous default search
+sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 sudo apt update
 
