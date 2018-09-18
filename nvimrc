@@ -19,20 +19,24 @@ let mapleader = " "
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Color scheme
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
-Plug 'itchyny/lightline.vim'   " Lightweight statusline
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 
+Plug 'w0rp/ale'
+Plug 'itchyny/lightline.vim'   " Lightweight statusline
+Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
+
 " Language specific
 Plug 'dag/vim-fish'            " Fish bindings
-Plug 'rust-lang/rust.vim'
-Plug 'w0rp/ale'
 
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/ncm-clang'
+" Completion
+Plug 'roxma/nvim-yarp'         " Needed by Ne
+Plug 'ncm2/ncm2'
+Plug 'davidhalter/jedi-vim'
+Plug 'ncm2/ncm2-jedi'
 call plug#end()
 
 " Appearance
@@ -41,6 +45,30 @@ set termguicolors
 colorscheme jellybeans
 "Use dark gray indent color for indentLine
 let g:indentLine_color_term = 238
+
+let g:lightline = {}
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ }
+let g:lightline.component_function = { 'gitbranch': 'fugitive#head' }
+let g:lightline.active = {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch' ],
+      \             ['readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+      \              [ 'filetype' ]]
+      \}
+let g:lightline.colorscheme = 'jellybeans'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = {
@@ -55,9 +83,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:ale_linters = {
     \'python':['pyflakes'],
-    \'cpp':['clang-check'],
-    \'rust': ['cargo'],
-    \'haskell': ['stack-build', 'hlint'],
     \}
 
 " mappings for replace in yank ring
@@ -86,9 +111,6 @@ map Q @@
 map Y y$
 
 map <Leader>t :TagbarToggle<CR>
-
-"Reload vimrc when its saved
-au BufWritePost nvimrc so ~/dotfiles/nvimrc
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
