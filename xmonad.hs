@@ -10,10 +10,7 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
-myManageHook = composeAll [
-          (resource   =? "Do")  --> doIgnore
-        , (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
-        ]
+myManageHook = manageHook gnomeConfig
 
 myLayout = avoidStruts (layouts)
   where
