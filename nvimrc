@@ -43,8 +43,6 @@ call plug#end()
 set background = "dark"
 set termguicolors
 colorscheme jellybeans
-"Use dark gray indent color for indentLine
-let g:indentLine_color_term = 238
 
 let g:lightline = {}
 let g:lightline.component_expand = {
