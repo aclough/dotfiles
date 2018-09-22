@@ -19,10 +19,8 @@ let mapleader = " "
 call plug#begin('~/.config/nvim/plugged')
 Plug 'nanotech/jellybeans.vim' " Colorscheme
 Plug 'itchyny/lightline.vim'   " Status line that gives the mode
-Plug 'luochen1990/rainbow'     " Rainbow parens
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
-Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
@@ -32,13 +30,14 @@ Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 Plug 'dag/vim-fish'
 Plug 'baabelfish/nvim-nim'
 Plug 'rust-lang/rust.vim'
-Plug 'dag/vim-fish'
 Plug 'w0rp/ale'
 
 " All nvim related completors
-Plug 'roxma/nvim-completion-manager'
-Plug 'racer-rust/vim-racer'       " Rust autocomplete
-Plug 'roxma/nvim-cm-racer'        " Integrate race wth NCM
+Plug 'roxma/nvim-yarp'            " Remote plugin framework
+Plug 'ncm2/ncm2'                  " Completion manager
+Plug 'ncm2/ncm2-pyclang'          " Clang completion
+Plug 'ncm2/ncm2-racer'            " Rust completion
+Plug 'ncm2/ncm2-jedi'             " Python completion
 Plug 'neovimhaskell/haskell-vim'  " Do I need to configure nvim for this more?
 call plug#end()
 
