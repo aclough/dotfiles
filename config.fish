@@ -8,7 +8,6 @@ source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
 set PATH $PATH $HOME/.local/bin
 set -x PYTHONPATH "/home/aclough/.local/lib/python3.5/site-packages"
-set -x GOPATH /home/aclough/workspace/go
 
 #set -x _ASSET_TEST_KNOWLEDGE /home/aclough/outside_knowledge
 #set -x _RHR_KNOWLEDGE_SELF_NAME rhr-rp-004
@@ -38,10 +37,6 @@ end
 
 function sscreen
     mosh --server='athrun mosh_project mosh-server' aclough@mass-toolpike.mit.edu --  screen -R -x -d
-end
-
-function mastyle
-    astyle -s2 -a -S -H -U -c -n --lineend=linux $argv
 end
 
 function fn
