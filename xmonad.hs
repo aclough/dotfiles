@@ -10,9 +10,7 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
-myManageHook = composeAll [
-         (className  =? "Gnome-panel" <&&> title =? "Run Application") --> doFloat
-        ]
+myManageHook = manageHook gnomeConfig
 
 
 myHandleEventHook = hintsEventHook
