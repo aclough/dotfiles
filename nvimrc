@@ -33,7 +33,7 @@ Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 Plug 'dag/vim-fish'            " Fish bindings
 
 " Completion
-Plug 'roxma/nvim-yarp'         " Needed by Ne
+Plug 'roxma/nvim-yarp'         " Needed by Ncm
 Plug 'ncm2/ncm2'
 Plug 'davidhalter/jedi-vim'
 Plug 'ncm2/ncm2-jedi'

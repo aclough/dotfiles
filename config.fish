@@ -53,9 +53,9 @@ end
 
 function v
     if type -p nvim
-        nvim $argv
+        nvim -p $argv
     else
-        vim $argv
+        vim -p $argv
     end
 end
 
