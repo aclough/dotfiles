@@ -30,7 +30,7 @@ Plug 'itchyny/lightline.vim'   " Lightweight statusline
 Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 
 " Language specific
-Plug 'dag/vim-fish'            " Fish bindings
+Plug 'sheerun/vim-polyglot'
 
 " Completion
 Plug 'roxma/nvim-yarp'         " Needed by Ncm
