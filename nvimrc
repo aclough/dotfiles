@@ -27,9 +27,7 @@ Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 
 " Basic langauge stuff
-Plug 'dag/vim-fish'
-Plug 'baabelfish/nvim-nim'
-Plug 'rust-lang/rust.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 
 " All nvim related completors
