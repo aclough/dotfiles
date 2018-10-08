@@ -12,7 +12,7 @@ myWorkspaces = map show [1..9]
 
 myHandleEventHook = hintsEventHook
 
-myTerminal = "gnome-terminal"
+myTerminal = "qterminal -e fish"
 
 myLayout = tiled ||| Full
   where
