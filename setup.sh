@@ -35,6 +35,9 @@ sudo apt-get install libxss1 libappindicator1 libindicator7 gconf-service libgco
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
+# Get Kitty
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
 
@@ -80,6 +83,8 @@ ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
+ln -s ~/.local/kitty.app/bin/kitty ~/bin/kitty
+ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 # Nvim options
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
