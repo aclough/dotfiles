@@ -32,11 +32,15 @@ Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 " Language specific
 Plug 'sheerun/vim-polyglot'
 
-" Completion
-Plug 'roxma/nvim-yarp'         " Needed by Ncm
-Plug 'ncm2/ncm2'
+" Async autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Completion from other opened files
+Plug 'Shougo/context_filetype.vim'
+" Python autocompletion
+Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+" Just to add the python go-to-definition and similar features, autocompletion
+" from this plugin is disabled
 Plug 'davidhalter/jedi-vim'
-Plug 'ncm2/ncm2-jedi'
 call plug#end()
 
 " Appearance
@@ -82,6 +86,42 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ale_linters = {
     \'python':['pyflakes'],
     \}
+
+" Completion section
+" needed so deoplete can auto select the first suggestion
+set completeopt+=noinsert
+" comment this line to enable autocompletion preview window
+" (displays documentation related to the selected completion option)
+set completeopt-=preview
+
+" autocompletion of files and commands behaves like shell
+" (complete only the common part, list the options that match)
+set wildmode=list:longest
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+" complete with words from any opened file
+let g:context_filetype#same_filetypes = {}
+let g:context_filetype#same_filetypes._ = '_'
+
+" Jedi-vim ------------------------------
+
+" Disable autocompletion (using deoplete instead)
+let g:jedi#completions_enabled = 0
+
+" All these mappings work only for python code:
+" Go to definition
+let g:jedi#goto_command = '<c-]>'
+" Find ocurrences
+let g:jedi#usages_command = ',o'
+" Find assignments
+let g:jedi#goto_assignments_command = ',a'
+" Go to definition in new tab
+nmap ,D :tab split<CR>:call jedi#goto()<CR>
+
+autocmd Filetype rs let g:autofmt_autosave = 1
 
 " mappings for replace in yank ring
 nmap <silent> s <Plug>(extract-replace-normal)
