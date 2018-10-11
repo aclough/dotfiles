@@ -14,7 +14,7 @@ myHandleEventHook = hintsEventHook
 
 myTerminal = "gnome-terminal"
 
-myLayout = tiled ||| Full
+myLayout = avoidStruts (tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
