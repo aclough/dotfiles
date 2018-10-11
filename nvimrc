@@ -32,15 +32,13 @@ Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 " Language specific
 Plug 'sheerun/vim-polyglot'
 
-" Async autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Completion from other opened files
-Plug 'Shougo/context_filetype.vim'
-" Python autocompletion
-Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
-" Just to add the python go-to-definition and similar features, autocompletion
-" from this plugin is disabled
+" Completion
+Plug 'roxma/nvim-yarp'         " Needed by Ncm
+Plug 'ncm2/ncm2'
 Plug 'davidhalter/jedi-vim'
+Plug 'ncm2/ncm2-jedi'
+"Plug 'ncm2/ncm2-bufword'       " Words in buffer
+"Plug 'ncm2/ncm2-path'          " Filepath
 call plug#end()
 
 " Appearance
@@ -87,29 +85,23 @@ let g:ale_linters = {
     \'python':['pyflakes'],
     \}
 
-" Completion section
-" needed so deoplete can auto select the first suggestion
-set completeopt+=noinsert
-" comment this line to enable autocompletion preview window
-" (displays documentation related to the selected completion option)
-set completeopt-=preview
+" NCM2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+" make it fast
+let ncm2#popup_delay = 5
+let ncm2#complete_length = [[1, 1]]
+" Use new fuzzy based matches
+let g:ncm2#matcher = 'substrfuzzy'
 
-" autocompletion of files and commands behaves like shell
-" (complete only the common part, list the options that match)
-set wildmode=list:longest
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
-" complete with words from any opened file
-let g:context_filetype#same_filetypes = {}
-let g:context_filetype#same_filetypes._ = '_'
-
-" Jedi-vim ------------------------------
-
-" Disable autocompletion (using deoplete instead)
-let g:jedi#completions_enabled = 0
+" Jedi config
+let g:jedi#auto_initialization = 1
+let g:jedi#completions_enabled = 0 " Use ncm2 instead
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = ""
+let g:jedi#show_call_signatures = "1"
 
 " All these mappings work only for python code:
 " Go to definition
@@ -120,12 +112,6 @@ let g:jedi#usages_command = ',o'
 let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
-
-autocmd Filetype rs let g:autofmt_autosave = 1
-
-" mappings for replace in yank ring
-nmap <silent> s <Plug>(extract-replace-normal)
-vmap <silent> s <Plug>(extract-replace-visual)
 
 " Easymotion
 map H <Plug>(easymotion-b)
