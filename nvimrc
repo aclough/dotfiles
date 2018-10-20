@@ -65,6 +65,8 @@ let g:ale_linters = {
     \'haskell': ['stack-build', 'hlint'],
     \}
 
+tnoremap <Esc> <C-\><C-n>
+
 " Easymotion
 map H <Plug>(easymotion-b)
 map L <Plug>(easymotion-w)
