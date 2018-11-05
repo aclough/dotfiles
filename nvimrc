@@ -25,6 +25,7 @@ Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
+Plug 'bfredl/nvim-miniyank' " Yank ring
 
 " Basic langauge stuff
 Plug 'sheerun/vim-polyglot'
@@ -64,6 +65,11 @@ let g:ale_linters = {
     \'rust': ['cargo'],
     \'haskell': ['stack-build', 'hlint'],
     \}
+
+" Yank ring
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+map <leader>p <Plug>(miniyank-cycle)
 
 tnoremap <Esc> <C-\><C-n>
 
