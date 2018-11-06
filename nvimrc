@@ -113,6 +113,8 @@ let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
+tnoremap <Esc> <C-\><C-n>
+
 " Easymotion
 map H <Plug>(easymotion-b)
 map L <Plug>(easymotion-w)
