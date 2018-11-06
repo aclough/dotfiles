@@ -24,6 +24,7 @@ Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
+Plug 'bfredl/nvim-miniyank' " Yank ring
 
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'   " Lightweight statusline
@@ -112,6 +113,11 @@ let g:jedi#usages_command = ',o'
 let g:jedi#goto_assignments_command = ',a'
 " Go to definition in new tab
 nmap ,D :tab split<CR>:call jedi#goto()<CR>
+
+" Yank ring
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+map <leader>p <Plug>(miniyank-cycle)
 
 tnoremap <Esc> <C-\><C-n>
 
