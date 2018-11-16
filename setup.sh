@@ -22,7 +22,7 @@ sudo apt update
 # Utilities and misc
 sudo apt install\
   fish mosh calibre vlc neovim curl suckless-tools screen fonts-firacode \
-  xmonad gnome-session-xmonad cabal-install \
+  xmonad gnome-session-xmonad cabal-install kitty \
   gcc g++ autoconf clang golang\
   ipython python-dev python3-dev python-pip python3-pip pylint\
   python-numpy python-scipy python-matplotlib\
@@ -80,6 +80,9 @@ ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
+ln -s ~/dotfiles/kitty.conf .config/kitty/kitty.conf
+
+
 
 # Nvim options
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
