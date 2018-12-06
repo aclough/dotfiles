@@ -10,8 +10,6 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
-myManageHook = manageHook gnomeConfig
-
 myLayout = avoidStruts (layouts)
   where
     layouts =  tiled ||| Full
@@ -24,7 +22,7 @@ myTerminal = "gnome-terminal"
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
-    , manageHook = myManageHook <+> manageHook gnomeConfig
+    , manageHook = manageHook gnomeConfig
     , layoutHook = myLayout
     , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
