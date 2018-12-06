@@ -59,6 +59,14 @@ function v
     end
 end
 
+function vdiff
+    if type -p nvim
+        nvim -d $argv
+    else
+        vimdiff $argv
+    end
+end
+
 # Ubuntu .bashrc compatibility
 function ll
     ls -alFt
