@@ -6,6 +6,7 @@ unset PYTHONPATH
 rm -f /home/aclough/rhr/pick/build/deploy/config/arm_links.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/default_planner_parameters.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_abba_full_pallet.json
+rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_abba_full_pallet_ur10e.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_abba_half_pallet.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_bishop.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_bender.json
