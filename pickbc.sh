@@ -15,6 +15,7 @@ rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_distrisort.js
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_eyehand.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_hbc.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_julia.json
+rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_johnny5.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_mission_control_tests.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_mission_control_zone_mapping_test.json
 rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_modex_abba.json
