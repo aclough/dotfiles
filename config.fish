@@ -36,7 +36,7 @@ function fish_prompt
 end
 
 function sscreen
-    mosh --server='athrun mosh_project mosh-server' aclough@mass-toolpike.mit.edu --  screen -R -x -d
+    mosh --server='athrun mosh_project mosh-server' aclough@musical-notes.mit.edu --  screen -R -x -d
 end
 
 function fn
