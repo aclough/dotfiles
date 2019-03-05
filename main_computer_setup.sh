@@ -1,5 +1,6 @@
 cd ~
 sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps tree \
+    vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
     python3-nose ubuntu-desktop
@@ -39,11 +40,13 @@ git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git ~/rh
 unlink ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh
 
+unlink ~/.local/bin/mupdate.sh
+ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
+
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 ln -s ~/dotfiles/yeganesh_run.sh ~/.local/bin/yeganesh_run.sh
-ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/cam.sh ~/.local/bin/cam.sh

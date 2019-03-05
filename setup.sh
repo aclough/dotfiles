@@ -4,9 +4,6 @@
 
 # Utilities and misc
 
-sudo apt install vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint
-  
-
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 
@@ -27,6 +24,7 @@ ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickbc.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickbc_plus.sh
+ln -s ~/dotfiles/remote_mupdate.sh ~/.local/bin/mupdate.sh
 
 ln -s ~/dotfiles/theanorc ~/.theanorc
 
