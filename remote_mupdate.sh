@@ -8,7 +8,7 @@ sudo apt-get dist-upgrade
 
 cd ~/.vim/vim-pathogen
 git pull
-cd ~/.vim/bundle/ctrlp.vim.git
+cd ~/.vim/bundle/ctrlp.vim
 git pull
 cd ~/.vim/bundle/vim-buffergator
 git pull
