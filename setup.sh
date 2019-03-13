@@ -4,16 +4,12 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
-# To make the fish version I get more up to date
-sudo apt-add-repository ppa:fish-shell/release-2
 # Fix for getting Gnome and XMonad playing nicely together post 14.04
 sudo apt-add-repository ppa:gekkio/xmonad
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo add-apt-repository ppa:paulo-miguel-dias/pkppa
 # Sway
 # sudo add-apt-repository ppa:s.noack/ppa
-# Neovim
-sudo add-apt-repository ppa:neovim-ppa/stable
 # Revert nautilus to previous default search
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
