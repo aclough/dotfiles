@@ -60,6 +60,7 @@ rustup component add rust-src
 
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+nimble install nimpy
 
 # I'll want it later
 mkdir -p ~/bin
