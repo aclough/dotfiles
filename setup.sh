@@ -28,6 +28,8 @@ ln -s ~/dotfiles/remote_mupdate.sh ~/.local/bin/mupdate.sh
 
 ln -s ~/dotfiles/theanorc ~/.theanorc
 
+fish -c fish_update_completions
+
 # Install all my vim addons
 mkdir ~/.vim
 cd ~/.vim
