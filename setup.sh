@@ -79,7 +79,7 @@ ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
 ln -s ~/dotfiles/kitty.conf .config/kitty/kitty.conf
 
-
+fish_update_completions
 
 # Nvim options
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
