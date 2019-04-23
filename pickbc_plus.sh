@@ -5,8 +5,6 @@ unset PYTHONPATH
 
 sudo service memcachedb restart
 
-rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_*
-
 cd ~/rhr/pick
 rm -r build/*
 
