@@ -77,7 +77,7 @@ ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
-ln -s ~/dotfiles/kitty.conf .config/kitty/kitty.conf
+ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 fish_update_completions
 
