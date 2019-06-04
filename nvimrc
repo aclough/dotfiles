@@ -10,6 +10,7 @@ set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
 set clipboard=unnamed          " Uses system clipboard by default
+set nomodeline                 " Security hole
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs

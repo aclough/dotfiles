@@ -37,6 +37,7 @@ filetype plugin on             " autocomplete
 filetype plugin indent on
 set complete-=i                " Autocomplete via tags
 set autoread                   " Mirror non-local changes
+set nomodeline                 " Security hole
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
