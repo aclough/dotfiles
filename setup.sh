@@ -18,7 +18,7 @@ sudo apt update
 # Utilities and misc
 sudo apt install\
   fish mosh calibre vlc neovim curl suckless-tools screen fonts-firacode \
-  xmonad gnome-session-xmonad cabal-install kitty \
+  xmonad gnome-session-xmonad rofi kitty \
   gcc g++ autoconf clang golang\
   ipython python-dev python3-dev python-pip python3-pip pylint\
   python-numpy python-scipy python-matplotlib\
@@ -48,10 +48,6 @@ sudo dpkg-reconfigure libdvd-pkg
 pip install scikit-learn jedi
 pip3 install neovim
 
-# Haskell
-cabal update
-cabal install yeganesh
-
 # Rust
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
@@ -76,7 +72,6 @@ ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
-ln -s ~/dotfiles/yeganesh_run.sh ~/bin/yeganesh_run.sh
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 fish_update_completions
