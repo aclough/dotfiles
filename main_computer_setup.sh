@@ -1,9 +1,9 @@
 cd ~
-sudo apt install vlc xmonad suckless-tools mosh synaptic cabal-install rhr-rightpick-deps tree \
+sudo apt install vlc xmonad suckless-tools mosh synaptic rhr-rightpick-deps tree \
     vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
-    python3-nose ubuntu-desktop
+    python3-nose ubuntu-desktop rofi
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
@@ -21,12 +21,6 @@ sudo apt-get remove unity-lens-shopping
 sudo apt-add-repository ppa:gekkio/xmonad
 sudo apt-get update
 sudo apt-get install gnome-session-xmonad
-
-# Get cabal going
-cabal update
-
-# Install yeganesh
-cabal install yeganesh
 
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen

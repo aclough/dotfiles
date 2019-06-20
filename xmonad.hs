@@ -30,7 +30,7 @@ main = xmonad $ gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
-        , ("M-n", spawn "yeganesh_run.sh")
+        , ("M-n", spawn "rofi -show run")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
