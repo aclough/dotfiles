@@ -44,5 +44,4 @@ ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
-ln -s ~/dotfiles/yeganesh_run.sh ~/.local/bin/yeganesh_run.sh
 ln -s ~/dotfiles/cam.sh ~/.local/bin/cam.sh
