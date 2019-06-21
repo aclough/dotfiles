@@ -30,7 +30,7 @@ main = xmonad $ gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
-        , ("M-n", spawn "rofi -show run")
+        , ("M-n", spawn "rofi -bg '#93a1a1' -show run")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus ~")
