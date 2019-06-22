@@ -74,6 +74,9 @@ ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
+mkdir ~/.config/rofi
+echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
+
 fish_update_completions
 
 # Nvim options
