@@ -72,12 +72,13 @@ ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
+mkdir ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 mkdir ~/.config/rofi
 echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
 
-fish_update_completions
+fish -c fish_update_completions
 
 # Nvim options
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
