@@ -6,6 +6,7 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.LayoutHints
+import XMonad.Layout.ThreeColumns
 import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
@@ -14,10 +15,12 @@ myHandleEventHook = hintsEventHook
 
 myTerminal = "kitty"
 
-myLayout = avoidStruts (tiled ||| Full)
+myLayout = avoidStruts (tiled ||| Full ||| three)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
+    -- three column otherwise like tiled
+    three   = ThreeCol nmaster delta ratio
     -- The default number of windows in the master pane
     nmaster = 1
     -- Default proportion of screen occupied by master pane
