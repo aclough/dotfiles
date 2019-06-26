@@ -6,18 +6,21 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.LayoutHints
+import XMonad.Layout.ThreeColumns
 import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
 myLayout = avoidStruts (layouts)
   where
-    layouts =  tiled ||| Full
+    layouts =  tiled ||| Full ||| three
     tiled = Tall 1 (3/100) (1/2)
+    three = ThreeCol 1 (3/100) (1/2)
 
 myHandleEventHook = hintsEventHook
 
 myTerminal = "gnome-terminal"
+
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
