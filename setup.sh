@@ -26,8 +26,6 @@ ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickbc.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickbc_plus.sh
 ln -s ~/dotfiles/remote_mupdate.sh ~/.local/bin/mupdate.sh
 
-ln -s ~/dotfiles/theanorc ~/.theanorc
-
 fish -c fish_update_completions
 
 # Install all my vim addons
