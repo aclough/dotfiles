@@ -1,4 +1,8 @@
-set -x EDITOR vim
+if type -p nvim
+    set -x EDITOR nvim
+else
+    set -x EDITOR vim
+end
 
 set fish_git_dirty_color red
 
