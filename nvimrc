@@ -14,6 +14,7 @@ set nomodeline
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
+set spell spelllang=en_us
 
 let mapleader = " "
 
@@ -28,7 +29,7 @@ Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 Plug 'bfredl/nvim-miniyank' " Yank ring
 
-" Basic langauge stuff
+" Basic language stuff
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 
@@ -46,7 +47,7 @@ call plug#end()
 set background = "dark"
 set termguicolors
 colorscheme jellybeans
-"Use dark grey indent color for indentLine
+"Use dark gray indent color for indentLine
 let g:indentLine_color_term = 238
 
 let g:ctrlp_map = '<c-p>'
@@ -86,13 +87,13 @@ map <C-K> <C-W>W
 map <C-H> gT
 map <C-L> gt
 
-"Resist the tempation to guess in the face of ambiguous tags
+"Resist the temptation to guess in the face of ambiguous tags
 map <C-]> g<C-]>
 
 "Map Q to repeat the last recorded macro
 map Q @@
 
-"Make Y behave like other captials
+"Make Y behave like other capitals
 map Y y$
 
 map <Leader>t :TagbarToggle<CR>
