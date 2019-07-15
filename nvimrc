@@ -14,6 +14,7 @@ set nomodeline                 " Security hole
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
+set spell spelllang=en_us
 
 let mapleader = " "
 
