@@ -63,6 +63,14 @@ function v
     end
 end
 
+function vd
+    if type -p nvim
+        nvim -d $argv
+    else
+        vimdiff  $argv
+    end
+end
+
 function vdiff
     if type -p nvim
         nvim -d $argv
