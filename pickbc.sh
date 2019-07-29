@@ -10,5 +10,5 @@ rm -f /home/aclough/rhr/pick/build/deploy/config/default_*
 ~/rhr/pick/software/build.sh build
 if [ ! $1 ]
 then
-    ~/rhr/pick/software/build.sh runtests
+    pickt.sh
 fi
