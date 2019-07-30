@@ -14,7 +14,8 @@ set nomodeline                 " Security hole
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
-set spell spelllang=en_us
+"set spell spelllang=en_us
+set nospell
 
 let mapleader = " "
 
@@ -26,7 +27,8 @@ Plug 'mhinz/vim-startify'
 Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
-Plug 'bfredl/nvim-miniyank' " Yank ring
+Plug 'bfredl/nvim-miniyank'    " Yank ring
+Plug 'kamykn/spelunker.vim'    " Better spell check
 
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'   " Lightweight statusline
@@ -126,6 +128,8 @@ tnoremap <Esc> <C-\><C-n>
 " Easymotion
 map H <Plug>(easymotion-b)
 map L <Plug>(easymotion-w)
+
+" Spelunker
 
 "For easier split window management
 map <C-J> <C-w>w
