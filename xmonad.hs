@@ -6,7 +6,6 @@ import XMonad.Util.EZConfig
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.LayoutHints
-import XMonad.Layout.ThreeColumns
 import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
@@ -15,12 +14,10 @@ myHandleEventHook = hintsEventHook
 
 myTerminal = "kitty"
 
-myLayout = avoidStruts (tiled ||| Full ||| three)
+myLayout = avoidStruts (tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
     tiled   = Tall nmaster delta ratio
-    -- three column otherwise like tiled
-    three   = ThreeCol nmaster delta ratio
     -- The default number of windows in the master pane
     nmaster = 1
     -- Default proportion of screen occupied by master pane
@@ -41,7 +38,7 @@ main = xmonad $ gnomeConfig
         [ ("M-c", kill)
         , ("M-n", spawn "rofi -show run")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "google-chrome --force-device-scale-factor=1.3")
+        , ("M-b", spawn "google-chrome --force-device-scale-factor=1.5")
         , ("M-v", spawn "nautilus ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
