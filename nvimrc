@@ -14,7 +14,7 @@ set nomodeline
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
-set spell spelllang=en_us
+"set spell spelllang=en_us
 
 let mapleader = " "
 
@@ -28,6 +28,7 @@ Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
 Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 Plug 'bfredl/nvim-miniyank' " Yank ring
+Plug 'kamykn/spelunker.vim'
 
 " Basic language stuff
 Plug 'sheerun/vim-polyglot'
