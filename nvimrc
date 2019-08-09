@@ -90,6 +90,9 @@ let g:ale_linters = {
     \'python':['pyflakes'],
     \}
 
+" Only check displayed words
+let g:spelunker_check_type = 2
+
 " NCM2
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
