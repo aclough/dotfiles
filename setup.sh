@@ -23,6 +23,7 @@ sudo apt install\
   ipython python-dev python3-dev python-pip python3-pip pylint\
   python-numpy python-scipy python-matplotlib\
   exuberant-ctags tree gitg linux-tools-common\
+  fzf ripgrep\
   boinc-client-opencl boinc-manager\
   mesa-vulkan-drivers clinfo opencl-headers mesa-common-dev
 
