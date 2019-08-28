@@ -32,7 +32,6 @@ set nofoldenable               " But don't start with things folded
 set laststatus=2               " Always use status lines
 set encoding=utf-8             " Needed for powerline, but also a good idea
 set nrformats-=octal           " Interpret 08 as 8
-set clipboard=unnamed          " Uses system clipboard by default
 filetype plugin on             " autocomplete
 filetype plugin indent on
 set complete-=i                " Autocomplete via tags
