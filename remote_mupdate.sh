@@ -26,3 +26,4 @@ cd ~/.vim/bundle/rainbow
 git pull
 cd ~/.vim/bundle/syntastic
 git pull
+fish -c fish_update_completions
