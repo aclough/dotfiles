@@ -1,2 +1,2 @@
 #!/bin/sh
-fetch-classifier --latest --category all --deploy local
+fetch-model --latest --category all --tag default-640x480 --deploy local
