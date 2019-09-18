@@ -1,3 +1,3 @@
 #!/bin/bash
 unset PYTHONPATH
-~/rhr/pick/software/build.sh runtests -j2
+~/rhr/pick/software/build.sh runtests -j4
