@@ -79,6 +79,10 @@ function vdiff
     end
 end
 
+function rp
+    cd ~/rhr/pick
+end
+
 # Ubuntu .bashrc compatibility
 function ll
     ls -alFt
