@@ -24,11 +24,12 @@ Plug 'itchyny/lightline.vim'   " Status line that gives the mode
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'mhinz/vim-startify'
-Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
-Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 Plug 'bfredl/nvim-miniyank' " Yank ring
 Plug 'kamykn/spelunker.vim'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf.vim'
 
 " Basic language stuff
 Plug 'sheerun/vim-polyglot'
@@ -51,6 +52,18 @@ colorscheme jellybeans
 "Use dark gray indent color for indentLine
 let g:indentLine_color_term = 238
 
+" fzf
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
+nmap <Leader>l :BLines<CR>
+nmap <Leader>L :Lines<CR>
+nmap <Leader>' :Marks<CR>
+nmap <Leader>/ :Rg<Space>
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = {
     \ 'types': {
@@ -60,7 +73,8 @@ let g:ctrlp_user_command = {
     \ 'fallback': 'find %s -type f'
     \ }
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" Only check displayed words
+let g:spelunker_check_type = 2
 
 let g:ale_linters = {
     \'python':['pyflakes'],
@@ -96,8 +110,6 @@ map Q @@
 
 "Make Y behave like other capitals
 map Y y$
-
-map <Leader>t :TagbarToggle<CR>
 
 "Reload vimrc when its saved
 au BufWritePost nvimrc so ~/dotfiles/nvimrc
