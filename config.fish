@@ -33,9 +33,9 @@ end
 
 function fish_prompt
          if test -n "$SSH_CLIENT"
-             set fish_color_cwd normal
-         else
              set fish_color_cwd A62
+         else
+             set fish_color_cwd normal
          end
          
          if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
