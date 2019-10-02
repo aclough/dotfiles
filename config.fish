@@ -32,7 +32,7 @@ function parse_git_branch
 end
 
 function fish_prompt
-         if test -d /results
+         if test -d /results/reports
              set fish_color_cwd A62
          end
          
