@@ -32,7 +32,9 @@ function parse_git_branch
 end
 
 function fish_prompt
-         if test -d /results/reports
+         if test -n "$SSH_CLIENT"
+             set fish_color_cwd normal
+         else
              set fish_color_cwd A62
          end
          
