@@ -32,6 +32,10 @@ function parse_git_branch
 end
 
 function fish_prompt
+         if test -d /results
+             set fish_color_cwd A62
+         end
+         
          if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
             printf '%s@%s %s%s%s $ '  (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
          else
