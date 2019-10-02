@@ -12,7 +12,7 @@ myWorkspaces = map show [1..9]
 
 myLayout = avoidStruts (layouts)
   where
-    layouts =  tiled ||| Full
+    layouts =  tiled ||| Full ||| Mirror tiled
     tiled = Tall 1 (3/100) (1/2)
 
 myHandleEventHook = hintsEventHook
@@ -43,9 +43,12 @@ main = xmonad $ gnomeConfig
         , ("M-M1-i", shiftToNext >> nextWS)
         , ("M-M1-j", windows W.swapDown)
         , ("M-M1-k", windows W.swapUp)
-        , ("M-y", nextScreen)
-        , ("M-S-y", shiftNextScreen)
-        , ("M-M1-y", shiftNextScreen >> nextScreen)
+        , ("M-o", nextScreen)
+        , ("M-S-o", shiftNextScreen)
+        , ("M-M1-o", shiftNextScreen >> nextScreen)
+        , ("M-y", prevScreen)
+        , ("M-S-y", shiftPrevScreen)
+        , ("M-M1-y", shiftPrevScreen >> prevScreen)
         ]
         -- Shifts a window to specifiec workspace, and sets that workspace in screen
         ++ [ ("M-M1-" ++ tag, (windows $ W.shift tag) >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
