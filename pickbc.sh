@@ -3,11 +3,7 @@
 set -e
 unset PYTHONPATH
 
-rm -f /home/aclough/rhr/pick/build/deploy/config/arm_links.json
-rm -f /home/aclough/rhr/pick/build/deploy/config/coordinate_frames_*
-rm -f /home/aclough/rhr/pick/build/deploy/config/suction_cups.json
-rm -f /home/aclough/rhr/pick/build/deploy/config/*planner_parameters.json
-rm -f /home/aclough/rhr/pick/build/deploy/config/default_*
+find /home/aclough/rhr/pick/build/deploy/config -type f -delete
 ~/rhr/pick/software/build.sh build
 if [ ! $1 ]
 then
