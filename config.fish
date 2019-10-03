@@ -110,3 +110,6 @@ function alert
     paplay /usr/share/sounds/freedesktop/stereo/complete.oga
 end
 
+function b
+    bounce $argv -t fish
+end
