@@ -16,3 +16,5 @@
     cia = commit -a --amend
 [help]
     autocorrect = 5
+[diff]
+	noprefix = true
