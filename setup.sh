@@ -16,16 +16,9 @@ sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo apt update
 
 # Utilities and misc
-sudo apt install\
-  fish mosh calibre vlc neovim curl suckless-tools screen fonts-firacode \
-  xmonad gnome-session-xmonad rofi kitty \
-  gcc g++ autoconf clang golang\
-  ipython python-dev python3-dev python-pip python3-pip pylint\
-  python-numpy python-scipy python-matplotlib\
-  exuberant-ctags tree gitg linux-tools-common\
-  fzf ripgrep\
-  boinc-client-opencl boinc-manager\
-  mesa-vulkan-drivers clinfo opencl-headers mesa-common-dev
+sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
+    gnome-session-xmonad rofi kitty pylint gitg linux-tools-common fzf ripgrep\
+  
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7 gconf-service libgconf-2-4
