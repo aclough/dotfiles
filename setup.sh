@@ -16,8 +16,9 @@ sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo apt update
 
 # Utilities and misc
-sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
-    gnome-session-xmonad rofi kitty pylint gitg linux-tools-common fzf ripgrep\
+sudo apt install fish mosh vlc neovim fonts-firacode xmonad
+python-pip python3-pip gnome-session-xmonad rofi kitty pylint\
+gitg linux-tools-common fzf ripgrep curl\
   
 
 # Get Chrome
