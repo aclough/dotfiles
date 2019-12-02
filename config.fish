@@ -6,18 +6,9 @@ end
 
 set fish_git_dirty_color red
 
-set -x _JAVA_AWT_WM_NONREPARENTING 1
-
 source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
 set PATH $PATH $HOME/.local/bin
-#set -x PYTHONPATH "/home/aclough/.local/lib/python3.5/site-packages"
-
-#set -x _ASSET_TEST_KNOWLEDGE /home/aclough/outside_knowledge
-#set -x _RHR_KNOWLEDGE_SELF_NAME rhr-rp-004
-
-set -x LCM_JAR $RIGHTPICK/build/depoy/share/java/lcmtypes_RightPick.jar
-set -x CLASSPATH $CLASSPATH $LCM_JAR
 
 function parse_git_dirty
          git diff --quiet HEAD ^&-
