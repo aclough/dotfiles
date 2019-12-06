@@ -30,6 +30,8 @@ pip3 install --user neovim jedi mistune psutil setproctitle
 
 fish -c fish_update_completions
 
+bounce --inject-ssh-config
+
 # Get more code
 git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git ~/rhr/firmware
 
