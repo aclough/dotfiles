@@ -30,7 +30,7 @@ sudo dpkg -i google-chrome*.deb
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
 
 # Swap caplocks and escape
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
