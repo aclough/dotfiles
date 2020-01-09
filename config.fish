@@ -80,6 +80,10 @@ function rp
     cd ~/rhr/pick
 end
 
+function rs
+    rsync -aurv $argv
+end
+
 # Ubuntu .bashrc compatibility
 function ll
     ls -alFt
