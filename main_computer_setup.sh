@@ -22,6 +22,9 @@ sudo apt-add-repository ppa:gekkio/xmonad
 sudo apt-get update
 sudo apt-get install gnome-session-xmonad
 
+curl https://sh.rustup.rs -sSf | s
+cargo install tldr
+
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
 sudo pip install sympy

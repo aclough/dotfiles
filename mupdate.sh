@@ -6,4 +6,5 @@ git pull
 sudo apt update
 sudo apt-get dist-upgrade
 fish -c fish_update_completions
+tldr --update
 nvim -c PlugUpdate

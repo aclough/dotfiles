@@ -8,7 +8,7 @@ set fish_git_dirty_color red
 
 source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
-set PATH $PATH $HOME/.local/bin
+set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin
 
 function parse_git_dirty
          git diff --quiet HEAD ^&-
