@@ -47,7 +47,6 @@ pip3 install neovim
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 cargo install racer # For nvim completion
-cargo install ripgrep # fast search
 rustup component add rust-src
 
 # Nim
