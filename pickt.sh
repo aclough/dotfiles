@@ -1,5 +1,4 @@
 #!/bin/bash
-unset PYTHONPATH
 if [ ! $1 ]
 then
     echo "Running with default 4 threads"

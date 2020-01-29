@@ -17,6 +17,8 @@ set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 "set spell spelllang=en_us
 set nospell
 
+autocmd BufWritePre * :%s/\s\+$//e
+
 let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')

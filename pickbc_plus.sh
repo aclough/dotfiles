@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-unset PYTHONPATH
 
 sudo service memcachedb restart
 
