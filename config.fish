@@ -29,7 +29,7 @@ function fish_prompt
          else
              set fish_color_cwd green
          end
-         
+
          if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
             printf '%s@%s %s%s%s $ '  (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
          else
@@ -50,7 +50,7 @@ function fng
 end
 
 function a
-    ag --color-line-number '0;32' --color-match '0;31' --color-path '0;33' $argv
+    rg -S --colors 'path:fg:yellow' $argv
 end
 
 function v
@@ -87,7 +87,7 @@ end
 
 # Ubuntu .bashrc compatibility
 function ll
-    ls -alFt
+    ls -alFth
 end
 
 function la
@@ -116,4 +116,8 @@ end
 
 function epoch_to_date
     date -ud @$argv
+end
+
+function s
+    ssh rhr@$argv
 end
