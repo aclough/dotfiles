@@ -46,9 +46,13 @@ pip3 install neovim
 # Rust
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
-cargo install racer # For nvim completion
-cargo install tealdeer # for tldr pages
 rustup component add rust-src
+
+cargo install racer # For nvim completion
+
+sudo apt install libssl-dev
+cargo install tealdeer # for tldr pages
+tldr --update
 
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
