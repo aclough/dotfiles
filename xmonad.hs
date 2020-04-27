@@ -27,7 +27,7 @@ main = xmonad $ gnomeConfig
     , layoutHook = myLayout
     , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
-    , startupHook = ewmhDesktopsStartup >> startupHook gnomeConfig
+    , startupHook = startupHook gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
