@@ -45,7 +45,7 @@ function fng
 end
 
 function a
-    ag --color-line-number '0;32' --color-match '0;31' --color-path '0;33' $argv
+    rg -S --colors 'path:fg:yellow' $argv
 end
 
 function v
