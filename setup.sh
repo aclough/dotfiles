@@ -56,6 +56,7 @@ tldr --update
 
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+PATH=/home/aclough/.nimble/bin:$PATH
 nimble install nimpy
 
 # I'll want it later
@@ -65,6 +66,7 @@ mkdir -p ~/bin
 ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
+xmonad --recompile
 mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
