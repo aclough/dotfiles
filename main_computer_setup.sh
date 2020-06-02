@@ -35,6 +35,8 @@ fish -c fish_update_completions
 
 bounce --inject-ssh-config
 
+sudo update-alternatives --config x-terminal-emulator
+
 # Get more code
 git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git ~/rhr/firmware
 
