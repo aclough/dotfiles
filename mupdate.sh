@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+set -e
 cd ~/dotfiles
 git pull
 sudo apt update
 sudo apt upgrade
 rustup update
 choosenim update stable
-fish fish_update_completions
+fish -c fish_update_completions
+tldr --update
 nvim -c PlugUpdate
