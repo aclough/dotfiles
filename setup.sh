@@ -17,7 +17,7 @@ sudo apt update
 
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
-python-pip python3-pip gnome-session-xmonad rofi kitty pylint\
+python3-pip gnome-session-xmonad rofi kitty pylint \
 gitg linux-tools-common fzf ripgrep curl variety
   
 
@@ -40,7 +40,6 @@ sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
 # Python
-pip install scikit-learn jedi
 pip3 install neovim
 
 # Rust
