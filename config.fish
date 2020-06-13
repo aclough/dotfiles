@@ -52,6 +52,10 @@ function v
     nvim -p $argv
 end
 
+function vd
+    nvim -d $argv
+end
+
 # Ubuntu .bashrc compatibility
 function ll
     ls -alFt
@@ -67,4 +71,20 @@ end
 
 function zc
     zig build-exe --library c --c-source $argv
+end
+
+function rs
+    rsync -aurv $argv
+end
+
+function alert
+    paplay /usr/share/sounds/freedesktop/stereo/complete.oga
+end
+
+function date_to_epoch
+    date -d "$argv" +%s
+end
+
+function epoch_to_date
+    date -ud @$argv
 end
