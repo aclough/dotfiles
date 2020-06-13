@@ -10,15 +10,20 @@ import qualified XMonad.StackSet as W
 
 myWorkspaces = map show [1..9]
 
-myLayout = avoidStruts (layouts)
-  where
-    layouts =  tiled ||| Full
-    tiled = Tall 1 (3/100) (1/2)
-
 myHandleEventHook = hintsEventHook
 
 myTerminal = "gnome-terminal"
 
+myLayout = avoidStruts (tiled ||| Full)
+  where
+    -- default tiling algorithm partitions the screen into two panes
+    tiled   = Tall nmaster delta ratio
+    -- The default number of windows in the master pane
+    nmaster = 1
+    -- Default proportion of screen occupied by master pane
+    ratio   = 1/2
+    -- Percent of screen to increment by when resizing panes
+    delta   = 3/100
 
 main = xmonad $ gnomeConfig
     { terminal = myTerminal
@@ -43,12 +48,9 @@ main = xmonad $ gnomeConfig
         , ("M-M1-i", shiftToNext >> nextWS)
         , ("M-M1-j", windows W.swapDown)
         , ("M-M1-k", windows W.swapUp)
-        , ("M-o", nextScreen)
-        , ("M-S-o", shiftNextScreen)
-        , ("M-M1-o", shiftNextScreen >> nextScreen)
-        , ("M-y", prevScreen)
-        , ("M-S-y", shiftPrevScreen)
-        , ("M-M1-y", shiftPrevScreen >> prevScreen)
+        , ("M-y", nextScreen)
+        , ("M-S-y", shiftNextScreen)
+        , ("M-M1-y", shiftNextScreen >> nextScreen)
         ]
         -- Shifts a window to specific workspace, and sets that workspace in screen
         ++ [ ("M-M1-" ++ tag, (windows $ W.shift tag) >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
