@@ -64,3 +64,7 @@ end
 function l
     ls -CF
 end
+
+function zc
+    zig build-exe --library c --c-source $argv
+end

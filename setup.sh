@@ -58,6 +58,9 @@ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 PATH=/home/aclough/.nimble/bin:$PATH
 nimble install nimpy
 
+# Zig
+snap install zig --classic --beta
+
 # I'll want it later
 mkdir -p ~/bin
 
