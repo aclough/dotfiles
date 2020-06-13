@@ -30,9 +30,9 @@ main = xmonad $ gnomeConfig
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = manageHook gnomeConfig
     , layoutHook = myLayout
-    , logHook =  updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
+    , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
-    , startupHook = ewmhDesktopsStartup >> startupHook gnomeConfig
+    , startupHook = startupHook gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
@@ -52,6 +52,6 @@ main = xmonad $ gnomeConfig
         , ("M-S-y", shiftNextScreen)
         , ("M-M1-y", shiftNextScreen >> nextScreen)
         ]
-        -- Shifts a window to specifiec workspace, and sets that workspace in screen
+        -- Shifts a window to specific workspace, and sets that workspace in screen
         ++ [ ("M-M1-" ++ tag, (windows $ W.shift tag) >> (windows $ W.greedyView tag)) | tag <- myWorkspaces ]
     )
