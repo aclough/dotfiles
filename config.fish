@@ -24,10 +24,11 @@ function parse_git_branch
 end
 
 function fish_prompt
+    set_color FB8B00 # Ubunto orange
     if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
-        printf '%s%s%s> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+        printf '%s%s> '  (prompt_pwd) (set_color normal)
     else
-        printf '%s%s%s (%s)> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
+        printf '%s%s (%s)> ' (prompt_pwd) (set_color normal) (parse_git_branch)
     end
 end
 
