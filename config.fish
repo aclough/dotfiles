@@ -24,17 +24,11 @@ function parse_git_branch
 end
 
 function fish_prompt
-         if test -n "$SSH_CLIENT"
-             set fish_color_cwd A62
-         else
-             set fish_color_cwd green
-         end
-
-         if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
-            printf '%s@%s %s%s%s $ '  (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
-         else
-            printf '%s@%s %s%s%s (%s) $ ' (whoami) (hostname|cut -d . -f 1) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
-         end
+    if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
+        printf '%s%s%s> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+    else
+        printf '%s%s%s (%s)> ' (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
+    end
 end
 
 function sscreen
@@ -103,5 +97,5 @@ function epoch_to_date
 end
 
 function s
-    ssh rhr@$argv
+    ssh rhr@$argv -t fish
 end
