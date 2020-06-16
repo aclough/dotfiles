@@ -24,12 +24,20 @@ function parse_git_branch
 end
 
 function fish_prompt
-    set_color FB8B00 # Ubunto orange
-    if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
-        printf '%s%s> '  (prompt_pwd) (set_color normal)
-    else
-        printf '%s%s (%s)> ' (prompt_pwd) (set_color normal) (parse_git_branch)
+    if test -n "$SSH_TTY"
+        echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
     end
+    if test $status -ne 0
+        set_color red
+    else
+        set_color FB8B00 # Ubuntu orange
+    end
+    printf '%s' (prompt_pwd)
+    set_color normal
+    if not contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
+        printf ' (%s)' (parse_git_branch)
+    end
+    echo -n '> '
 end
 
 function sscreen
