@@ -18,8 +18,9 @@ sudo apt update
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
 python3-pip gnome-session-xmonad rofi kitty pylint \
-gitg linux-tools-common fzf ripgrep curl variety
+gitg linux-tools-common fzf ripgrep curl variety calibre
   
+snap install monolith # A way of saving webpages
 
 # Get Chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7 gconf-service libgconf-2-4
