@@ -18,7 +18,8 @@ sudo apt update
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
 python3-pip gnome-session-xmonad rofi kitty pylint \
-gitg linux-tools-common fzf ripgrep curl variety calibre
+gitg linux-tools-common fzf ripgrep curl variety calibre \
+pyflakes clangd
   
 snap install monolith # A way of saving webpages
 
@@ -42,11 +43,13 @@ sudo dpkg-reconfigure libdvd-pkg
 
 # Python
 pip3 install neovim
+pip3 install python-language-server
+
 
 # Rust
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
-rustup component add rust-src
+rustup component add rust-src rls rust-analysis
 
 cargo install racer # For nvim completion
 
@@ -57,7 +60,9 @@ tldr --update
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 PATH=/home/aclough/.nimble/bin:$PATH
+nimble install inim
 nimble install nimpy
+nimble install nimlsp
 
 # Zig
 snap install zig --classic --beta
