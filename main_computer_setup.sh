@@ -12,6 +12,9 @@ sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
+# Don't use touchpad if I've got another pointer availabile
+gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mous
+
 sudo addgroup aclough dialout
 
 # Remove the shopping lense
@@ -52,3 +55,8 @@ ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 mkdir ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 ln -s ~/dotfiles/cam.sh ~/.local/bin/cam.sh
+
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s ~/dotfiles/nvimrc ~/.config/nvim/init.vim
+nvim -c PlugInstall
