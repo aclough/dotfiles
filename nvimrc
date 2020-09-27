@@ -25,8 +25,9 @@ Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'mhinz/vim-startify'
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
-Plug 'bfredl/nvim-miniyank' " Yank ring
-Plug 'kamykn/spelunker.vim'
+Plug 'bfredl/nvim-miniyank'    " Yank ring
+Plug 'kamykn/spelunker.vim'    " Spell check
+Plug 'wellle/targets.vim'      " More text objects, make () work like ''
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/fzf.vim'
@@ -34,16 +35,8 @@ Plug 'junegunn/fzf.vim'
 " Basic language stuff
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-
-" All nvim related completors
-Plug 'roxma/nvim-yarp'            " Remote plugin framework
-Plug 'ncm2/ncm2'                  " Completion manager
-Plug 'ncm2/ncm2-pyclang'          " Clang completion
-Plug 'ncm2/ncm2-racer'            " Rust completion
-Plug 'ncm2/ncm2-jedi'             " Python completion
-Plug 'neovimhaskell/haskell-vim'  " Do I need to configure nvim for this more?
+Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 call plug#end()
-
 
 " Appearance
 set background = "dark"
@@ -64,6 +57,30 @@ nmap <Leader>L :Lines<CR>
 nmap <Leader>' :Marks<CR>
 nmap <Leader>/ :Rg<Space>
 
+let g:lightline = {}
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ }
+let g:lightline.component_function = { 'gitbranch': 'fugitive#head' }
+let g:lightline.active = {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch' ],
+      \             ['readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ],
+      \              [ 'filetype' ]]
+      \}
+let g:lightline.colorscheme = 'jellybeans'
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = {
     \ 'types': {
@@ -79,9 +96,14 @@ let g:spelunker_check_type = 2
 let g:ale_linters = {
     \'python':['pyflakes'],
     \'cpp':['clang-check'],
+    \'go': ['gopls'],
     \'rust': ['cargo'],
+    \'nim': ['nimlsp'],
     \'haskell': ['stack-build', 'hlint'],
     \}
+
+noremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+
 
 " Yank ring
 map p <Plug>(miniyank-autoput)
