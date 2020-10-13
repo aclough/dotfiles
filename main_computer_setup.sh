@@ -13,7 +13,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
 # Don't use touchpad if I've got another pointer availabile
-gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mous
+gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 
 sudo addgroup aclough dialout
 
