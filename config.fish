@@ -102,5 +102,5 @@ function epoch_to_date
 end
 
 function s
-    ssh rhr@$argv -t fish
+    ssh -AM rhr@$argv -t fish
 end
