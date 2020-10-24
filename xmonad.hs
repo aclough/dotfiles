@@ -38,7 +38,7 @@ main = xmonad $ xfceConfig
         [ ("M-c", kill)
         , ("M-n", spawn "rofi -show run")
         , ("M-;", spawn myTerminal)
-        , ("M-b", spawn "google-chrome --force-device-scale-factor=1.7")
+        , ("M-b", spawn "google-chrome --force-device-scale-factor=1.4")
         , ("M-v", spawn "thunar ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
