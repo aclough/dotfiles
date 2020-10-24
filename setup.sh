@@ -31,12 +31,6 @@ sudo apt-get install libxss1 libappindicator1 libindicator7 gconf-service libgco
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
-# Don't use touchpad if I've got another pointer availabile
-synclient TouchpadOff=1
-
-# Swap caplocks and escape
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
-
 # Enable DVDs
 sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
