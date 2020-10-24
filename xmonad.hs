@@ -1,5 +1,5 @@
 import XMonad
-import XMonad.Config.Gnome
+import XMonad.Config.Xfce
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
@@ -25,21 +25,21 @@ myLayout = avoidStruts (tiled ||| Full)
     -- Percent of screen to increment by when resizing panes
     delta   = 3/100
 
-main = xmonad $ gnomeConfig
+main = xmonad $ xfceConfig
     { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
-    , manageHook = manageHook gnomeConfig
+    , manageHook = manageHook xfceConfig
     , layoutHook = myLayout
-    , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
+    , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook xfceConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
-    , startupHook = startupHook gnomeConfig
+    , startupHook = startupHook xfceConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
         , ("M-n", spawn "rofi -show run")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome --force-device-scale-factor=1.7")
-        , ("M-v", spawn "nautilus ~")
+        , ("M-v", spawn "thunar ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)

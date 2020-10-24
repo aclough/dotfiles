@@ -4,22 +4,25 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
-# Fix for getting Gnome and XMonad playing nicely together post 14.04
-sudo apt-add-repository ppa:gekkio/xmonad
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo add-apt-repository ppa:paulo-miguel-dias/pkppa
 # Sway
 # sudo add-apt-repository ppa:s.noack/ppa
-# Revert nautilus to previous default search
-sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
+# Most recent neovim
+sudo add-apt-repository ppa:neovim-ppa/unstable
+
 
 sudo apt update
 
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
-python3-pip gnome-session-xmonad rofi kitty pylint \
+python3-pip rofi kitty pylint \
 gitg linux-tools-common fzf ripgrep curl variety calibre \
 pyflakes clangd
+
+# Auto change to xmonad
+mkdir ~/.config/autostart
+cp ~/dotfiles/autostart.desktop ~/.config/autostart
   
 snap install monolith # A way of saving webpages
 
@@ -29,13 +32,10 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
 # Don't use touchpad if I've got another pointer availabile
-gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
+synclient TouchpadOff=1
 
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
-
-# Remove the shopping lense
-sudo apt-get remove unity-lens-shopping
 
 # Enable DVDs
 sudo apt-get install libdvd-pkg
