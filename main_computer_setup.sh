@@ -5,7 +5,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-add-repository ppa:gekkio/xmonad
 sudo add-apt-repository ppa:x4121/ripgrep
 sudo apt update
-sudo apt install vlc xmonad suckless-tools mosh synaptic tree \
+sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     vim-gtk fish gcc-avr arduino pylint python-pip python3-pip \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
@@ -28,7 +28,7 @@ sudo addgroup aclough dialout
 sudo apt-get remove unity-lens-shopping
 
 curl https://sh.rustup.rs -sSf | sh
-cargo install tldr
+cargo install tealdear
 
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
