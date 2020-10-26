@@ -1,5 +1,5 @@
 #!/bin/sh
-sleep 1
+sleep 2
 synclient TouchpadOff=1
 xmodmap -e "clear lock"
 xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
