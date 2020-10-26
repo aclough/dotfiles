@@ -1,9 +1,12 @@
 cd ~
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-add-repository ppa:gekkio/xmonad
+sudo apt update
 sudo apt install vlc xmonad suckless-tools mosh synaptic rhr-rightpick-deps tree \
     vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
-    python3-nose ubuntu-desktop rofi
+    python3-nose ubuntu-desktop rofi gnome-session-xmonad
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
@@ -20,11 +23,6 @@ sudo addgroup aclough dialout
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
-
-# Fix for getting Gnome and XMonad playing nicely together post 14.04
-sudo apt-add-repository ppa:gekkio/xmonad
-sudo apt-get update
-sudo apt-get install gnome-session-xmonad
 
 curl https://sh.rustup.rs -sSf | s
 cargo install tldr
