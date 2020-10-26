@@ -1,12 +1,13 @@
 cd ~
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-add-repository ppa:gekkio/xmonad
+sudo add-apt-repository ppa:x4121/ripgrep
 sudo apt update
 sudo apt install vlc xmonad suckless-tools mosh synaptic rhr-rightpick-deps tree \
     vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
-    python3-nose ubuntu-desktop rofi gnome-session-xmonad
+    python3-nose ubuntu-desktop rofi gnome-session-xmonad neovim ripgrep python-pip python3-pip
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
@@ -24,12 +25,11 @@ sudo addgroup aclough dialout
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
 
-curl https://sh.rustup.rs -sSf | s
+curl https://sh.rustup.rs -sSf | sh
 cargo install tldr
 
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
-sudo pip install sympy
 # For Neovim
 pip3 install --user neovim jedi mistune psutil setproctitle
 
@@ -39,8 +39,8 @@ bounce --inject-ssh-config
 
 sudo update-alternatives --config x-terminal-emulator
 
-# Get more code
-git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpickfirmware.git ~/rhr/firmware
+git clone git@bitbucket.org:yuli_rhr/rightpick.git
+git clone git@bitbucket.org:yuli_rhr/servermanagement.git
 
 unlink ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh

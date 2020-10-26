@@ -10,10 +10,6 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 # I'll want it later
 mkdir ~/.local/bin ~/rhr
 
-# Get the code
-git clone https://andrewclough@bitbucket.org/yuli_rhr/rightpick.git ~/rhr/pick
-
-
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/screenrc ~/.screenrc
