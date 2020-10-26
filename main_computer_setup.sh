@@ -1,13 +1,15 @@
+set -e
+
 cd ~
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-add-repository ppa:gekkio/xmonad
 sudo add-apt-repository ppa:x4121/ripgrep
 sudo apt update
-sudo apt install vlc xmonad suckless-tools mosh synaptic rhr-rightpick-deps tree \
-    vim-gtk fish gcc-avr arduino python-pip silversearcher-ag pylint \
+sudo apt install vlc xmonad suckless-tools mosh synaptic tree \
+    vim-gtk fish gcc-avr arduino pylint python-pip python3-pip \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
-    python3-nose ubuntu-desktop rofi gnome-session-xmonad neovim ripgrep python-pip python3-pip
+    python3-nose ubuntu-desktop rofi gnome-session-xmonad neovim ripgrep
 
 # A supplamental script for those things that I'm only going to want on my main
 # as opposed to shared work computers
