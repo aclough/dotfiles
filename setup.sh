@@ -71,6 +71,7 @@ ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 xmonad --recompile
 mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
+ln -s ~/dotfiles/variety.conf ~/.config/variety
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
