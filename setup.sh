@@ -8,10 +8,14 @@ set -e
 sudo apt-add-repository ppa:gekkio/xmonad
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 #sudo add-apt-repository ppa:paulo-miguel-dias/pkppa
+# sudo apt-add-repository ppa:oibaf/graphics-drivers
 # Sway
 # sudo add-apt-repository ppa:s.noack/ppa
 # Revert nautilus to previous default search
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
+
+# Neovim unstable
+sudo add-apt-repository ppa:neovim-ppa/unstable
 
 sudo apt update
 
