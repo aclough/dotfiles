@@ -6,6 +6,7 @@ git pull
 sudo apt update
 sudo apt-get dist-upgrade
 clean-laptop-boot-partition
+sudo service memcachedb restart
 # If something has removed the cuda link regenerate it
 if ! test -L /usr/local/cuda; then
     sudo apt install --reinstall cuda-toolkit-10-2
