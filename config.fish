@@ -65,7 +65,7 @@ function rp
 end
 
 function rs
-    rsync -aurv $argv
+    rsync -aurvhP $argv
 end
 
 # Ubuntu .bashrc compatibility
