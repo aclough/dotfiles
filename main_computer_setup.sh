@@ -50,6 +50,7 @@ ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickb.sh
 unlink ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 
+ln -s ~/dotfiles/deploy.sh ~/.local/bin/deploy.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
