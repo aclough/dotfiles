@@ -2,5 +2,8 @@
 
 set -e
 
+pickb.sh
+echo "Built successfully"
+rsync -ralu ~/rhr/pick/build rhr@$1:aclough
 
-rsync --partial ~/rhr/pick/build/deploy rhr@$1:/home/rhr/aclough/build/deploy
+echo "Deploy successful"
