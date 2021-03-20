@@ -7,8 +7,8 @@ set -e
 # Fix for getting Gnome and XMonad playing nicely together post 14.04
 sudo apt-add-repository ppa:gekkio/xmonad
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
-#sudo add-apt-repository ppa:paulo-miguel-dias/pkppa
 # sudo apt-add-repository ppa:oibaf/graphics-drivers
+# sudo add-apt-repository ppa:kisak/kisak-mesa
 # Sway
 # sudo add-apt-repository ppa:s.noack/ppa
 # Revert nautilus to previous default search
