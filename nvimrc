@@ -38,7 +38,7 @@ Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 
 " Language specific
 Plug 'sheerun/vim-polyglot'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 " Appearance

@@ -4,7 +4,7 @@ set fish_git_dirty_color red
 
 source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
-set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin
+set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin $HOME/.fzf/bin
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 function parse_git_dirty
@@ -103,4 +103,8 @@ end
 
 function s
     ssh -AM rhr@$argv -t fish
+end
+
+function gd
+    git diff $argv{^,}
 end

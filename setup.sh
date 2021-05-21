@@ -21,7 +21,7 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     vim-gtk fish gcc-avr arduino pylint python-pip python3-pip \
     lua5.2 g++ autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common python-dumbnet\
-    python3-nose ubuntu-desktop rofi gnome-session-xmonad neovim ripgrep
+    python3-nose ubuntu-desktop rofi gnome-session-xmonad neovim ripgrep maven
 
 # Remove the shopping lense
 sudo apt-get remove unity-lens-shopping
@@ -35,7 +35,7 @@ curl https://sh.rustup.rs -sSf | sh
 cargo install tealdear
 
 # I'll want it later
-mkdir ~/.local/bin ~/rhr
+mkdir ~/.local/bin ~/rhr ~/workspace
 
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
@@ -46,8 +46,15 @@ fish -c fish_update_completions
 
 sudo update-alternatives --config x-terminal-emulator
 
-git clone git@bitbucket.org:yuli_rhr/rightpick.git
+cd ~/rhr
+git clone git@bitbucket.org:yuli_rhr/rightpick.git pick
 git clone git@bitbucket.org:yuli_rhr/servermanagement.git
+
+cd ~/workspace
+git clone https://github.com/swagger-api/swagger-codegen
+cd swagger-codegen
+git checkout v3.0.10
+mvn clean package
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
@@ -60,6 +67,7 @@ ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 ln -s ~/dotfiles/pickbc.sh ~/.local/bin/pickbc.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickbc_plus.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
+ln -s ~/dotfiles/regen-api.sh ~/.local/bin/regen-api.sh
 ln -s ~/dotfiles/deploy.sh ~/.local/bin/deploy.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
