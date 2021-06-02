@@ -11,6 +11,10 @@ sudo apt-add-repository ppa:gekkio/xmonad
 # sudo add-apt-repository ppa:kisak/kisak-mesa
 # Sway
 # sudo add-apt-repository ppa:s.noack/ppa
+# For AMD power management
+# Sadly 20.04 only for now
+# sudo add-apt-repository ppa:slimbook/slimbook
+# sudo apt install slimbookamdcontroller
 # Revert nautilus to previous default search
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
