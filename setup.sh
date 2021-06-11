@@ -4,35 +4,30 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
-# Fix for getting Gnome and XMonad playing nicely together post 14.04
-sudo apt-add-repository ppa:gekkio/xmonad
+# Driver stuff
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 # sudo apt-add-repository ppa:oibaf/graphics-drivers
 # sudo add-apt-repository ppa:kisak/kisak-mesa
-# Sway
-# sudo add-apt-repository ppa:s.noack/ppa
 # For AMD power management
 # Sadly 20.04 only for now
 # sudo add-apt-repository ppa:slimbook/slimbook
 # sudo apt install slimbookamdcontroller
+
+# Desktop
+# Sway
+# sudo add-apt-repository ppa:s.noack/ppa
 # Revert nautilus to previous default search
+# sudo apt install xmonad gnome-session-flashback
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 # Neovim unstable
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
-sudo apt update
-
 # Utilities and misc
-sudo apt install fish mosh vlc neovim fonts-firacode xmonad \
-python3-pip gnome-session-xmonad rofi kitty pylint \
-gitg linux-tools-common fzf ripgrep curl variety calibre \
-pyflakes clangd
-  
-snap install monolith # A way of saving webpages
+sudo apt install fish mosh vlc neovim fonts-firacode python3-pip rofi kitty
+ripgrep curl variety calibre clangd
 
 # Get Chrome
-sudo apt-get install libxss1 libappindicator1 libindicator7 gconf-service libgconf-2-4
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 
@@ -42,9 +37,6 @@ gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-ext
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
-# Remove the shopping lense
-sudo apt-get remove unity-lens-shopping
-
 # Enable DVDs
 sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
@@ -52,7 +44,6 @@ sudo dpkg-reconfigure libdvd-pkg
 # Python
 pip3 install neovim
 pip3 install python-language-server
-
 
 # Rust
 curl https://sh.rustup.rs -sSf | sh
@@ -66,11 +57,9 @@ cargo install tealdeer # for tldr pages
 tldr --update
 
 # Nim
-curl https://nim-lang.org/choosenim/init.sh -sSf | sh
-PATH=/home/aclough/.nimble/bin:$PATH
-nimble install inim
-nimble install nimpy
-nimble install nimlsp
+sudo snap install nim-lang --classic
+sudo snap alias nim-lang.nim nim
+sudo snap alias nim-lang.nimle nimble
 
 # Zig
 snap install zig --classic --beta
@@ -92,7 +81,6 @@ ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 mkdir ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
-
 mkdir ~/.config/rofi
 echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
 
@@ -104,3 +92,5 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 ln -s ~/dotfiles/nvimrc ~/.config/nvim/init.vim
 nvim -c PlugInstall
 
+# Start variety, should prompt for autostart
+variety &
