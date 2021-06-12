@@ -17,7 +17,6 @@ set -e
 # Sway
 # sudo add-apt-repository ppa:s.noack/ppa
 # Revert nautilus to previous default search
-# sudo apt install xmonad gnome-session-flashback
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 # Neovim unstable
@@ -69,9 +68,6 @@ mkdir -p ~/bin
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
-mkdir ~/.xmonad
-ln -s ~/dotfiles/xmonad.hs ~/.xmonad
-xmonad --recompile
 mkdir ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
