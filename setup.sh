@@ -72,6 +72,8 @@ mkdir -p ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 ln -s ~/dotfiles/cam.sh ~/.local/bin/cam.sh
 
+dconf load /org/gnome/terminal/ < gnome-terminal-settings.txt
+
 fish -c fish_update_completions
 
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \

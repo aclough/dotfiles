@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 cd ~/dotfiles
+dconf dump /org/gnome/terminal > gnome-terminal-settings.txt
 git pull
 /srv/package-mirror/mirror_pull
 sudo apt update
