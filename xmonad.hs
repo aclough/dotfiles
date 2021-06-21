@@ -33,6 +33,7 @@ main = xmonad $ gnomeConfig
     , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
     , startupHook = startupHook gnomeConfig
+    , focusedBorderColor = "#cd3255"
     }
     `additionalKeysP`(
         [ ("M-c", kill)
