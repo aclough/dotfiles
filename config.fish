@@ -20,13 +20,10 @@ function parse_git_branch
 end
 
 function fish_prompt
-    if test -n "$SSH_TTY"
-        echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
-    end
     if test $status -ne 0
         set_color red
     else
-        set_color FB8B00 # Ubuntu orange
+        set_color FFB000 # RHR orange
     end
     printf '%s' (prompt_pwd)
     set_color normal
@@ -34,10 +31,6 @@ function fish_prompt
         printf ' (%s)' (parse_git_branch)
     end
     echo -n '> '
-end
-
-function sscreen
-    mosh --server='athrun mosh_project mosh-server' aclough@musical-notes.mit.edu --  screen -R -x -d
 end
 
 function fn
@@ -87,18 +80,6 @@ end
 
 function alert
     paplay /usr/share/sounds/freedesktop/stereo/complete.oga
-end
-
-function b
-    bounce $argv -t fish
-end
-
-function date_to_epoch
-    date -d "$argv" +%s
-end
-
-function epoch_to_date
-    date -ud @$argv
 end
 
 function s
