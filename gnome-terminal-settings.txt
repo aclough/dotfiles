@@ -1,11 +1,13 @@
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-background-color='rgb(8,32,27)'
-login-shell=false
-use-custom-command=true
-use-theme-transparency=false
 foreground-color='rgb(204,204,204)'
+login-shell=false
 custom-command='fish'
+use-custom-command=true
 use-theme-colors=false
+use-theme-transparency=false
+background-color='rgb(8,32,27)'
+scrollbar-policy='never'
+scrollback-lines=8192
 
 [legacy]
 schema-version=uint32 3
