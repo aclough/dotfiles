@@ -33,12 +33,12 @@ main = xmonad $ gnomeConfig
     , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
     , handleEventHook = myHandleEventHook
     , startupHook = startupHook gnomeConfig
-    , focusedBorderColor = "#cd3255"
+    , focusedBorderColor = "#ffb000"
     }
     `additionalKeysP`(
         [ ("M-c", kill)
         -- RHR teal is 32cdaa
-        , ("M-n", spawn "rofi -bg '#0a2922' -hlbg '#196655' -fg '#ffffff'  -show run")
+        , ("M-n", spawn "rofi -bg '#0a2922' -hlbg '#196655' -fg '#ffffff' -show run")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus")

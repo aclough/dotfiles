@@ -23,7 +23,7 @@ function fish_prompt
     if test $status -ne 0
         set_color red
     else
-        set_color FFB000 # RHR orange
+        set_color FFB000 # RHR sunburst
     end
     printf '%s' (prompt_pwd)
     set_color normal

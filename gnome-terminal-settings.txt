@@ -1,5 +1,5 @@
 [legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-foreground-color='rgb(204,204,204)'
+foreground-color='rgb(234,234,234)'
 login-shell=false
 custom-command='fish'
 use-custom-command=true
