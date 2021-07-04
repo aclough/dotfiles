@@ -79,7 +79,8 @@ ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
 mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/rofi
-echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
+ln -s ~/dotfiles/rofi_config ~/.config/rofi/config
+#echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
 
 fish -c fish_update_completions
 
