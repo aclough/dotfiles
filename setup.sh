@@ -36,7 +36,8 @@ sudo dpkg -i google-chrome*.deb
 
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled-on-external-mouse
-
+# Focus follows mouse when not in xmonad
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
@@ -72,17 +73,18 @@ mkdir -p ~/bin
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
-mkdir ~/.config/fish
+mkdir -p ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
-mkdir ~/.config/kitty
+mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
-mkdir ~/.config/rofi
-echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
+mkdir -p ~/.config/rofi
+ln -s ~/dotfiles/rofi_config ~/.config/rofi/config
+#echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" > ~/.config/rofi/config
 
 fish -c fish_update_completions
 
