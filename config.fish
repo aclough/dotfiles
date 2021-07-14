@@ -1,13 +1,12 @@
 set -x EDITOR nvim
 
 set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/.nimble/bin
-set fish_git_dirty_color red
 
 
 function parse_git_dirty
          git diff --quiet HEAD 2>&-
          if test $status = 1
-            echo (set_color $fish_git_dirty_color)"Δ"(set_color normal)
+            echo (set_color red)"Δ"(set_color normal)
          end
 end
 function parse_git_branch
@@ -17,23 +16,17 @@ function parse_git_branch
 end
 
 function fish_prompt
-         if contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
-            printf '%s%s%s> '    (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
-         else
-            printf '%s%s%s (%s)> '   (set_color $fish_color_cwd) (prompt_pwd) (set_color normal) (parse_git_branch)
-         end
-end
-
-function sscreen
-    mosh --server='athrun mosh_project mosh-server' aclough@musical-notes.mit.edu --  screen -R -x -d
-end
-
-function sscreenx
-    mosh --server='athrun mosh_project mosh-server' aclough@musical-notes.mit.edu --  screen -x
-end
-
-function mastyle
-    astyle -s2 -a -S -H -U -c -n --lineend=linux $argv
+    if test $status -ne 0
+        set_color red
+    else
+        set_color FFB000 # RHR sunburst
+    end
+    printf '%s' (prompt_pwd)
+    set_color normal
+    if not contains "no git" (git branch --quiet 2>| awk '/fatal:/ {print "no git"}')
+        printf ' (%s)' (parse_git_branch)
+    end
+    echo -n '> '
 end
 
 function fn
@@ -87,4 +80,8 @@ end
 
 function epoch_to_date
     date -ud @$argv
+end
+
+function gd
+    git diff $argv{^,}
 end
