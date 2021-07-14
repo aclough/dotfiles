@@ -1,16 +1,14 @@
 set -x EDITOR nvim
 
-set fish_git_dirty_color red
-
 source ~/rhr/pick/build/deploy/env.fish > /dev/null
 
-set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin $HOME/.fzf/bin
+set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin $HOME/.fzf/bin /snap/bin
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 function parse_git_dirty
          git diff --quiet HEAD 2>&-
          if test $status = 1
-            echo (set_color $fish_git_dirty_color)"Δ"(set_color normal)
+            echo (set_color red)"Δ"(set_color normal)
          end
 end
 function parse_git_branch
@@ -72,10 +70,6 @@ end
 
 function l
     ls -CF
-end
-
-function i
-    ipython
 end
 
 function alert
