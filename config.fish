@@ -61,15 +61,15 @@ end
 
 # Ubuntu .bashrc compatibility
 function ll
-    ls -alFth
+    ls -alFth $argv
 end
 
 function la
-    ls -A
+    ls -A $argv
 end
 
 function l
-    ls -CF
+    ls -CF $argv
 end
 
 function alert
