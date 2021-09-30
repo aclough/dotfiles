@@ -61,7 +61,7 @@ ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
-ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickbc_plus.sh
+ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickc.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/regen-api.sh ~/.local/bin/regen-api.sh
 ln -s ~/dotfiles/deploy.sh ~/.local/bin/deploy.sh
