@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Variety
+Name=XMonad
 Comment=Replace window manager with xmonad
 Exec=/usr/bin/xmonad --replace
 Icon=variety
