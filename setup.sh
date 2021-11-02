@@ -27,8 +27,8 @@ sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # Utilities and misc
-sudo apt install fish mosh vlc neovim fonts-firacode python3-pip rofi kitty
-ripgrep curl variety calibre clangd
+sudo apt install fish mosh vlc neovim fonts-firacode python3-pip rofi kitty \
+ripgrep curl variety calibre clangd libssl-dev
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -48,17 +48,6 @@ sudo dpkg-reconfigure libdvd-pkg
 # Python
 pip3 install neovim
 pip3 install python-language-server
-
-# Rust
-curl https://sh.rustup.rs -sSf | sh
-source $HOME/.cargo/env
-rustup component add rust-src rls rust-analysis
-
-cargo install racer # For nvim completion
-
-sudo apt install libssl-dev
-cargo install tealdeer # for tldr pages
-tldr --update
 
 # Nim
 sudo snap install nim-lang --classic
