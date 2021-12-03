@@ -39,6 +39,10 @@ function fng
     find -name $argv[1] -print0 2> /dev/null | xargs -0 grep $argv[2]
 end
 
+function p
+    python3 $argv
+end
+
 function a
     rg -S --colors 'path:fg:yellow' $argv
 end
