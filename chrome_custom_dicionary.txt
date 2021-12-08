@@ -28,18 +28,23 @@ chiplets
 concientiousness
 configurability
 coronavirus
+customizable
 decrement
+deduplicating
 device
 ecologies
 erectus
+ethicists
 eukaryotes
 eukaryotic
 explicitly
+fomites
 heterozygosity
 incentivized
 infeasibility
 intelligences
 jeopardizing
+judgements
 latencies
 lense
 lethality
@@ -71,8 +76,10 @@ stereotypically
 takktile
 terraform
 terraformed
+tradeoffs
 transmissibility
 unsplittable
 unsurprised
 unusably
-checksum_v1 = 0ecaab28f0ca1734054ac1eb51b33275
+virally
+checksum_v1 = c4b5664a9825bfecbab13137c3ec0d26
