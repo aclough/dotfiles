@@ -12,7 +12,6 @@ sudo service memcachedb restart
 if ! test -L /usr/local/cuda; then
     sudo apt install --reinstall cuda-toolkit-10-2
 fi
-bounce --inject-ssh-config
 fish -c "source ~/rhr/pick/build/deploy/env.fish; fish_update_completions"
 tldr --update
 nvim -c PlugUpdate
