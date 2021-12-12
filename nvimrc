@@ -5,7 +5,6 @@ set showmatch
 set ignorecase                 " Normally ignore case when searching
 set smartcase                  " Do The Right Thing with case when searching
 set lazyredraw                 " Don't redraw screen for intermediate macro steps
-set hidden
 set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
