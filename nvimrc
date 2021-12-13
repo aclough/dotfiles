@@ -26,11 +26,13 @@ Plug 'nanotech/jellybeans.vim' " Color scheme
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'mhinz/vim-startify'
-Plug 'kien/ctrlp.vim'          " Search functionality
 Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
-Plug 'jeetsukumaran/vim-buffergator' " Buffer management
 Plug 'bfredl/nvim-miniyank'    " Yank ring
-Plug 'kamykn/spelunker.vim'    " Better spell check
+Plug 'kamykn/spelunker.vim'    " Spell check
+Plug 'wellle/targets.vim'      " More text objects, make () work like ''
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'   " Lightweight statusline
@@ -45,6 +47,20 @@ call plug#end()
 set background = "dark"
 set termguicolors
 colorscheme jellybeans
+"Use dark gray indent color for indentLine
+let g:indentLine_color_term = 238
+
+" fzf
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
+nmap <Leader>l :BLines<CR>
+nmap <Leader>L :Lines<CR>
+nmap <Leader>' :Marks<CR>
+nmap <Leader>/ :Rg<Space>
 
 let g:lightline = {}
 let g:lightline.component_expand = {
@@ -83,6 +99,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:ale_linters = {
     \'python':['pyflakes'],
+    \'cpp':['clang-check'],
     \}
 
 " Only check displayed words
@@ -138,6 +155,9 @@ map Q @@
 map Y y$
 
 map <Leader>t :TagbarToggle<CR>
+
+"Reload vimrc when its saved
+au BufWritePost nvimrc so ~/dotfiles/nvimrc
 
 "Treat .ino like .cpp
 au BufRead,BufNewFile *.pde,*.ino set filetype=cpp
