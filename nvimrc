@@ -86,15 +86,6 @@ let g:lightline.active = {
       \}
 let g:lightline.colorscheme = 'jellybeans'
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard'],
-        \ 2: ['.hg', 'ht --cwd %s locate -I .'],
-        \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
-
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:ale_linters = {
