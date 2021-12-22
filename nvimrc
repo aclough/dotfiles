@@ -23,7 +23,7 @@ Plug 'itchyny/lightline.vim'   " Status line that gives the mode
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'mhinz/vim-startify'
-Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
+Plug 'ggandor/lightspeed.nvim' " Even faster to jump somewhere
 Plug 'bfredl/nvim-miniyank'    " Yank ring
 Plug 'kamykn/spelunker.vim'    " Spell check
 Plug 'wellle/targets.vim'      " More text objects, make () work like ''
@@ -41,8 +41,6 @@ call plug#end()
 set background = "dark"
 set termguicolors
 colorscheme jellybeans
-"Use dark gray indent color for indentLine
-let g:indentLine_color_term = 238
 
 " fzf
 nmap <Leader>f :GFiles<CR>
@@ -110,10 +108,6 @@ map P <Plug>(miniyank-autoPut)
 map <leader>p <Plug>(miniyank-cycle)
 
 tnoremap <Esc> <C-\><C-n>
-
-" Easymotion
-map H <Plug>(easymotion-b)
-map L <Plug>(easymotion-w)
 
 "For easier split window management
 map <C-J> <C-w>w
