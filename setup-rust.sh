@@ -11,3 +11,7 @@ cargo install racer # For nvim completion
 cargo install tealdeer # for tldr pages
 tldr --update
 
+sudo apt install linux-tools-generic linux-tools-common
+cargo install flamegraph 
+mkdir -p ~/.config/fish/completions
+flamegraph --completions fish > ~/.config/fish/completions/flamegraph.fish
