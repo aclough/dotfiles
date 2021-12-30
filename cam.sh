@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -e
+set -eo pipefail
 
 sudo service memcachedb restart
 
-can-i-merge --branch $1
+can-i-merge --branch "$1"

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 cd ~/dotfiles
 dconf dump /org/gnome/terminal/ > gnome-terminal-settings.txt
 git pull

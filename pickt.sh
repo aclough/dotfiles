@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -eo pipefail
+
 cd $RIGHTPICK_ROOT
 if [ ! $1 ]
 then

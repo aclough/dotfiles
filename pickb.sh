@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
 cd $RIGHTPICK_ROOT
 ./software/build.sh build
