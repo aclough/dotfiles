@@ -26,7 +26,7 @@ Plug 'nanotech/jellybeans.vim' " Color scheme
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
 Plug 'mhinz/vim-startify'
-Plug 'Lokaltog/vim-easymotion' " Quickly jump somewhere
+Plug 'ggandor/lightspeed.nvim' " Even faster to jump somewhere
 Plug 'bfredl/nvim-miniyank'    " Yank ring
 Plug 'kamykn/spelunker.vim'    " Spell check
 Plug 'wellle/targets.vim'      " More text objects, make () work like ''
