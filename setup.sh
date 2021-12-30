@@ -21,7 +21,8 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     vim-gtk fish gcc-avr arduino pylint python-pip python3-pip lua5.2 g++ \
     autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy python-scipy python-matplotlib linux-tools-common \
-    python-dumbnet python3-nose rofi gnome-session-xmonad neovim ripgrep maven
+    python-dumbnet python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
+    shellcheck
 
 # Remove the shopping lens
 sudo apt-get remove unity-lens-shopping

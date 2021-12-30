@@ -91,6 +91,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ale_linters = {
     \'python':['pyflakes'],
     \'cpp':['clang-check'],
+    \'sh':['shellcheck'],
     \}
 
 " Only check displayed words
