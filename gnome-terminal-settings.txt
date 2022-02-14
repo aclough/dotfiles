@@ -2,8 +2,10 @@
 foreground-color='rgb(234,234,234)'
 login-shell=false
 custom-command='fish'
+use-system-font=false
 use-custom-command=true
 use-theme-colors=false
+font='Monospace 10'
 use-theme-transparency=false
 background-color='rgb(8,32,27)'
 scrollbar-policy='never'
