@@ -28,11 +28,12 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode python3-pip rofi kitty \
-ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch
+ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch steam lutris
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
+mkdir -p ~/.config/google-chrome/Default
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 
 # Don't use touchpad if I've got another pointer availabile
@@ -51,9 +52,7 @@ pip3 install neovim
 pip3 install python-language-server
 
 # Nim
-sudo snap install nim-lang --classic
-sudo snap alias nim-lang.nim nim
-sudo snap alias nim-lang.nimle nimble
+curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
 # Zig
 snap install zig --classic --beta
