@@ -39,6 +39,7 @@ main = xmonad $ gnomeConfig
         [ ("M-c", kill)
         -- RHR teal is 32cdaa
         , ("M-n", spawn "rofi -bg '#0a2922' -hlbg '#196655' -fg '#ffffff' -show run")
+        , ("M-o", spawn "rofi -bg '#0a2922' -hlbg '#196655' -fg '#ffffff' -show ssh -ssh-command '{terminal} -e {ssh-client} -AM {host} -t fish'")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nautilus")
