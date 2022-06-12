@@ -58,17 +58,17 @@ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 snap install zig --classic --beta
 
 # I'll want it later
-mkdir -p ~/bin
+mkdir -p ~/.local/bin
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir -p ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/shutdown.sh ~/bin/shutdown.sh
-ln -s ~/dotfiles/suspend.sh ~/bin/suspend.sh
-ln -s ~/dotfiles/restart.sh ~/bin/restart.sh
-ln -s ~/dotfiles/mupdate.sh ~/bin/mupdate.sh
+ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
+ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
+ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
+ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/rofi
