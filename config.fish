@@ -57,6 +57,11 @@ function rp
     cd ~/rhr/pick
 end
 
+function rpp
+    cd ~/rhr/pick
+    docker-compose exec rightpick fish
+end
+
 function rs
     rsync -aurvhP $argv
 end
