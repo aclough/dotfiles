@@ -2,5 +2,4 @@
 
 set -euo pipefail
 
-cd $RIGHTPICK_ROOT
-./scripts/lcm-tunnel $1
+~/rhr/pick/scripts/lcm-tunnel $1

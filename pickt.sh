@@ -1,15 +1,16 @@
 #!/bin/bash
 
 set -eo pipefail
+cd ~/rhr/pick
 
 docker-compose up -d
 
-cd $RIGHTPICK_ROOT
 if [ ! $1 ]
 then
-    echo "Running with default 4 threads"
+    echo "Running with 1 thread"
+    docker-compose exec rightpick ./rightpick/software/build.sh runtests
     ./software/build.sh runtests
 else
     echo "Running with $1 threads"
-    ./software/build.sh runtests -j$1
+    docker-compose exec rightpick ./rightpick/software/build.sh runtests -j$1
 fi

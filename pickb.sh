@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
+cd ~/rhr/pick
 docker-compose up -d
 
-cd $RIGHTPICK_ROOT
-./software/build.sh build
+docker-compose exec rightpick ./rightpick/software/build.sh build -i
