@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+docker-compose up -d
+
 sudo service memcachedb restart
 npm update
 

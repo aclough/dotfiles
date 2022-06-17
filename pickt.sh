@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
+docker-compose up -d
+
 cd $RIGHTPICK_ROOT
 if [ ! $1 ]
 then
