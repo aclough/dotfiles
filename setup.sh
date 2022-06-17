@@ -13,25 +13,20 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 
-sudo addgroup aclough dialout
-
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-add-repository ppa:gekkio/xmonad
-sudo add-apt-repository ppa:x4121/ripgrep
 sudo apt update
 sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
-    vim-gtk fish gcc-avr arduino pylint python-pip python3-pip lua5.2 g++ \
-    autoconf clang ipython exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
-    python-dev python-numpy python-scipy python-matplotlib linux-tools-common \
-    python-dumbnet python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
+    vim-gtk fish gcc-avr arduino pylint python3-pip lua5.2 g++ \
+    autoconf clang exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
+    python-dev python-numpy linux-tools-common \
+    python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
     shellcheck
 
 # Remove the shopping lens
 sudo apt-get remove unity-lens-shopping
 
-sudo apt-get install libxss1 libappindicator1 libindicator7
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
+rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 
 
