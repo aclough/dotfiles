@@ -70,6 +70,10 @@ ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 mkdir -p ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 ln -s ~/dotfiles/cam.sh ~/.local/bin/cam.sh
+mkdir -p ~/.config/kitty
+ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+mkdir -p ~/.config/rofi
+ln -s ~/dotfiles/rofi_config ~/.config/rofi/config
 
 dconf load /org/gnome/terminal/ < gnome-terminal-settings.txt
 
