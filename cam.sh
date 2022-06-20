@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
-sudo service memcachedb restart
+cd ~/rhr/pick
+docker-compose up -d
 
-can-i-merge --branch "$1"
+docker-compose exec rightpick bash -c "export RIGHTPICK_PLATFORM=v3; ls; source ./rightpick/build/deploy/env.sh; can-i-merge"
+
