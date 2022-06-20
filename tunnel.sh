@@ -2,4 +2,7 @@
 
 set -euo pipefail
 
-~/rhr/pick/scripts/lcm-tunnel $1
+cd ~/rhr/pick
+docker-compose up -d
+
+docker-compose exec rightpick ./rightpick/scripts/lcm-tunnel "$1"
