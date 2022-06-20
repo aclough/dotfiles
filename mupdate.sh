@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 cd ~/dotfiles
-bounce --inject-ssh-config
+#bounce --inject-ssh-config
 dconf dump /org/gnome/terminal/ > gnome-terminal-settings.txt
 git pull
 sudo apt update
