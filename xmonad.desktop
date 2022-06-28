@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=XMonad
+Comment=Replace window manager with xmonad
+Exec=/usr/bin/xmonad --replace
+Icon=variety
+Terminal=false
+Type=Application
+X-GNOME-Autostart-Delay=2

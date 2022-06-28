@@ -71,6 +71,7 @@ ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 mkdir -p ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
+ln -s ~/dotfiles/xmonad.desktop ~/.config/autostart
 ln -s ~/dotfiles/cam.sh ~/.local/bin/cam.sh
 mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
