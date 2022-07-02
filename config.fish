@@ -2,7 +2,7 @@ set -x EDITOR nvim
 
 set -x RIGHTPICK_PLATFORM v3
 
-set PATH $PATH $HOME/.local/bin $HOME/.cargo/bin $HOME/.fzf/bin /snap/bin
+set PATH $PATH $HOME/.cargo/bin $HOME/.fzf/bin
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 function parse_git_dirty
