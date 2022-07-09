@@ -1,0 +1,11 @@
+* {
+    border-color:                #0f3e33;
+    bordercolor:                 #0f3e33;
+    foreground:                  #ffffff;
+    selected-normal-foreground:  #fdf6e3;
+    selected-active-foreground:  #fdf6e3;
+    selected-normal-background:  #196655;
+    alternate-normal-foreground: #ffffff;
+    alternate-normal-background: #0a2922;
+    background:                  #0a2922;
+}
