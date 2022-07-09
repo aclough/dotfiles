@@ -67,7 +67,7 @@ let g:lightline.component_type = {
       \     'linter_errors': 'error',
       \     'linter_ok': 'left',
       \ }
-let g:lightline.component_function = { 'gitbranch': 'fugitive#head' }
+let g:lightline.component_function = { 'gitbranch': 'FugitiveHead' }
 let g:lightline.active = {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch' ],
