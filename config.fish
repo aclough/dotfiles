@@ -1,5 +1,7 @@
 set -x EDITOR nvim
 
+wmname LG3D
+
 set -x RIGHTPICK_PLATFORM v3
 
 set PATH $PATH $HOME/.cargo/bin $HOME/.fzf/bin
