@@ -29,7 +29,6 @@ Plug 'mhinz/vim-startify'
 Plug 'ggandor/lightspeed.nvim' " Even faster to jump somewhere
 Plug 'bfredl/nvim-miniyank'    " Yank ring
 Plug 'kamykn/spelunker.vim'    " Spell check
-Plug 'wellle/targets.vim'      " More text objects, make () work like ''
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/fzf.vim'
