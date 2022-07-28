@@ -48,6 +48,17 @@ cd ~/rhr
 git clone git@bitbucket.org:yuli_rhr/rightpick.git pick
 git clone git@bitbucket.org:yuli_rhr/servermanagement.git
 git clone https://github.com/swagger-api/swagger-codegen
+
+mkdir symlinks
+ln -sf ~/rhr/pick/software/drivers/arms/python/ symlinks/arms
+ln -sf ~/rhr/pick/software/utils/python/util symlinks/util
+ln -sf ~/rhr/pick/software/drivers/barcodelib/python/ symlinks/barcodelib
+ln -sf ~/rhr/pick/software/utils/python/enumerations/ symlinks/enumerations
+ln -sf ~/rhr/pick/software/monitoring/python/ symlinks/monitoring
+ln -sf ~/rhr/pick/software/tools/python/ symlinks/tools
+ln -sf ~/rhr/pick/software/planner/python/ symlinks/planner
+ln -sf ~/rhr/pick/software/api/python/mission symlinks/missionn -sf
+
 cd swagger-codegen
 git checkout v3.0.10
 mvn clean package

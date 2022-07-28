@@ -1,5 +1,7 @@
 set -x EDITOR nvim
 
+set -x PYTHONPATH /home/aclough/rhr/symlinks/ /home/aclough/workspace
+
 wmname LG3D
 
 set -x RIGHTPICK_PLATFORM v3
