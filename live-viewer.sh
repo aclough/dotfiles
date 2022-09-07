@@ -5,9 +5,8 @@ set -euo pipefail
 
 RIGHTPICK_SOURCE=~/rhr/pick
 bot=$1
-COMMAND="source /home/rhr/LATEST_DEPLOY/build/deploy/env.sh"
+COMMAND="source /home/rhr/rightpick/build/deploy/env.sh"
 
-ls ~/rhr/pick
 cd $RIGHTPICK_SOURCE
 docker-compose up -d
 
