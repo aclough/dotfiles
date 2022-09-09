@@ -65,6 +65,7 @@ end
 
 function rpp
     cd ~/rhr/pick
+    docker-compose up -d
     docker-compose exec rightpick fish -c "set -x RIGHTPICK_PLATFORM v3; source ./rightpick/build/deploy/env.fish; fish"
 end
 
