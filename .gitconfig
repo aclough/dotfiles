@@ -3,9 +3,10 @@
 [color]
     ui = true
 [user]
-	email = andrew.clough@gmail.com
+    email = andrew.clough@gmail.com
+    name = Andrew Clough
 [push]
-	default = simple
+    default = simple
 [alias]
     st = status
     br = branch
