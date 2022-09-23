@@ -3,7 +3,8 @@
 [color]
     ui = true
 [user]
-    email = andrew.clough@gmail.com
+	email = aclough@righthandrobotics.com
+	name = Andrew Clough
 [push]
     default = simple
 [alias]
