@@ -73,6 +73,10 @@ function rs
     rsync -aurvhP $argv
 end
 
+function rv
+    v scp://rhr@$argv[1]//$argv[2]
+end
+
 # Ubuntu .bashrc compatibility
 function ll
     ls -alFth $argv
@@ -92,6 +96,21 @@ end
 
 function s
     ssh -AM rhr@$argv -t fish
+end
+
+function sf
+    umount -q ~/mount
+    sshfs rhr@$argv[1]:/ ~/mount -C
+end
+
+function sfh
+    umount -q ~/mount
+    sshfs rhr@$argv[1]:/home/rhr ~/mount -C
+end
+
+function sfc
+    umount -q ~/mount
+    sshfs rhr@$argv[1]:/configuration/rightpick ~/mount -C
 end
 
 function gd

@@ -44,6 +44,9 @@ pip3 install --user neovim jedi mistune psutil setproctitle
 
 sudo update-alternatives --config x-terminal-emulator
 
+# For ssh filesystem mounting
+mkdir mount
+
 cd ~/rhr
 git clone git@bitbucket.org:yuli_rhr/rightpick.git pick
 git clone git@bitbucket.org:yuli_rhr/servermanagement.git
