@@ -92,8 +92,6 @@ ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/rofi
 ln -s ~/dotfiles/rofi_config ~/.config/rofi/config
 
-dconf load /org/gnome/terminal/ < gnome-terminal-settings.txt
-
 fish -c fish_update_completions
 
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
