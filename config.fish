@@ -105,17 +105,17 @@ function s
 end
 
 function sf
-    umount -q ~/mount
+    umount -q ~/mount &> /dev/null
     sshfs rhr@$argv[1]:/ ~/mount -C
 end
 
 function sfh
-    umount -q ~/mount
+    umount -q ~/mount &> /dev/null
     sshfs rhr@$argv[1]:/home/rhr ~/mount -C
 end
 
 function sfc
-    umount -q ~/mount
+    umount -q ~/mount &> /dev/null
     sshfs rhr@$argv[1]:/configuration/rightpick ~/mount -C
 end
 
