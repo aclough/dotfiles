@@ -104,6 +104,10 @@ function s
     ssh -AM rhr@$argv -t fish
 end
 
+function sx
+    ssh -AMX rhr@$argv -t fish
+end
+
 function sf
     umount -q ~/mount &> /dev/null
     sshfs rhr@$argv[1]:/ ~/mount -C
