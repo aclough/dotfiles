@@ -78,13 +78,6 @@ function alert
     paplay /usr/share/sounds/freedesktop/stereo/complete.oga
 end
 
-function date_to_epoch
-    date -d "$argv" +%s
-end
-
-function epoch_to_date
-    date -ud @$argv
-end
 
 function gd
     git diff $argv{^,}

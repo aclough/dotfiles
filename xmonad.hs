@@ -37,7 +37,6 @@ main = xmonad $ gnomeConfig
     }
     `additionalKeysP`(
         [ ("M-c", kill)
-        -- RHR teal is 32cdaa
         , ("M-n", spawn "rofi -show run")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")

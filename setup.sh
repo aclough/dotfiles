@@ -18,10 +18,6 @@ set -e
 # sudo apt install slimbookamdcontroller
 
 # Desktop
-# Sway
-# sudo add-apt-repository ppa:s.noack/ppa
-# Revert nautilus to previous default search
-sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 # Neovim unstable
 sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -43,6 +39,9 @@ gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+
+# Revert nautilus to previous default search
+sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 # Enable DVDs
 sudo apt-get install libdvd-pkg
