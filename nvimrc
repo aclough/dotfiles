@@ -39,7 +39,6 @@ Plug 'maximbaz/lightline-ale'  " Adds Ale stuff to lightline
 
 " Language specific
 Plug 'sheerun/vim-polyglot'
-"Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 " Appearance
@@ -96,24 +95,6 @@ let g:ale_linters = {
 " Only check displayed words
 let g:spelunker_check_type = 2
 
-" Jedi config
-let g:jedi#auto_initialization = 1
-let g:jedi#completions_enabled = 0 " Use ncm2 instead
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#smart_auto_mappings = 0
-let g:jedi#popup_on_dot = 0
-let g:jedi#completions_command = ""
-let g:jedi#show_call_signatures = "0"
-
-" All these mappings work only for python code:
-" Go to definition
-let g:jedi#goto_command = '<c-]>'
-" Find ocurrences
-let g:jedi#usages_command = ',o'
-" Find assignments
-let g:jedi#goto_assignments_command = ',a'
-" Go to definition in new tab
-nmap ,D :tab split<CR>:call jedi#goto()<CR>
 
 " Yank ring
 map p <Plug>(miniyank-autoput)
@@ -121,12 +102,6 @@ map P <Plug>(miniyank-autoPut)
 map <leader>p <Plug>(miniyank-cycle)
 
 tnoremap <Esc> <C-\><C-n>
-
-" Easymotion
-map H <Plug>(easymotion-b)
-map L <Plug>(easymotion-w)
-
-" Spelunker
 
 "For easier split window management
 map <C-J> <C-w>w
