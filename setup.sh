@@ -28,7 +28,8 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode python3-pip rofi kitty \
-ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch steam lutris
+ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch steam \
+lutris shellcheck
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

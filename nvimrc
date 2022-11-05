@@ -9,16 +9,18 @@ set tabstop=4                  " 4 space tabs
 set expandtab                  " expand tabs to spaces
 set shiftwidth=4               " use 4 spaces when indented
 set clipboard=unnamed          " Uses system clipboard by default
-set nomodeline
+set nomodeline                 " Security hole
 set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags file
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 "set spell spelllang=en_us
 
+autocmd BufWritePre * :%s/\s\+$//e
+
 let mapleader = " "
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'nanotech/jellybeans.vim' " Colorscheme
+Plug 'nanotech/jellybeans.vim' " Color scheme
 Plug 'itchyny/lightline.vim'   " Status line that gives the mode
 Plug 'Yggdroot/indentLine'     " Gives tab marker on leading whitespace
 Plug 'tpope/vim-fugitive'      " Git integration
@@ -41,6 +43,8 @@ call plug#end()
 set background = "dark"
 set termguicolors
 colorscheme jellybeans
+"Use dark gray indent color for indentLine
+let g:indentLine_color_term = 238
 
 " fzf
 nmap <Leader>f :GFiles<CR>
@@ -78,26 +82,20 @@ let g:lightline.active = {
       \}
 let g:lightline.colorscheme = 'jellybeans'
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files . -co --exclude-standard'],
-        \ 2: ['.hg', 'ht --cwd %s locate -I .'],
-        \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
-
-" Only check displayed words
-let g:spelunker_check_type = 2
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:ale_linters = {
     \'python':['pyflakes'],
     \'cpp':['clang-check'],
+    \'sh':['shellcheck'],
     \'go': ['gopls'],
     \'rust': ['cargo'],
     \'nim': ['nimlsp'],
     \'haskell': ['stack-build', 'hlint'],
     \}
+
+" Only check displayed words
+let g:spelunker_check_type = 2
 
 noremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 
