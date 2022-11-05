@@ -14,7 +14,6 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 
 sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-add-repository ppa:gekkio/xmonad
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo apt update
 sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
@@ -23,9 +22,6 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     python-dev python-numpy linux-tools-common \
     python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
     shellcheck variety
-
-# Remove the shopping lens
-sudo apt-get remove unity-lens-shopping
 
 rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
@@ -40,7 +36,7 @@ mkdir -p ~/.local/bin ~/rhr ~/workspace
 # Add ctypesgen for RHR firmware interface
 sudo pip install ctypesgen
 # For Neovim
-pip3 install --user neovim jedi mistune psutil setproctitle
+pip3 install --user neovim mistune psutil setproctitle
 
 sudo update-alternatives --config x-terminal-emulator
 
