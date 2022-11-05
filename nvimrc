@@ -15,7 +15,6 @@ set tags=tags,../tags,../../tags,../../../tags,../../../../tags " Use this tags 
 "set textwidth=80              " Maximum text width before wrap, gq to auto
 set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅ " Show whitespace and tabs
 "set spell spelllang=en_us
-set nospell
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -119,8 +118,6 @@ map Q @@
 
 "Make Y behave like other capitals
 map Y y$
-
-map <Leader>t :TagbarToggle<CR>
 
 "Reload vimrc when its saved
 au BufWritePost nvimrc so ~/dotfiles/nvimrc
