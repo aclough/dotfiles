@@ -21,7 +21,7 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     autoconf clang exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy linux-tools-common \
     python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
-    shellcheck variety
+    shellcheck variety minicom  stlink-tools
 
 rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
@@ -37,6 +37,7 @@ mkdir -p ~/.local/bin ~/rhr ~/workspace
 sudo pip install ctypesgen
 # For Neovim
 pip3 install --user neovim mistune psutil setproctitle
+pip3 install --user pygame # For gripper visualization
 
 sudo update-alternatives --config x-terminal-emulator
 
