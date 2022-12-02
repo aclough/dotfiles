@@ -63,6 +63,13 @@ function rp
     cd ~/rhr/pick
 end
 
+function mfg
+    cd ~/rhr/pick/software/drivers/chameleon_gripper/python/manufacturing_v5
+    ./mfg_build_env.sh 1 .
+    cd gripper_v5_manufacturing/
+    ls
+end
+
 function rpp
     cd ~/rhr/pick
     docker-compose up -d
