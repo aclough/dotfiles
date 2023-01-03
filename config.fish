@@ -65,8 +65,8 @@ end
 
 function mfg
     cd ~/rhr/pick/software/drivers/chameleon_gripper/python/manufacturing_v5
-    ./mfg_build_env.sh 1 .
-    cd gripper_v5_manufacturing/
+    ./mfg_build_env.sh 1 ~/rhr/pick/build
+    cd ~/rhr/pick/build/gripper_v5_manufacturing/
     ls
 end
 
