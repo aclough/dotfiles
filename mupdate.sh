@@ -1,7 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 cd ~/dotfiles
-#bounce --inject-ssh-config
 git pull
 sudo apt update
 sudo apt-get dist-upgrade
