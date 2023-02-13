@@ -21,7 +21,8 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     autoconf clang exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy linux-tools-common \
     python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
-    shellcheck variety minicom  stlink-tools
+    shellcheck variety minicom  stlink-tools make build-essential \
+    libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
 
 rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
