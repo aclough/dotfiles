@@ -133,3 +133,7 @@ end
 function gd
     git diff $argv{^,}
 end
+
+function pyfmt
+    black -l79 -S $argv
+end
