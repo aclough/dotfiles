@@ -134,6 +134,10 @@ function gd
     git diff $argv{^,}
 end
 
+function gb
+    git checkout $argv^
+end
+
 function pyfmt
     black -l79 -S $argv
 end
