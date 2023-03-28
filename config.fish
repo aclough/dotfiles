@@ -130,8 +130,8 @@ function sfc
     sshfs rhr@$argv[1]:/configuration/rightpick ~/mount -C
 end
 
-function gd
-    git diff $argv{^,}
+function gs
+    git show $argv
 end
 
 function gb
