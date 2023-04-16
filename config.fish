@@ -1,7 +1,6 @@
 set -x EDITOR nvim
 
-set PATH $PATH $HOME/bin $HOME/.cargo/bin $HOME/.nimble/bin
-
+set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $home/.local/bin
 
 function parse_git_dirty
          git diff --quiet HEAD 2>&-
