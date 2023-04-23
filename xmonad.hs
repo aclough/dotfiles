@@ -1,8 +1,8 @@
 import XMonad
 import XMonad.Config.Gnome
-import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageDocks -- Provides avoidStruts
 import XMonad.Hooks.EwmhDesktops
-import XMonad.Util.EZConfig
+import XMonad.Util.EZConfig -- Provides additionalKeysP
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdatePointer
 import XMonad.Layout.LayoutHints
@@ -25,12 +25,12 @@ myLayout = avoidStruts (tiled ||| Full)
     -- Percent of screen to increment by when resizing panes
     delta   = 3/100
 
-main = xmonad $ gnomeConfig
+main = xmonad $ ewmhFullscreen . ewmh $ gnomeConfig
     { terminal = myTerminal
     , modMask = mod4Mask -- use the mod key to the windows key
     , manageHook = manageHook gnomeConfig
     , layoutHook = myLayout
-    , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig >> ewmhDesktopsLogHook
+    , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig
     , handleEventHook = myHandleEventHook
     , startupHook = startupHook gnomeConfig
     , focusedBorderColor = "#ffb000"
