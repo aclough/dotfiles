@@ -24,7 +24,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # Utilities and misc
 sudo apt install fish mosh vlc neovim fonts-firacode python3-pip rofi kitty \
-ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch steam \
+ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 lutris shellcheck
 
 # Get Chrome
@@ -56,6 +56,9 @@ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
 # Zig
 snap install zig --classic --beta
+
+# Steam
+sudo snap install steam
 
 # I'll want it later
 mkdir -p ~/.local/bin
