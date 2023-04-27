@@ -76,11 +76,12 @@ function rd
     docker-compose exec rightpick fish -c "set -x RIGHTPICK_PLATFORM v3; source ./rightpick/build/deploy/env.fish; fish"
 end
 
-function rpf
-    cd ~/rhr/pick/software/visualization/visualizer/engines/foxglove
-    docker-compose -f /docker-compose.yaml up -d
-    docker-compose -f /docker-compose.yaml exec rightpick fish -c "set -x RIGHTPICK_PLATFORM v3; source ./rightpick/build/deploy/env.fish; fish"
+function rdv
+    cd ~/rhr/pick/visualization
+    docker-compose up -d
+    docker-compose exec rightpick fish -c "set -x RIGHTPICK_PLATFORM v3; source ./rightpick/build/deploy/env.fish; fish"
 end
+
 
 function rs
     rsync -aurvhP $argv
