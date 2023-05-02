@@ -73,13 +73,13 @@ end
 function rd
     cd ~/rhr/pick
     docker-compose up -d
-    docker-compose exec rightpick fish -c "set -x RIGHTPICK_PLATFORM v3; source ./rightpick/build/deploy/env.fish; fish"
+    docker-compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
 end
 
 function rdv
     cd ~/rhr/pick/visualization
     docker-compose up -d
-    docker-compose exec rightpick fish -c "set -x RIGHTPICK_PLATFORM v3; source ./rightpick/build/deploy/env.fish; fish"
+    docker-compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
 end
 
 
