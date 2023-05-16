@@ -33,6 +33,10 @@ sudo dpkg -i google-chrome*.deb
 mkdir -p ~/.config/google-chrome/Default
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 
+# Get Zoom
+wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb
+
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 # Focus follows mouse when not in xmonad
