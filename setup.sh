@@ -6,6 +6,10 @@ set -euo pipefail
 
 # Utilities and misc
 
+# Get Zoom
+wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb
+
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 # Focus follows mouse when not in xmonad
