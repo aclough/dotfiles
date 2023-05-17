@@ -78,6 +78,7 @@ ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickc.sh
 ln -s ~/dotfiles/tunnel.sh ~/.local/bin/tunnel.sh
+ln -s ~/dotfiles/vtunnel.sh ~/.local/bin/vtunnel.sh
 ln -s ~/dotfiles/live-viewer.sh ~/.local/bin/live-viewer.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/regen-api.sh ~/.local/bin/regen-api.sh
