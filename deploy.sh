@@ -4,6 +4,9 @@ set -euo pipefail
 
 pickb.sh
 echo "Built successfully"
-rsync -raluhP ~/rhr/pick/build rhr@"$1":aclough
+for bot in "$@"
+do
+    rsync -raluhP ~/rhr/pick/build rhr@"$bot":aclough
+done
 
 echo "Deploy successful"
