@@ -94,10 +94,7 @@ ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
 fish -c fish_update_completions
 
 # Nvim options
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln -s ~/dotfiles/nvimrc ~/.config/nvim/init.vim
-nvim -c PlugInstall
+ln -s ~/dotfiles/nvim ~/.config/nvim
 
 # Start variety, should prompt for autostart
 variety &
