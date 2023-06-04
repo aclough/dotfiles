@@ -77,7 +77,14 @@ function alert
     play /usr/share/sounds/freedesktop/stereo/complete.oga
 end
 
+function gs
+    git show $argv
+end
 
-function gd
-    git diff $argv{^,}
+function gb
+    git checkout $argv^
+end
+
+function pyfmt
+    black -l79 -S $argv
 end

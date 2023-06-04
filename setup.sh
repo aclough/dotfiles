@@ -27,7 +27,8 @@ sudo apt install fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 lutris \ # Game launcher
 shellcheck \ # For neovim checking
-sox # For the `play` command
+sox \ # For the `play` command
+black \ # Python formatter
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
