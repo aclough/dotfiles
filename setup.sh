@@ -67,6 +67,13 @@ snap install zig --classic --beta
 # Steam
 sudo snap install steam
 
+# Font
+mkdir ~/.fonts
+cd ~/.fonts
+curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip
+unzip FiraCode.zip
+fc-cache -fv
+
 # I'll want it later
 mkdir -p ~/.local/bin
 
