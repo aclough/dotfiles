@@ -74,7 +74,7 @@ function zc
 end
 
 function alert
-    paplay /usr/share/sounds/freedesktop/stereo/complete.oga
+    play /usr/share/sounds/freedesktop/stereo/complete.oga
 end
 
 
