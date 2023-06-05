@@ -38,8 +38,6 @@ cargo install tealdeer
 # I'll want it later
 mkdir -p ~/.local/bin ~/rhr ~/workspace
 
-# Add ctypesgen for RHR firmware interface
-sudo pip install ctypesgen
 # For Neovim
 pip3 install --user neovim mistune psutil setproctitle
 pip3 install --user pygame # For gripper visualization
@@ -62,7 +60,7 @@ ln -sf ~/rhr/pick/software/utils/python/enumerations/ symlinks/enumerations
 ln -sf ~/rhr/pick/software/monitoring/python/ symlinks/monitoring
 ln -sf ~/rhr/pick/software/tools/python/ symlinks/tools
 ln -sf ~/rhr/pick/software/planner/python/ symlinks/planner
-ln -sf ~/rhr/pick/software/api/python/mission symlinks/missionn -sf
+ln -sf ~/rhr/pick/software/api/python/mission symlinks/missionn
 
 cd swagger-codegen
 git checkout v3.0.10
