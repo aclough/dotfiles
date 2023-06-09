@@ -142,3 +142,7 @@ end
 function pyfmt
     black -l79 -S $argv
 end
+
+function spin
+    /opt/spinnaker/bin/spinview
+end

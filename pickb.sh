@@ -3,6 +3,8 @@
 set -euo pipefail
 
 cd ~/rhr/pick
-docker-compose up -d
 
+cp -r ~/workspace/flir_venv build
+
+docker-compose up -d
 time docker-compose exec rightpick ./rightpick/software/build.sh build -i
