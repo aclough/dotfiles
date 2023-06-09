@@ -26,7 +26,12 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
-  {'metalelf0/jellybeans-nvim'},
-  {'rktjmp/lush.nvim'},
+  {'metalelf0/jellybeans-nvim', dependencies = {'rktjmp/lush.nvim'}},
   {'nvim-lualine/lualine.nvim'},
+  {'Yggdroot/indentLine'},
+  {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
+  -- Spell checker
+  -- Git intgegration
+  -- Yank ring? bfredl/nvim-miniyank
+  -- Lint engine works with lualine?
 })

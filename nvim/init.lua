@@ -40,6 +40,7 @@ map_key('n', 'Y', 'y$')
 
 require('core/lazy')
 require('core/appearance')
+require('core/telescope')
 
 -- ==================================================
 -- Plugin Config
