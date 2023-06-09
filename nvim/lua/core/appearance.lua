@@ -18,3 +18,8 @@ vim.wo.signcolumn = 'yes'
 -- Lazy redraw
 vim.o.lazyredraw = true
 
+-- Whitespace
+vim.opt.list = true
+vim.opt.listchars.tab = "▸"
+vim.opt.listchars.trail = "⋅"
+vim.opt.listchars.nbsp = "⋅"
