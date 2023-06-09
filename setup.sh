@@ -29,6 +29,8 @@ lutris \ # Game launcher
 shellcheck \ # For neovim checking
 sox \ # For the `play` command
 black \ # Python formatter
+corectl \ # System control https://gitlab.com/corectrl/corectrl
+
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
