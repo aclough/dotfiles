@@ -43,6 +43,6 @@ lazy.setup({
     -- Git integration
     -- Yank ring? bfredl/nvim-miniyank
     -- Lint engine works with lualine?
-    -- Remove trailing whitespace
     -- surround.vim?
+    -- Repalce ALE with a lsp thingy
 })
