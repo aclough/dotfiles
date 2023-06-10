@@ -5,7 +5,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4 
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.o.scrolloff = 5
 
@@ -13,13 +13,14 @@ vim.o.scrolloff = 5
 vim.o.hidden = true
 
 -- Set spelling
-vim.o.spell = false
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true -- Consider going back to Spelunker though
 
 -- ==================================================
 -- Keybindings
 -- ==================================================
 vim.g.mapleader = " "
--- Simple function to map keymap, non-recursive way
+-- Simple function to set keys non-recursively
 local function map_key(mode, lhs, rhs)
   vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true })
 end

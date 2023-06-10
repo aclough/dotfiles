@@ -30,8 +30,8 @@ lazy.setup({
   {'nvim-lualine/lualine.nvim'},
   {'Yggdroot/indentLine'},
   {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
-  -- Spell checker
-  -- Git intgegration
+  -- Git integration
   -- Yank ring? bfredl/nvim-miniyank
   -- Lint engine works with lualine?
+  -- Remove trailing whitespace
 })
