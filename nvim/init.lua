@@ -22,7 +22,7 @@ vim.opt.spell = true -- Consider going back to Spelunker though
 vim.g.mapleader = " "
 -- Simple function to set keys non-recursively
 local function map_key(mode, lhs, rhs)
-  vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true })
+    vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true, silent = true })
 end
 
 -- Cycle through split windows
