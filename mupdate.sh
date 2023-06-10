@@ -8,4 +8,4 @@ rustup update
 choosenim update stable
 fish -c fish_update_completions
 tldr --update
-nvim -c PlugUpdate
+nvim --headless "+Lazy! update" +qa
