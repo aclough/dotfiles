@@ -30,7 +30,16 @@ lazy.setup({
     {'nvim-lualine/lualine.nvim'},
     {'Yggdroot/indentLine'},
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
-    {'justinmk/vim-sneak'},
+    {'ggandor/leap.nvim', 
+        dependencies = {"tpope/vim-repeat"},
+        config = function(_, opts)
+            local leap = require("leap")
+            for k, v in pairs(opts) do
+                leap.opts[k] = v
+            end
+            leap.add_default_mappings(true)
+        end,
+    },
     -- Git integration
     -- Yank ring? bfredl/nvim-miniyank
     -- Lint engine works with lualine?
