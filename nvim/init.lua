@@ -12,10 +12,6 @@ vim.o.scrolloff = 5
 -- Buffers/Tabs/Windows
 vim.o.hidden = true
 
--- Set spelling
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true -- Consider going back to Spelunker though
-
 -- ==================================================
 -- Keybindings
 -- ==================================================

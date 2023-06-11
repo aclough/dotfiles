@@ -26,6 +26,7 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
+    {'kamykn/spelunker.vim'},
     {'metalelf0/jellybeans-nvim', dependencies = {'rktjmp/lush.nvim'}},
     {'nvim-lualine/lualine.nvim'},
     {'Yggdroot/indentLine'},
