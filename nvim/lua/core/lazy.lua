@@ -30,19 +30,21 @@ lazy.setup({
     {'nvim-lualine/lualine.nvim'},
     {'Yggdroot/indentLine'},
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
-    {'ggandor/leap.nvim', 
+    {'ggandor/leap.nvim',
         dependencies = {"tpope/vim-repeat"},
         config = function(_, opts)
             local leap = require("leap")
-            for k, v in pairs(opts) do
-                leap.opts[k] = v
-            end
             leap.add_default_mappings(true)
         end,
     },
-    -- Git integration
+    {'alaviss/nim.nvim'}, -- starts in folds but provides syntax highlighting
+
+
+    -- Git integration (gitsigns.nvim?)
     -- Yank ring? bfredl/nvim-miniyank
     -- Lint engine works with lualine?
     -- surround.vim?
-    -- Repalce ALE with a lsp thingy
+
+    -- LSP stuff config in lsp.lua
+    {'neovim/nvim-lspconfig'},
 })

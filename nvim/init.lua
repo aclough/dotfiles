@@ -46,5 +46,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 
 require('core/lazy')
+
 require('core/appearance')
+require('core/lsp')
 require('core/telescope')
