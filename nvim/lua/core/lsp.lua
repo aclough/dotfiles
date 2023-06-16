@@ -2,7 +2,18 @@
 
 -- Setup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pylsp.setup {}
+lspconfig.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
 lspconfig.tsserver.setup {}
 lspconfig.rust_analyzer.setup {
     -- Server-specific settings. See `:help lspconfig-setup`
