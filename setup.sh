@@ -30,7 +30,7 @@ shellcheck \ # For neovim checking
 sox \ # For the `play` command
 black \ # Python formatter
 corectl \ # System control https://gitlab.com/corectrl/corectrl
-python3-lsp \ # For neovim language server
+python3-pylsp \ # Python language server
 
 
 # Get Chrome
