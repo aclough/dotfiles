@@ -3,8 +3,8 @@
 [color]
     ui = true
 [user]
-	email = aclough@righthandrobotics.com
-	name = Andrew Clough
+    email = aclough@righthandrobotics.com
+    name = Andrew Clough
 [push]
     default = simple
 [alias]
@@ -18,4 +18,4 @@
 [help]
     autocorrect = 5
 [diff]
-	noprefix = true
+    noprefix = true
