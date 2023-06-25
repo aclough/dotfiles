@@ -4,21 +4,6 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
-# Driver stuff
-# Maybe add advanced Radeon drivers and kernel (if this is my desktop)
-# sudo apt-add-repository ppa:oibaf/graphics-drivers
-# sudo add-apt-repository ppa:kisak/kisak-mesa
-# For AMD power management
-# sudo add-apt-repository ppa:radeon-profile/radeon-profile
-# sudo add-apt-repository ppa:oibaf/graphics-drivers
-# sudo apt update
-# sudo apt install radeon-profile
-# Sadly 20.04 only for now
-# sudo add-apt-repository ppa:slimbook/slimbook
-# sudo apt install slimbookamdcontroller
-
-# Desktop
-
 # Neovim unstable
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
@@ -31,6 +16,7 @@ sox \ # For the `play` command
 black \ # Python formatter
 corectl \ # System control https://gitlab.com/corectrl/corectrl
 python3-pylsp \ # Python language server
+python3-neovim \ # We might want it
 
 
 # Get Chrome
@@ -57,18 +43,11 @@ sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
-# Python
-pip3 install neovim
-pip3 install python-language-server
-
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
 # Zig
 snap install zig --classic --beta
-
-# Steam
-sudo snap install steam
 
 # Font
 mkdir ~/.fonts
