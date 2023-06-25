@@ -4,7 +4,7 @@ set -e
 
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
-rustup component add rust-src rls rust-analysis
+rustup component add rust-src rust-analysis rust-analyzer
 
 cargo install racer # For nvim completion
 
@@ -15,6 +15,6 @@ tldr --update
 cargo install battop
 
 sudo apt install linux-tools-generic linux-tools-common
-cargo install flamegraph 
+cargo install flamegraph
 mkdir -p ~/.config/fish/completions
 flamegraph --completions fish > ~/.config/fish/completions/flamegraph.fish
