@@ -27,6 +27,10 @@ lazy.opts = {}
 
 lazy.setup({
     {'kamykn/spelunker.vim'},
+    {'tpope/vim-fugitive'},
+    {'lewis6991/gitsigns.nvim',
+        event = {"BufReadPre", "BufNewFile"},
+    },
     {'metalelf0/jellybeans-nvim', dependencies = {'rktjmp/lush.nvim'}},
     {'nvim-lualine/lualine.nvim'},
     {'Yggdroot/indentLine'},
@@ -49,3 +53,4 @@ lazy.setup({
     -- LSP stuff config in lsp.lua
     {'neovim/nvim-lspconfig'},
 })
+require('gitsigns').setup()
