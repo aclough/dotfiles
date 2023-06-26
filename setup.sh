@@ -23,6 +23,7 @@ python3-neovim \ # We might want it
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 mkdir -p ~/.config/google-chrome/Default
+rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 
 # Get Zoom
