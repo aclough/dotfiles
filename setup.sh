@@ -28,6 +28,10 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     shellcheck variety minicom  stlink-tools make build-essential \
     libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
 
+# Get Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
+mkdir -p ~/.config/google-chrome/Default
 rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 
