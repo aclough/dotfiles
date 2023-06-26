@@ -33,7 +33,9 @@ ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Cus
 
 
 curl https://sh.rustup.rs -sSf | sh
-cargo install tealdeer
+source $HOME/.cargo/env
+rustup component add rust-analyzer
+cargo install tealdeer battop
 
 # I'll want it later
 mkdir -p ~/.local/bin ~/rhr ~/workspace
