@@ -41,6 +41,8 @@ coronavirus
 customizable
 decrement
 deduplicating
+desaturate
+desaturated
 device
 differentially
 ecologies
