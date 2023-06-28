@@ -1,6 +1,7 @@
 ALU
 Advantech
 Blindsight
+ChatGPT
 Chorded
 Clough
 Eukaryotic
@@ -33,6 +34,7 @@ carthaginian
 cephalopods
 chemosynthesis
 chemosynthetic
+cheritable
 chiplets
 chorded
 concientiousness
@@ -73,6 +75,7 @@ lightspeed
 marginalism
 microarchitecture
 microgravity
+militaries
 misconfigured
 misremembered
 nanotech
@@ -93,12 +96,14 @@ prokaryotes
 prokaryotic
 prophylactically
 proxied
+quadradically
 quadratically
 qualia
 realtime
 regolith
 respirate
 seatbelt
+spermaceti
 splittable
 stereotypically
 swapper
@@ -107,6 +112,7 @@ tardigrades
 terraform
 terraformed
 terraforming
+thrusters
 tradeoffs
 transmissibility
 undried
@@ -115,4 +121,4 @@ unsurprised
 unusably
 virally
 waypoint
-checksum_v1 = 9463a4ce8a1e9dac3c39bffafa3c44d4
+checksum_v1 = 3595abe800513d8ce69520e99f9c9677
