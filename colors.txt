@@ -23,5 +23,6 @@ Sunburst:
     FFb000
     FFd780
     FFEFCC
+Alabaster:
     EDE1CD
     F8F3EB
