@@ -2,6 +2,7 @@ Official RHR colors
 Teal:       32CDAA (50, 205, 170)
 Evergreen:  2E8E8E (46, 142, 142)
 Sunburst:   FFB000 (255, 176, 0)
+Alabaster:  EDE1CD (237, 225, 205)
 Dark Grey:  3C3C3C (60, 60, 60)
 Mild Grey:  999D9F (153, 157, 159)
 Light Grey: EAEAEA (234, 234, 234)
