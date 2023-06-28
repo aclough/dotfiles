@@ -5,3 +5,22 @@ Sunburst:   FFB000 (255, 176, 0)
 Dark Grey:  3C3C3C (60, 60, 60)
 Mild Grey:  999D9F (153, 157, 159)
 Light Grey: EAEAEA (234, 234, 234)
+
+Extra tints/shades
+Teal:
+    196755
+    32CDAA
+    ABEDDD
+    EAFAF6
+Evergreen:
+    174747
+    2E8E8E
+    96C6C6
+    D5E8E8
+Sunburst:
+    805800
+    FFb000
+    FFd780
+    FFEFCC
+    EDE1CD
+    F8F3EB
