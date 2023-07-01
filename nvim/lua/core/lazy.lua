@@ -52,5 +52,6 @@ lazy.setup({
 
     -- LSP stuff config in lsp.lua
     {'neovim/nvim-lspconfig'},
+    {'github/copilot.vim'},
 })
 require('gitsigns').setup()
