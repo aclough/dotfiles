@@ -28,6 +28,7 @@ lazy.opts = {}
 lazy.setup({
     {'kamykn/spelunker.vim'},
     {'tpope/vim-fugitive'},
+    {'airblade/vim-rooter'}, -- set CWD based on .git or other clues
     {'lewis6991/gitsigns.nvim',
         event = {"BufReadPre", "BufNewFile"},
     },
