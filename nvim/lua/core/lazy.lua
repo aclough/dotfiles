@@ -36,6 +36,7 @@ lazy.setup({
     {'nvim-lualine/lualine.nvim'}, -- Status line
     {'Yggdroot/indentLine'}, -- Display indentation
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
+    {'nvim-telescope/telescope-fzy-native.nvim'},
     {'ggandor/leap.nvim',
         dependencies = {"tpope/vim-repeat"},
         config = function(_, opts)

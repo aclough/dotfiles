@@ -26,7 +26,8 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     python-dev python-numpy linux-tools-common \
     python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
     shellcheck variety minicom  stlink-tools make build-essential \
-    libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
+    libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev \
+    fzy # For nvim telescope
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
