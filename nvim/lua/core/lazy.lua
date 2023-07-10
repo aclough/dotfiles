@@ -26,8 +26,9 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
-    {'kamykn/spelunker.vim'},
+    {'kamykn/spelunker.vim'}, -- Spelling
     {'tpope/vim-fugitive'},
+    {'airblade/vim-rooter'}, -- set CWD based on .git or other clues
     {'lewis6991/gitsigns.nvim',
         event = {"BufReadPre", "BufNewFile"},
     },
