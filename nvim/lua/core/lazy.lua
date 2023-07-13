@@ -26,16 +26,17 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 lazy.opts = {}
 
 lazy.setup({
-    {'kamykn/spelunker.vim'},
+    {'kamykn/spelunker.vim'}, -- Spelling
     {'tpope/vim-fugitive'},
     {'airblade/vim-rooter'}, -- set CWD based on .git or other clues
     {'lewis6991/gitsigns.nvim',
         event = {"BufReadPre", "BufNewFile"},
     },
     {'metalelf0/jellybeans-nvim', dependencies = {'rktjmp/lush.nvim'}},
-    {'nvim-lualine/lualine.nvim'},
-    {'Yggdroot/indentLine'},
+    {'nvim-lualine/lualine.nvim'}, -- Status line
+    {'Yggdroot/indentLine'}, -- Display indentation
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
+    {'nvim-telescope/telescope-fzy-native.nvim'},
     {'ggandor/leap.nvim',
         dependencies = {"tpope/vim-repeat"},
         config = function(_, opts)
