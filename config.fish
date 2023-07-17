@@ -1,6 +1,7 @@
 set -x EDITOR nvim
 
 set -x PYTHONPATH /home/aclough/rhr/symlinks/ /home/aclough/workspace
+set -x RIGHTPICK_IMAGE us-central1-docker.pkg.dev/rhr-infrastructure/rightpick/rightpick:master-20230712-175654-spinnaker
 
 wmname LG3D
 
