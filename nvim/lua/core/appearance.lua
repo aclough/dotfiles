@@ -9,6 +9,8 @@ vim.cmd.colorscheme('jellybeans-nvim')
 -- Basic text
 vim.o.textwidth = 80
 vim.wo.colorcolumn = '80'
+vim.opt.formatoptions:remove { "t", "c" }
+vim.opt.formatoptions:append { "q", "l" }
 
 vim.o.showbreak = '+++'
 
