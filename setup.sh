@@ -18,6 +18,7 @@ corectl \ # System control https://gitlab.com/corectrl/corectrl
 python3-pylsp \ # Python language server
 python3-neovim \ # We might want it
 fzy \ # For neovim file/buffer/etc finding
+python3-pydrive2 # For deja-dup
 
 
 # Get Chrome
