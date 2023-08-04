@@ -4,7 +4,9 @@ set -e
 
 sudo snap install steam
 
-pip3 install protonup
+sudo apt install pipx
+
+pipx install protonup
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 # sudo apt-add-repository ppa:oibaf/graphics-drivers
