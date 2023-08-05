@@ -4,7 +4,7 @@ set -e
 
 sudo snap install steam
 
-sudo apt install pipx
+sudo apt install pipx corectrl
 
 pipx install protonup
 
