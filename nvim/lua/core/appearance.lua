@@ -25,3 +25,9 @@ vim.opt.list = true
 vim.opt.listchars.tab = "▸"
 vim.opt.listchars.trail = "⋅"
 vim.opt.listchars.nbsp = "⋅"
+
+-- Spelling
+vim.o.spell = true
+vim.o.spelling = "en_us"
+vim.g.spelunker_check_comments = 1
+
