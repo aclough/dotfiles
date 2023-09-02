@@ -10,15 +10,15 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 # Utilities and misc
 sudo apt install fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
-lutris \ # Game launcher
-shellcheck \ # For neovim checking
-sox \ # For the `play` command
-black \ # Python formatter
-corectl \ # System control https://gitlab.com/corectrl/corectrl
-python3-pylsp \ # Python language server
-python3-neovim \ # We might want it
-fzy \ # For neovim file/buffer/etc finding
-python3-pydrive2 # For deja-dup
+shellcheck sox black corectrl python3-pylsp python3-neovim fzy python3-pydrive2
+# shellcheck:  For neovim checking
+# sox:  For the `play` command
+# black:  Python formatter
+# corectrl:  System control https://gitlab.com/corectrl/corectrl
+# python3-pylsp:  Python language server
+# python3-neovim:  We might want it
+# fzy:  For neovim file/buffer/etc finding
+# python3-pydrive2: For deja-dup
 
 
 # Get Chrome
