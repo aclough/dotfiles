@@ -2,7 +2,17 @@
 
 set -e
 
-sudo snap install steam
+# Steam 32 bit
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install wget gdebi-core libgl1-mesa-glx:i386
+wget -O ~/steam.deb http://media.steampowered.com/client/installer/steam.deb
+sudo apt install ./steam.deb
+
+
+
+
+
 
 sudo apt install pipx
 
@@ -10,11 +20,7 @@ pipx install protonup
 
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
+# But not compatible with steam 32 bit libraries
 # sudo apt-add-repository ppa:oibaf/graphics-drivers
 # sudo add-apt-repository ppa:kisak/kisak-mesa
 # For AMD power management
-# sudo add-apt-repository ppa:radeon-profile/radeon-profile
-# sudo add-apt-repository ppa:oibaf/graphics-drivers
-# sudo apt update
-# sudo apt install radeon-profile
-# Sadly 20.04 only for now
