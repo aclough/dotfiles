@@ -4,6 +4,8 @@ cd ~/dotfiles
 git pull
 sudo apt update
 sudo apt upgrade
+set +e
+protonup
 rustup update
 choosenim update stable
 fish -c fish_update_completions
