@@ -5,7 +5,6 @@ git pull
 sudo apt update
 sudo apt upgrade
 set +e
-protonup
 rustup update
 choosenim update stable
 protonup
