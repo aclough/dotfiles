@@ -88,3 +88,11 @@ end
 function pyfmt
     black -l79 -S $argv
 end
+
+function ci
+    eval /home/aclough/workspace/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+
+function ca
+    conda activate $argv
+end

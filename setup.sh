@@ -61,6 +61,7 @@ fc-cache -fv
 
 # I'll want it later
 mkdir -p ~/.local/bin
+mkdir -p ~/workspace
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
@@ -75,8 +76,6 @@ mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/rofi
 ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
-
-fish -c fish_update_completions
 
 # Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
