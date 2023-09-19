@@ -97,6 +97,7 @@ ln -s ~/dotfiles/deploy.sh ~/.local/bin/deploy.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
+ln -s ~/dotfiles/update_replay_tests.sh ~/.local/bin/update_replay_tests.sh
 mkdir -p ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
 ln -s ~/dotfiles/xmonad.desktop ~/.config/autostart
