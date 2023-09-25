@@ -24,7 +24,7 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     vim-gtk fish gcc-avr arduino pylint python3-pip lua5.2 g++ \
     autoconf clang exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy linux-tools-common \
-    python3-nose rofi gnome-session-xmonad neovim ripgrep maven \
+    python3-nose rofi gnome-session-xmonad neovim maven \
     shellcheck variety minicom  stlink-tools make build-essential \
     libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev \
     fzy # For nvim telescope
@@ -40,7 +40,7 @@ ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Cus
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup component add rust-analyzer
-cargo install tealdeer battop
+cargo install tealdeer battop ripgrep
 
 # I'll want it later
 mkdir -p ~/.local/bin ~/rhr ~/workspace ~/.fonts
