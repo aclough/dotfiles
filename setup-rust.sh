@@ -16,3 +16,5 @@ sudo apt install linux-tools-generic linux-tools-common
 cargo install flamegraph
 mkdir -p ~/.config/fish/completions
 flamegraph --completions fish > ~/.config/fish/completions/flamegraph.fish
+
+cargo install cargo-update

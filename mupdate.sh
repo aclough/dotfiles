@@ -8,6 +8,7 @@ set +e
 rustup update
 choosenim update stable
 protonup
+cargo install-update -a
 fish -c fish_update_completions
 tldr --update
 nvim --headless "+Lazy! update" +qa
