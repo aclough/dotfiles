@@ -17,4 +17,5 @@ cargo install flamegraph
 mkdir -p ~/.config/fish/completions
 flamegraph --completions fish > ~/.config/fish/completions/flamegraph.fish
 
+sudo apt-get install pkg-config libssl-dev
 cargo install cargo-update
