@@ -40,7 +40,7 @@ ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Cus
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup component add rust-analyzer
-cargo install tealdeer battop ripgrep
+cargo install tealdeer battop ripgrep cargo-update
 
 # I'll want it later
 mkdir -p ~/.local/bin ~/rhr ~/workspace ~/.fonts
