@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 # Utilities and misc
 sudo apt install fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
-shellcheck sox black corectrl python3-pylsp python3-neovim fzy python3-pydrive2
+shellcheck sox black python3-pylsp python3-neovim fzy
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -26,10 +26,12 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
 mkdir -p ~/.config/google-chrome/Default
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
+rm googgle-chrome-stable_current_amd64.deb
 
 # Get Zoom
 wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb
+rm zoom_amd64.deb
 
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
