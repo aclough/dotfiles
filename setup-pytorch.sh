@@ -22,3 +22,5 @@ sudo usermod -aG video $USER
 sudo usermod -aG render $USER
 
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
+
+# RuntimeError: HIP error: invalid device function
