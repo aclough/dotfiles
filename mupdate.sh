@@ -2,7 +2,7 @@
 set -e
 cd ~/dotfiles
 git pull
-pacman -Syu
+sudo pacman -Syu
 set +e
 rustup update
 choosenim update stable
