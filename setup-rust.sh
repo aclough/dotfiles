@@ -12,10 +12,4 @@ tldr --update
 # Battery info
 cargo install battop
 
-sudo apt install linux-tools-generic linux-tools-common
-cargo install flamegraph
-mkdir -p ~/.config/fish/completions
-flamegraph --completions fish > ~/.config/fish/completions/flamegraph.fish
-
-sudo apt-get install pkg-config libssl-dev
 cargo install cargo-update
