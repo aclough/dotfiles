@@ -7,7 +7,7 @@ set -e
 # Utilities and misc
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
     calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
-    base-devel zig python-pydrive xclip wl-clipboard
+    base-devel zig python-pydrive xclip wl-clipboard gparted
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
