@@ -2,8 +2,7 @@
 set -e
 cd ~/dotfiles
 git pull
-sudo apt update
-sudo apt upgrade
+pacman -Syu
 set +e
 rustup update
 choosenim update stable
