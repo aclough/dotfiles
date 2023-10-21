@@ -70,6 +70,13 @@ fc-cache -fv
 mkdir -p ~/.local/bin
 mkdir -p ~/workspace
 
+# Setup conda
+cd ~/workspace
+FILENAME=Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/$FILENAME
+bash $FILENAME -b -p ~/workspace/conda
+rm $FILENAME
+
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir -p ~/.config/fish

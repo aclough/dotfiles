@@ -90,7 +90,7 @@ function pyfmt
 end
 
 function ci
-    eval /home/aclough/workspace/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+    eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
 end
 
 function ca
