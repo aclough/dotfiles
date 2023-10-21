@@ -48,10 +48,18 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
-
 # Enable DVDs
 sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
+
+curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+rustup component add rust-src rust-analysis rust-analyzer
+
+sudo apt-get install -y pkg-config libssl-dev
+
+cargo install tealdeer battop cargo-update
+tldr --update
 
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
