@@ -2,6 +2,8 @@ set -x EDITOR nvim
 
 set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $HOME/.local/bin
 
+eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
+
 function parse_git_dirty
          git diff --quiet HEAD 2>&-
          if test $status = 1
@@ -87,10 +89,6 @@ end
 
 function pyfmt
     black -l79 -S $argv
-end
-
-function ci
-    eval /home/aclough/workspace/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 end
 
 function ca

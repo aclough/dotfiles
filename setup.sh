@@ -6,9 +6,8 @@ set -e
 
 # Utilities and misc
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
-	calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
-	base-devel zig
-
+    calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
+    base-devel zig python-pydrive xclip wl-clipboard
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -16,7 +15,9 @@ sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
 # python3-pylsp:  Python language server
 # python3-neovim:  We might want it
 # fzy:  For neovim file/buffer/etc finding
-# python3-pydrive2: For deja-dup
+# xclip: For neovim clipboard
+# wl-clipboard: For neovim wayland clipboard
+
 
 yay -S google-chrome
 
@@ -26,6 +27,16 @@ gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+
+
+curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+rustup component add rust-src rust-analysis rust-analyzer
+
+sudo apt-get install -y pkg-config libssl-dev
+
+cargo install tealdeer battop cargo-update
+tldr --update
 
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
@@ -40,6 +51,13 @@ fc-cache -fv
 # I'll want it later
 mkdir -p ~/.local/bin
 mkdir -p ~/workspace
+
+# Setup conda
+cd ~/workspace
+FILENAME=Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/$FILENAME
+bash $FILENAME -b -p ~/workspace/conda
+rm $FILENAME
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
