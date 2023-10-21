@@ -7,10 +7,13 @@ set -e
 # Neovim unstable
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
+# Revert nautilus to previous default search
+sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
+
 # Utilities and misc
 sudo apt install fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
-shellcheck sox black python3-pylsp python3-neovim fzy
+shellcheck sox black python3-pylsp python3-neovim fzy git
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -18,7 +21,12 @@ shellcheck sox black python3-pylsp python3-neovim fzy
 # python3-pylsp:  Python language server
 # python3-neovim:  We might want it
 # fzy:  For neovim file/buffer/etc finding
-# python3-pydrive2: For deja-dup
+
+set +e
+sudo apt install -y python3-pydrive
+sudo apt install -y python3-pydrive2
+# python3-pydriveX: For deja-dup, depending on OS version
+set -e
 
 
 # Get Chrome
@@ -40,8 +48,6 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 
-# Revert nautilus to previous default search
-sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 # Enable DVDs
 sudo apt-get install libdvd-pkg
