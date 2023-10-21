@@ -100,3 +100,11 @@ end
 function beep
     echo -en "\007"
 end
+
+function hardware-debug-info
+    inxi -Fxxc0z | eos-sendlog
+end
+
+function bootlog-debug-info
+    journalctl -k -b -0 | eos-sendlog
+end
