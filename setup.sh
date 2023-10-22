@@ -52,6 +52,7 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
+# Rust
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup component add rust-src rust-analysis rust-analyzer
