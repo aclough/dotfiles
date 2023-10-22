@@ -2,7 +2,7 @@
 
 set -e
 
-# Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
+# Script to do all the housekeeping stuff I want to do whenever I install Endeavour on a new computer.
 
 # Utilities and misc
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
