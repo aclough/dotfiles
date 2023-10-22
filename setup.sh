@@ -21,25 +21,28 @@ sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
 
 yay -S google-chrome
 
+# New settings changes for the Cinnamon desktop
 # Don't use touchpad if I've got another pointer availabile
-gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
+gsettings set org.cinnamon.desktop.peripherals.touchpad send-events 'disabled'
 # Focus follows mouse when not in xmonad
-gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+gsettings set org.cinnamon.desktop.input-sources xkb-options "['caps:escape']"
 
 
+# Rust
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
-rustup component add rust-src rust-analysis rust-analyzer
 
-sudo apt-get install -y pkg-config libssl-dev
+rustup component add rust-src rust-analysis rust-analyzer
 
 cargo install tealdeer battop cargo-update
 tldr --update
 
+
 # Nim
 curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+
 
 # Font
 mkdir ~/.fonts
@@ -48,9 +51,11 @@ curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraC
 unzip FiraCode.zip
 fc-cache -fv
 
+
 # I'll want it later
 mkdir -p ~/.local/bin
 mkdir -p ~/workspace
+
 
 # Setup conda
 cd ~/workspace
@@ -58,6 +63,7 @@ FILENAME=Miniconda3-latest-Linux-x86_64.sh
 wget https://repo.anaconda.com/miniconda/$FILENAME
 bash $FILENAME -b -p ~/workspace/conda
 rm $FILENAME
+
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
