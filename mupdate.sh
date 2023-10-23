@@ -1,9 +1,9 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 cd ~/dotfiles
 git pull
 sudo apt update
-sudo apt upgrade
+sudo apt-get dist-upgrade
 set +e
 rustup update
 choosenim update stable
