@@ -102,6 +102,7 @@ ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
 
 # Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
+nvim --headless "+Lazy! update" +qa
 
 # Start variety, should prompt for autostart
 variety &
