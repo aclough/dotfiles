@@ -16,10 +16,9 @@ curl -O https://repo.radeon.com/amdgpu-install/5.7.1/ubuntu/jammy/amdgpu-install
 sudo dpkg -i amdgpu-install_5.7.50701-1_all.deb
 rm *.deb
 
-sudo amdgpu-install --usecase=graphics,rocm
+sudo amdgpu-install --usecase=rocm
 
-sudo usermod -aG video $USER
-sudo usermod -aG render $USER
+sudo usermod -aG render,video $USER
 
 pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
 
