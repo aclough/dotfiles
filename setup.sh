@@ -5,18 +5,6 @@ set -euo pipefail
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 # Utilities and misc
-
-# Get Zoom
-wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
-sudo apt install ./zoom_amd64.deb
-
-# Don't use touchpad if I've got another pointer availabile
-gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
-# Focus follows mouse when not in xmonad
-gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
-# Swap caplocks and escape
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
-
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo apt update
@@ -36,16 +24,28 @@ mkdir -p ~/.config/google-chrome/Default
 rm ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
 
+# Get Zoom
+wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb
+rm zoom_amd64.deb
+
+# Don't use touchpad if I've got another pointer availabile
+gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
+# Focus follows mouse when not in xmonad
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+# Swap caplocks and escape
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
+
+
+
 
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup component add rust-analyzer
 cargo install tealdeer battop ripgrep cargo-update
 
-# I'll want it later
-mkdir -p ~/.local/bin ~/rhr ~/workspace ~/.fonts
-
 # Font
+mkdir ~/.fonts
 cd ~/.fonts
 curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/FiraCode.zip
 unzip FiraCode.zip
@@ -55,11 +55,20 @@ fc-cache -fv
 pip3 install --user neovim mistune psutil setproctitle
 pip3 install --user pygame # For gripper visualization
 
+# Setup conda
+mkdir -p ~/workspace
+cd ~/workspace
+FILENAME=Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/miniconda/$FILENAME
+bash $FILENAME -b -p ~/workspace/conda
+rm $FILENAME
+
 sudo update-alternatives --config x-terminal-emulator
 
 # For ssh filesystem mounting
 mkdir mount
 
+mkdir -p ~/rhr
 cd ~/rhr
 git clone git@bitbucket.org:yuli_rhr/rightpick.git pick
 git clone git@bitbucket.org:yuli_rhr/servermanagement.git
@@ -85,6 +94,7 @@ ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir -p ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+mkdir -p ~/.local/bin
 ln -s ~/dotfiles/pickb.sh ~/.local/bin/pickb.sh
 ln -s ~/dotfiles/pickt.sh ~/.local/bin/pickt.sh
 ln -s ~/dotfiles/pickbc_plus.sh ~/.local/bin/pickc.sh
@@ -109,6 +119,7 @@ ln -s ~/dotfiles/rofi_config ~/.config/rofi/config
 
 fish -c fish_update_completions
 
+# Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
 nvim --headless "+Lazy! update" +qa
 
