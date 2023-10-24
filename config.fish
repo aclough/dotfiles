@@ -2,6 +2,8 @@ set -x EDITOR nvim
 
 set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $HOME/.local/bin
 
+set -x HIP_VISIBLE_DEVICES 0
+
 eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
 
 function parse_git_dirty
