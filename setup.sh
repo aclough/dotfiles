@@ -10,6 +10,9 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 # Revert nautilus to previous default search
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
+sudo apt update
+sudo apt dist-upgrade
+
 # Utilities and misc
 sudo apt install -y fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
