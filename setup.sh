@@ -11,9 +11,9 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 
 # Utilities and misc
-sudo apt install fish vlc neovim fonts-firacode python3-pip rofi kitty \
+sudo apt install -y fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
-shellcheck sox black python3-pylsp python3-neovim fzy git
+shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -21,6 +21,8 @@ shellcheck sox black python3-pylsp python3-neovim fzy git
 # python3-pylsp:  Python language server
 # python3-neovim:  We might want it
 # fzy:  For neovim file/buffer/etc finding
+# pkg-config: For Rust packages
+# libssl-dev: For Rust packages
 
 set +e
 sudo apt install -y python3-pydrive
@@ -53,11 +55,9 @@ sudo apt-get install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
 # Rust
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup component add rust-src rust-analysis rust-analyzer
-
-sudo apt-get install -y pkg-config libssl-dev
 
 cargo install tealdeer battop cargo-update
 tldr --update
