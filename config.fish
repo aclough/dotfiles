@@ -97,6 +97,10 @@ function ca
     conda activate $argv
 end
 
+function cn
+    conda create --name $argv
+end
+
 function beep
     echo -en "\007"
 end
