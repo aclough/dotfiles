@@ -1,11 +1,13 @@
 ALU
 Advantech
+Bitbucket
 Blindsight
 ChatGPT
 Chorded
 Clough
 Eukaryotic
 Fanuc
+Flir
 Fungibility
 Github
 Hippocampus
@@ -14,11 +16,13 @@ Itanium
 Kyiv
 MITSFS
 Metaculus
+ROCm
 Radiological
 Relatedly
 RoI
 Sabatier
 Somerville
+SpaceX
 Szechuan
 ablatable
 accelerometers
@@ -26,6 +30,7 @@ adjuvants
 affordances
 ahold
 amendment
+anthropic
 anthropomorphizing
 aspirational
 aways
@@ -37,9 +42,12 @@ chemosynthetic
 cheritable
 chiplets
 chorded
+combinatorial
+commoditizing
 concientiousness
 configurability
 coronavirus
+coupler
 customizable
 decrement
 deduplicating
@@ -55,6 +63,7 @@ eukaryotes
 eukaryotic
 evaporative
 evidential
+exokernel
 explainers
 explicitly
 fomite
@@ -68,10 +77,12 @@ intelligences
 invariance
 jeopardizing
 judgements
+larer
 latencies
 lense
 lethality
 lightspeed
+magnetron
 marginalism
 microarchitecture
 microgravity
@@ -82,6 +93,7 @@ nanotech
 natively
 neuroscientist
 neuroticism
+norovirus
 odometry
 organise
 outlier
@@ -107,6 +119,7 @@ spermaceti
 splittable
 stereotypically
 swapper
+swappers
 takktile
 tardigrades
 terraform
@@ -115,10 +128,12 @@ terraforming
 thrusters
 tradeoffs
 transmissibility
+uncalibrated
 undried
 unsplittable
 unsurprised
 unusably
 virally
 waypoint
-checksum_v1 = 3595abe800513d8ce69520e99f9c9677
+waypoints
+checksum_v1 = fcd16b1fb732bf8a8b74bdd913149d09
