@@ -154,3 +154,7 @@ end
 function ci
     eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
 end
+
+function cn
+    conda create --name $argv
+end
