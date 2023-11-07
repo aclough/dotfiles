@@ -88,7 +88,6 @@ mvn clean package
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/screenrc ~/.screenrc
 mkdir -p ~/.config/fish
 ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig

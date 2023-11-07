@@ -1,1 +1,0 @@
-caption always "%{= kg}%-Lw%50>%?%F%{+b w}%?%n*%f %t%{-}%+Lw%-6= %c"
