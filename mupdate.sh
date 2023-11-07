@@ -5,6 +5,7 @@ git pull
 sudo apt update
 sudo apt-get dist-upgrade
 rhr-setup --update zoom
+cp ~/rhr/pick/docker-compose.override.yaml ~/workspace
 cd ~/rhr/pick
 rhr-docker clean
 cargo install-update -a
