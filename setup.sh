@@ -4,6 +4,9 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Endeavour on a new computer.
 
+sudo apt update
+sudo apt dist-upgrade
+
 # Utilities and misc
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
     calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
@@ -17,21 +20,27 @@ sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
 # fzy:  For neovim file/buffer/etc finding
 # xclip: For neovim clipboard
 # wl-clipboard: For neovim wayland clipboard
+# pkg-config: For Rust packages
+# libssl-dev: For Rust packages
+
 
 
 yay -S google-chrome
 
 # New settings changes for the Cinnamon desktop
 # Don't use touchpad if I've got another pointer availabile
+gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 gsettings set org.cinnamon.desktop.peripherals.touchpad send-events 'disabled'
 # Focus follows mouse when not in xmonad
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 gsettings set org.cinnamon.desktop.input-sources xkb-options "['caps:escape']"
 
 
 # Rust
-curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 
 rustup component add rust-src rust-analysis rust-analyzer
@@ -81,6 +90,7 @@ ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
 
 # Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
+nvim --headless "+Lazy! update" +qa
 
 # Start variety, should prompt for autostart
 variety &
