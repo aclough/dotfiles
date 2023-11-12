@@ -6,7 +6,7 @@ wmname LG3D
 
 set -x RIGHTPICK_PLATFORM v3
 
-set PATH $PATH $HOME/.cargo/bin $HOME/.fzf/bin
+set PATH $PATH $HOME/.cargo/bin $HOME/.fzf/bin $HOME/.nimble/bin
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 function parse_git_dirty
