@@ -15,7 +15,7 @@ sudo apt dist-upgrade
 
 # Utilities and misc
 sudo apt install -y fish vlc neovim fonts-firacode python3-pip rofi kitty \
-ripgrep curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
+ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
 naev
 # shellcheck:  For neovim checking
