@@ -5,12 +5,12 @@
 #
 
 echo "Backing up Documents"
-rclone copy ~/Documents gdrive:backup/Documents
+rclone sync -P ~/Documents gdrive:backup/Documents
 echo "Backing up Picture"
-rclone copy ~/Pictures gdrive:backup/Pictures
+rclone sync -P ~/Pictures gdrive:backup/Pictures
 echo "Backing up Music"
-rclone copy ~/Music gdrive:backup/Music
+rclone sync -P ~/Music gdrive:backup/Music
 echo "Backing up Videos"
-rclone copy ~/Videos gdrive:backup/Videos
+rclone sync -P ~/Videos gdrive:backup/Videos
 echo "Backing up Calibre library"
-rclone copy ~/Calibre\ Library gdrive:backup/Calibre\ Library
+rclone sync -P ~/Calibre\ Library gdrive:backup/Calibre\ Library
