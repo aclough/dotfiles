@@ -104,10 +104,15 @@ ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
+ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
+ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/rofi
 ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
+mkdir -p ~/.config/rclone
+# Copy instead of link to prevent private info from getting into git
+cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.rasi
 
 # Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
