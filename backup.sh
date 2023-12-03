@@ -12,3 +12,5 @@ echo "Backing up Music"
 rclone copy ~/Music gdrive:backup/Music
 echo "Backing up Videos"
 rclone copy ~/Videos gdrive:backup/Videos
+echo "Backing up Calibre library"
+rclone copy ~/Calibre\ Library gdrive:backup/Calibre\ Library
