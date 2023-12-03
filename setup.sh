@@ -112,7 +112,7 @@ mkdir -p ~/.config/rofi
 ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
 mkdir -p ~/.config/rclone
 # Copy instead of link to prevent private info from getting into git
-cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.rasi
+cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.conf
 
 # Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
