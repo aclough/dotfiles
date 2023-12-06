@@ -99,6 +99,8 @@ ln -s ~/dotfiles/tunnel.sh ~/.local/bin/tunnel.sh
 ln -s ~/dotfiles/vtunnel.sh ~/.local/bin/vtunnel.sh
 ln -s ~/dotfiles/live-viewer.sh ~/.local/bin/live-viewer.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
+ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
+ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 ln -s ~/dotfiles/regen-api.sh ~/.local/bin/regen-api.sh
 ln -s ~/dotfiles/deploy.sh ~/.local/bin/deploy.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
