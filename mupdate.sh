@@ -4,6 +4,7 @@ cd ~/dotfiles
 git pull
 sudo pacman -Syu
 sudo paccache -r
+yay
 set +e
 rustup update
 choosenim update stable
