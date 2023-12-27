@@ -2,7 +2,7 @@
 
 set -e
 
-pacman -S steam corectrl vulkan-tools
+pacman -S steam corectrl
 
-pip install protonup
+pipx install protonup
 

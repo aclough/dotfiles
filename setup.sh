@@ -3,14 +3,14 @@
 set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Endeavour on a new computer.
-
-sudo apt update
-sudo apt dist-upgrade
+sudo pacman -Syu
+sudo paccache -r
 
 # Utilities and misc
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
     calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
-    base-devel zig python-pydrive xclip wl-clipboard gparted transmission-gtk
+    base-devel zig python-pydrive xclip wl-clipboard gparted transmission-gtk \
+    pipx
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -22,12 +22,13 @@ sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
 # wl-clipboard: For neovim wayland clipboard
 # pkg-config: For Rust packages
 # libssl-dev: For Rust packages
-
-
+# pipx: install non-distro python packages
 
 yay -S google-chrome
+ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
+mkdir -p ~/.config/google-chrome/Default
 
-# New settings changes for the Cinnamon desktop
+# New settings changes for the Cinnamon or Gnome desktop
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 gsettings set org.cinnamon.desktop.peripherals.touchpad send-events 'disabled'
