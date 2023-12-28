@@ -17,7 +17,7 @@ sudo apt dist-upgrade
 sudo apt install -y fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
-naev rclone tig
+naev rclone tig usg-creator-gtk
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -30,6 +30,7 @@ naev rclone tig
 # naev: Video game
 # rclone for new cloud backup
 # tig: git browser
+# usb-creator-gtk: Create startup disks
 
 set +e
 sudo apt install -y python3-pydrive
