@@ -5,12 +5,12 @@
 #
 
 echo "Restoring Documents"
-rclone sync -P gdrive:backup/Documents ~/Documents
+rclone copy -P gdrive:backup/Documents ~/Documents --update
 echo "Restoring Pictures"
-rclone sync -P gdrive:backup/Pictures ~/Pictures
+rclone copy -P gdrive:backup/Pictures ~/Pictures --update
 echo "Restoring Music"
-rclone sync -P gdrive:backup/Music ~/Music
+rclone copy -P gdrive:backup/Music ~/Music --update
 echo "Restoring Videos"
-rclone sync -P gdrive:backup/Videos ~/Videos
+rclone copy -P gdrive:backup/Videos ~/Videos --update
 echo "Restoring Calibre library"
-rclone sync -P gdrive:backup/Calibre\ Library ~/Calibre\ Library
+rclone copy -P gdrive:backup/Calibre\ Library ~/Calibre\ Library --update
