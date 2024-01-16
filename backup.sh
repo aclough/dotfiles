@@ -3,4 +3,4 @@
 # Note: Config at /home/aclough/.config/rclone/rclone.conf"
 
 echo "Backing up Wallapers"
-rclone sync -P ~/Pictures/Wallpapers gdrive:backup/Pictures/Wallpapers
+rclone copy -P ~/Pictures/Wallpapers gdrive:backup/Pictures/Wallpapers --update

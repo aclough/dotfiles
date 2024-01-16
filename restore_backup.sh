@@ -3,4 +3,4 @@
 # Note: Config at /home/aclough/.config/rclone/rclone.conf"
 
 echo "Restoring Wallpapers"
-rclone sync -P gdrive:backup/Pictures/Wallpapers ~/Pictures/Wallpapers
+rclone copy -P gdrive:backup/Pictures/Wallpapers ~/Pictures/Wallpapers --update
