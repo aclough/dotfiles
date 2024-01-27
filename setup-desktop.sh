@@ -12,6 +12,7 @@ rm steam.deb
 
 pip install protonup
 
+sudo apt install radeontop
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
 # But not compatible with steam 32 bit libraries
