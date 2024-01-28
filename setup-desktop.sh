@@ -2,7 +2,6 @@
 
 set -e
 
-pacman -S steam corectrl
+pacman -S steam corectrl radeontop
 
 pipx install protonup
-
