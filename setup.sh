@@ -35,13 +35,6 @@ naev rclone tig usg-creator-gtk
 # Optional tools I want to record here:
 # horizon-eda: PCB layout tool
 
-set +e
-sudo apt install -y python3-pydrive
-sudo apt install -y python3-pydrive2
-# python3-pydriveX: For deja-dup, depending on OS version
-set -e
-
-
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome*.deb
