@@ -32,6 +32,9 @@ naev rclone tig usg-creator-gtk
 # tig: git browser
 # usb-creator-gtk: Create startup disks
 
+# Optional tools I want to record here:
+# horizon-eda: PCB layout tool
+
 set +e
 sudo apt install -y python3-pydrive
 sudo apt install -y python3-pydrive2
