@@ -2,6 +2,7 @@
 set -euo pipefail
 cd ~/dotfiles
 git pull
+sudo pacman -S archlinux-keyring
 sudo pacman -Syu
 sudo paccache -r
 yay
