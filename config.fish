@@ -31,11 +31,11 @@ function fish_prompt
 end
 
 function fn
-    find -name $argv
+    fd $argv
 end
 
 function fng
-    find -name $argv[1] -print0 2> /dev/null | xargs -0 grep $argv[2]
+    fd $argv[1] --type f -X rg -S $argv[2]
 end
 
 function p

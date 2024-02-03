@@ -13,7 +13,7 @@ sudo paccache -r
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
     calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
     base-devel zig python-pydrive xclip wl-clipboard gparted transmission-gtk \
-    python-pipx
+    python-pipx rclone naev tig fd-find
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -26,6 +26,10 @@ sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
 # pkg-config: For Rust packages
 # libssl-dev: For Rust packages
 # pipx: install non-distro python packages
+# rclone for new cloud backup
+# naev: Video game
+# tig: git browser
+# fd-find: better find
 
 yay -S google-chrome
 mkdir -p ~/.config/google-chrome/Default
@@ -86,10 +90,15 @@ ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
+ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
+ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 mkdir -p ~/.config/kitty
 ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/rofi
 ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
+mkdir -p ~/.config/rclone
+# Copy instead of link to prevent private info from getting into git
+cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.conf
 
 # Nvim options
 ln -s ~/dotfiles/nvim ~/.config/nvim
