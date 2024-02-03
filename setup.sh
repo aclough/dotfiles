@@ -3,7 +3,9 @@
 set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Endeavour on a new computer.
-sudo pacman -S archlinux-keyring
+# This is in case the later steps fail because of out of date keyrings
+#sudo pacman -S archlinux-keyring
+
 sudo pacman -Syu
 sudo paccache -r
 
