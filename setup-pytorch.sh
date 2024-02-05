@@ -9,4 +9,4 @@ sudo usermod -aG render $USER
 
 sudo pacman -S python-pytorch-rocm rocminfo
 
-sudo yay -Sns python-torchvision-rocm
+yay -Sns python-torchvision-rocm
