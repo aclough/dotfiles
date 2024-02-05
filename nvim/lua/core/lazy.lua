@@ -45,6 +45,7 @@ lazy.setup({
         end,
     },
     {'alaviss/nim.nvim'}, -- starts in folds but provides syntax highlighting
+    {'nvim-treesitter/nvim-treesitter', build = ":TSUpdate"},
 
 
     -- Git integration (gitsigns.nvim?)
