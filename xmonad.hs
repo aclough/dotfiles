@@ -41,7 +41,7 @@ main = xmonad $ ewmhFullscreen . ewmh $ gnomeConfig
         , ("M-;", spawn myTerminal)
         -- , ("M-b", spawn "google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland")
         , ("M-b", spawn "google-chrome")
-        , ("M-v", spawn "thunar ~")
+        , ("M-v", spawn "nemo ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)

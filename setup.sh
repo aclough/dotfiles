@@ -14,7 +14,7 @@ sudo apt dist-upgrade
 sudo apt install -y fish vlc neovim fonts-firacode python3-pip rofi kitty \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
-naev rclone tig usg-creator-gtk gparted thunar
+naev rclone tig usg-creator-gtk gparted nemo
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -29,7 +29,7 @@ naev rclone tig usg-creator-gtk gparted thunar
 # tig: git browser
 # usb-creator-gtk: Create startup disks
 # gparted: Edit partitions
-# thunar: For xmonad
+# nemo: For xmonad
 
 # Optional tools I want to record here:
 # horizon-eda: PCB layout tool
