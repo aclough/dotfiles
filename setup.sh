@@ -12,8 +12,8 @@ sudo paccache -r
 # Utilities and misc
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
     calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
-    base-devel zig python-pydrive xclip wl-clipboard gparted transmission-gtk \
-    python-pipx rclone naev tig fd-find gparted thunar
+    base-devel zig xclip wl-clipboard gparted transmission-gtk \
+    python-pipx rclone naev tig fd-find thunar
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
