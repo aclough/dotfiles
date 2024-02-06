@@ -13,7 +13,7 @@ sudo paccache -r
 sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
     calibre clang neofetch shellcheck sox fzy python-lsp-server python-pynvim \
     base-devel zig xclip wl-clipboard gparted transmission-gtk \
-    python-pipx rclone naev tig fd-find thunar
+    python-pipx rclone naev tig fd-find nemo
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -31,7 +31,7 @@ sudo pacman -S fish neovim vlc python-pip rofi kitty ripgrep curl variety \
 # tig: git browser
 # fd-find: better find
 # gparted: Edit partitions
-# thunar: For xmonad
+# nemo: For xmonad
 
 yay -S google-chrome
 mkdir -p ~/.config/google-chrome/Default
