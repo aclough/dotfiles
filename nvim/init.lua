@@ -35,6 +35,11 @@ map_key('n', 'Q', '@@')
 -- Y should behave like other capitals
 map_key('n', 'Y', 'y$')
 
+-- Use escape to exit terminal mode
+map_key('t', '<esc>', '<C-\\><C-N>')
+-- Start up terminal easily
+map_key('n', '<leader>t', ':te fish\ni')
+
 -- Remove trailing whitespace
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
