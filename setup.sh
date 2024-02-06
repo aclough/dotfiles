@@ -6,7 +6,6 @@ set -euo pipefail
 
 # Utilities and misc
 sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo add-apt-repository ppa:lubomir-brindza/nautilus-typeahead
 sudo apt update
 sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     vim-gtk fish gcc-avr arduino pylint python3-pip lua5.2 g++ \
@@ -15,7 +14,7 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     python3-nose rofi gnome-session-xmonad neovim maven \
     shellcheck variety minicom  stlink-tools make build-essential \
     libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev \
-    fzy rclone tig foxglove-studio
+    fzy rclone tig foxglove-studio thunar
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

@@ -40,7 +40,7 @@ main = xmonad $ gnomeConfig
         , ("M-n", spawn "rofi -show run")
         , ("M-;", spawn myTerminal)
         , ("M-b", spawn "google-chrome")
-        , ("M-v", spawn "nautilus ~")
+        , ("M-v", spawn "thunar ~")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)
