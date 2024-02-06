@@ -14,7 +14,7 @@ sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
     python3-nose rofi gnome-session-xmonad neovim maven \
     shellcheck variety minicom  stlink-tools make build-essential \
     libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev \
-    fzy rclone tig foxglove-studio thunar
+    fzy rclone tig foxglove-studio nemo
 
 # Get Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
