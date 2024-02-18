@@ -47,6 +47,16 @@ gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 gsettings set org.gnome.libgnomekbd.keyboard options "['caps\tcaps:escape']"
+# Super drags windows
+gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier '<Super>'
+gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
+# Newly launched windows don't grab focus
+gsettings set org.cinnamon.desktop.wm.preferences focus-new-windows 'strict'
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
+# Cycle workspaces
+gsettings set org.cinnamon.muffin workspace-cycle true
+# But only on the main monitor
+gsettings set org.cinnamon.muffin workspaces-only-on-primary true
 
 
 # Rust
