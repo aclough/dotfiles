@@ -58,6 +58,7 @@ gsettings set org.cinnamon.muffin workspace-cycle true
 # But only on the main monitor
 gsettings set org.cinnamon.muffin workspaces-only-on-primary true
 
+# To analyze settings changes in the future use dconf dump / > output.txt
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
