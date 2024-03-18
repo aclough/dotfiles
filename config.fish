@@ -72,20 +72,20 @@ end
 
 function rd
     cd ~/rhr/pick
-    docker-compose up -d
-    docker-compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
+    docker compose up -d
+    docker compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
 end
 
 function rdb
     cd ~/rhr/pick
-    docker-compose up -d
-    docker-compose exec rightpick bash
+    docker compose up -d
+    docker compose exec rightpick bash
 end
 
 function rdv
     cd ~/rhr/pick/visualization
-    docker-compose up -d
-    docker-compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
+    docker compose up -d
+    docker compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
 end
 
 

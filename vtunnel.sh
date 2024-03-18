@@ -3,6 +3,6 @@
 set -euo pipefail
 
 cd ~/rhr/pick/visualization
-#docker-compose up -d
+#docker compose up -d
 
-docker-compose exec rightpick ./rightpick/scripts/lcm-tunnel "$1"
+docker compose exec rightpick ./rightpick/scripts/lcm-tunnel "$1"
