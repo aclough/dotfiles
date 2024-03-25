@@ -39,7 +39,7 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustup component add rust-analyzer
-cargo install tealdeer battop ripgrep cargo-update
+cargo install tealdeer battop ripgrep cargo-update navi
 
 # Font
 mkdir ~/.fonts
