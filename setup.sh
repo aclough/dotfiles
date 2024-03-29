@@ -102,6 +102,7 @@ ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
 ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 ln -s ~/dotfiles/regen-api.sh ~/.local/bin/regen-api.sh
 ln -s ~/dotfiles/deploy.sh ~/.local/bin/deploy.sh
+ln -s ~/dotfiles/impersonate.sh ~/.local/bin/impersonate.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
 ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
