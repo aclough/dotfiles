@@ -95,6 +95,10 @@ function ci
     eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
 end
 
+function cls
+    conda env list
+end
+
 function ca
     conda activate $argv
 end
