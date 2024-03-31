@@ -6,7 +6,9 @@ set -e
 sudo usermod -aG video $USER
 sudo usermod -aG render $USER
 
+sudo pacman -S rocminfo rocm-core
 
-sudo pacman -S python-pytorch-rocm rocminfo
-
-yay -Sns python-torchvision-rocm
+source ~/workspace/conda/etc/profile.d/conda.sh
+conda create --name pytorch
+conda activate pytorch
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.0
