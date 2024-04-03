@@ -84,8 +84,7 @@ end
 
 function rdv
     cd ~/rhr/pick/visualization
-    docker compose up -d
-    docker compose exec rightpick fish -c "source ./rightpick/build/deploy/env.fish; fish"
+    ./rhr-viz.sh --shell
 end
 
 
