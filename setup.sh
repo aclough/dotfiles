@@ -7,7 +7,7 @@ set -euo pipefail
 # Utilities and misc
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
-sudo apt install vlc xmonad suckless-tools mosh synaptic tree gparted \
+sudo apt install -y vlc xmonad suckless-tools mosh synaptic tree gparted \
     vim-gtk fish gcc-avr arduino pylint python3-pip lua5.2 g++ \
     autoconf clang exuberant-ctags  gitg  cmake python2.7-dbg gdb gcc \
     python-dev python-numpy linux-tools-common \
@@ -25,7 +25,7 @@ ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Cus
 
 # Get Zoom
 wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
-sudo apt install ./zoom_amd64.deb
+sudo apt install -y ./zoom_amd64.deb
 rm zoom_amd64.deb
 
 # Don't use touchpad if I've got another pointer availabile
