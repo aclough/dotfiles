@@ -44,7 +44,7 @@ rm google-chrome-stable_current_amd64.deb
 
 # Get Zoom
 wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
-sudo apt install ./zoom_amd64.deb
+sudo apt install -y ./zoom_amd64.deb
 rm zoom_amd64.deb
 
 # Don't use touchpad if I've got another pointer availabile
@@ -58,7 +58,7 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 gsettings set org.cinnamon.desktop.input-sources xkb-options "['caps:escape']"
 
 # Enable DVDs
-sudo apt-get install libdvd-pkg
+sudo apt-get install -y libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
 # Rust

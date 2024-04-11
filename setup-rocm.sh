@@ -9,7 +9,7 @@ set -e
 cd ~/workspace
 
 # Include DKMS headers
-sudo apt install "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
+sudo apt install -y "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
 # Add myself to video and render
 sudo usermod -a -G render,video $LOGNAME
 
@@ -28,7 +28,7 @@ EOF
 echo -e 'Package: *\nPin: release o=repo.radeon.com\nPin-Priority: 600' | sudo tee /etc/apt/preferences.d/rocm-pin-600
 
 sudo apt update
-sudo apt install amdgpu-dkms rocm-hip-sdk
+sudo apt install -y amdgpu-dkms rocm-hip-sdk
 ￼
 # Tell system where to find shared libraries
 sudo tee --append /etc/ld.so.conf.d/rocm.conf <<EOF
