@@ -63,7 +63,7 @@ nvim --headless "+Lazy! update" +qa
 # fish
 sudo apt install -y fish
 mkdir -p ~/.config/fish
-ln -s ~/dotfiles/config.fish ~/.config/fish
+ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
 
 # kitty
 sudo apt install -y kitty
