@@ -1,8 +1,7 @@
 #!/bin/bash
+# Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 set -e
-
-# Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
 sudo apt update
 sudo apt dist-upgrade
