@@ -32,10 +32,10 @@ naev tig usb-creator-gtk gparted nemo nvtop
 # horizon-eda: PCB layout tool
 
 # Get Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
 mkdir -p ~/.config/google-chrome/Default
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome*.deb
 rm google-chrome-stable_current_amd64.deb
 
 # Get Zoom
