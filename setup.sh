@@ -10,7 +10,7 @@ sudo apt dist-upgrade
 sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
-naev tig usb-creator-gtk gparted nemo nvtop
+naev tig usb-creator-gtk gparted nvtop
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -24,7 +24,6 @@ naev tig usb-creator-gtk gparted nemo nvtop
 # tig: git browser
 # usb-creator-gtk: Create startup disks
 # gparted: Edit partitions
-# nemo: For xmonad
 # nvtop: Monitor GPU usage
 
 # Optional tools I want to record here:

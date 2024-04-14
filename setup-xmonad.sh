@@ -2,7 +2,7 @@
 
 set -e
 
-sudo apt install -y xmonad gnome-session-flashback
+sudo apt install -y xmonad gnome-session-flashback nemo
 
 mkdir -p ~/.xmonad
 ln -s ~/dotfiles/xmonad.hs ~/.xmonad
