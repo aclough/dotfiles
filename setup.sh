@@ -4,17 +4,14 @@ set -e
 
 # Script to do all the housekeeping stuff I want to do whenever I install Ubuntu on a new computer.
 
-# Neovim unstable
-sudo add-apt-repository ppa:neovim-ppa/unstable
-
 sudo apt update
 sudo apt dist-upgrade
 
 # Utilities and misc
-sudo apt install -y fish vlc neovim fonts-firacode python3-pip rofi kitty \
+sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
-naev rclone tig usb-creator-gtk gparted nemo nvtop
+naev tig usb-creator-gtk gparted nemo nvtop
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -25,7 +22,6 @@ naev rclone tig usb-creator-gtk gparted nemo nvtop
 # pkg-config: For Rust packages
 # libssl-dev: For Rust packages
 # naev: Video game
-# rclone for new cloud backup
 # tig: git browser
 # usb-creator-gtk: Create startup disks
 # gparted: Edit partitions
@@ -56,6 +52,34 @@ gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 gsettings set org.cinnamon.desktop.input-sources xkb-options "['caps:escape']"
+
+# Nvim options
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt -y install neovim
+ln -s ~/dotfiles/nvim ~/.config/nvim
+nvim --headless "+Lazy! update" +qa
+
+# fish
+sudo apt install -y fish
+mkdir -p ~/.config/fish
+ln -s ~/dotfiles/config.fish ~/.config/fish
+
+# kitty
+sudo apt install -y kitty
+mkdir -p ~/.config/kitty
+ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+
+# rofi
+sudo apt install -y rofi
+mkdir -p ~/.config/rofi
+ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
+
+# rclone cloud backup
+sudo apt install -y rclone
+mkdir -p ~/.config/rclone
+# Copy instead of link to prevent private info from getting into git
+cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.conf
 
 # Enable DVDs
 sudo apt-get install -y libdvd-pkg
@@ -95,8 +119,6 @@ rm $FILENAME
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/screenrc ~/.screenrc
-mkdir -p ~/.config/fish
-ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
@@ -104,17 +126,6 @@ ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
 ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
-mkdir -p ~/.config/kitty
-ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
-mkdir -p ~/.config/rofi
-ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
-mkdir -p ~/.config/rclone
-# Copy instead of link to prevent private info from getting into git
-cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.conf
-
-# Nvim options
-ln -s ~/dotfiles/nvim ~/.config/nvim
-nvim --headless "+Lazy! update" +qa
 
 # Start variety, should prompt for autostart
 variety &
