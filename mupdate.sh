@@ -8,7 +8,8 @@ rhr-setup --update zoom
 cp ~/rhr/pick/docker-compose.override.yaml ~/workspace
 cd ~/rhr/pick
 rhr-docker clean
+docker compose exec rightpick fish -c fish_update_completions
 cargo install-update -a
-fish -c "source ~/rhr/pick/build/deploy/env.fish; fish_update_completions"
+fish -c fish_update_completions
 tldr --update
 nvim --headless "+Lazy! update" +qa
