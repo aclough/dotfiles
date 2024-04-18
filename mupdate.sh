@@ -8,6 +8,7 @@ rhr-setup --update zoom
 cp ~/rhr/pick/docker-compose.override.yaml ~/workspace
 cd ~/rhr/pick
 rhr-docker clean
+docker compose up -d
 docker compose exec rightpick fish -c fish_update_completions
 cargo install-update -a
 fish -c fish_update_completions
