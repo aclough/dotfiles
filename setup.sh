@@ -37,9 +37,9 @@ sudo dpkg -i google-chrome*.deb
 rm google-chrome-stable_current_amd64.deb
 
 # Get Zoom
-wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
-sudo apt install -y ./zoom_amd64.deb
-rm zoom_amd64.deb
+#wget https://zoom.us/client/5.14.7.2928/zoom_amd64.deb
+#sudo apt install -y ./zoom_amd64.deb
+#rm zoom_amd64.deb
 
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
