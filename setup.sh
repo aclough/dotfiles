@@ -126,3 +126,7 @@ ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 # Start variety, should prompt for autostart
 mkdir -p ~/Pictures/Wallpapers
 variety &
+
+# Grab my sudoku solver
+cd ~/workspace
+git clone git@github.com:aclough/sudoku.git
