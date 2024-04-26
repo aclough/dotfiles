@@ -57,6 +57,7 @@ nvim --headless "+Lazy! update" +qa
 
 # fish
 sudo apt install -y fish
+# Need conf.d for Rust install to add something to
 mkdir -p ~/.config/fish/conf.d
 ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
 
@@ -123,4 +124,5 @@ ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
 ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 
 # Start variety, should prompt for autostart
+mkdir -p ~/Pictures/Wallpapers
 variety &
