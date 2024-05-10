@@ -36,7 +36,8 @@ function fish_prompt
 end
 
 function fn
-    fd $argv
+    #fd $argv
+    find -name $argv[1]
 end
 
 function fng
