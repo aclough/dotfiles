@@ -123,6 +123,11 @@ function sx
     ssh -AMX rhr@$argv -t fish
 end
 
+function sd
+    ssh aclough@usc1-cdp-task-sw01
+    # source /usr/local/rightpick/activate
+end
+
 function sf
     umount -q ~/mount &> /dev/null
     sshfs rhr@$argv[1]:/ ~/mount -C
