@@ -2,7 +2,7 @@
 
 set -e
 
-sudo apt install steam-installer
+sudo apt install steam-installer radeontop
 
 pip install protonup
 
