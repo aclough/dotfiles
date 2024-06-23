@@ -114,7 +114,6 @@ bash $FILENAME -b -p ~/workspace/conda
 rm $FILENAME
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
-ln -s ~/dotfiles/screenrc ~/.screenrc
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
