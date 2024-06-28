@@ -104,3 +104,4 @@ end
 function beep
     echo -en "\007"
 end
+

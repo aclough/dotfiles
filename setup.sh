@@ -10,7 +10,7 @@ sudo apt dist-upgrade
 sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
-naev tig usb-creator-gtk gparted nvtop
+naev tig usb-creator-gtk gparted nvtop nodejs
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -25,6 +25,7 @@ naev tig usb-creator-gtk gparted nvtop
 # usb-creator-gtk: Create startup disks
 # gparted: Edit partitions
 # nvtop: Monitor GPU usage
+# nodejs: For Github copilot
 
 # Optional tools I want to record here:
 # horizon-eda: PCB layout tool
@@ -54,6 +55,7 @@ sudo apt update
 sudo apt -y install neovim
 ln -s ~/dotfiles/nvim ~/.config/nvim
 nvim --headless "+Lazy! update" +qa
+nvim --headless "Copilot setup" +qa
 
 # fish
 sudo apt install -y fish
