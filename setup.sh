@@ -49,6 +49,8 @@ gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+# Use ctrl-alt-l for locking
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Ctrl><Alt>l']"
 
 # Nvim options
 sudo add-apt-repository ppa:neovim-ppa/unstable
