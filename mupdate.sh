@@ -9,7 +9,7 @@ yay
 set +e
 rustup update
 choosenim update stable
-protonup
+#protonup
 cargo install-update -a
 ~/workspace/conda/bin/conda update -n base -c defaults conda
 fish -c fish_update_completions
