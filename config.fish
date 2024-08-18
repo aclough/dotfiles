@@ -2,6 +2,8 @@ set -x EDITOR nvim
 
 set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $HOME/.local/bin /opt/rocm/bin
 
+set -x DATA_DIR $HOME/workspace/progress
+
 set -x HIP_VISIBLE_DEVICES 0
 
 function parse_git_dirty
