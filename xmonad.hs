@@ -14,6 +14,8 @@ myHandleEventHook = hintsEventHook
 
 myTerminal = "kitty"
 
+myScreenshot = "scrot -e 'mv $f ~/workspace/' "
+
 myLayout = avoidStruts (tiled ||| Full)
   where
     -- default tiling algorithm partitions the screen into two panes
@@ -42,6 +44,9 @@ main = xmonad $ ewmhFullscreen . ewmh $ gnomeConfig
         -- , ("M-b", spawn "google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland")
         , ("M-b", spawn "google-chrome")
         , ("M-v", spawn "nemo ~")
+        , ("M-p", spawn myScreenshot)
+        , ("M-S-p", spawn $ myScreenshot ++ " -s")
+        , ("M-M1-p", spawn $ myScreenshot ++ " -u")
         , ("M-u", prevWS)
         , ("M-i", nextWS)
         , ("M-S-u", shiftToPrev)
