@@ -35,7 +35,7 @@ main = xmonad $ ewmhFullscreen . ewmh $ gnomeConfig
     , logHook = updatePointer (0.5,0.5) (0.5,0.5) >> logHook gnomeConfig
     , handleEventHook = myHandleEventHook
     , startupHook = startupHook gnomeConfig
-    , focusedBorderColor = "#ffb000"
+    , focusedBorderColor = "#c71341"
     }
     `additionalKeysP`(
         [ ("M-c", kill)
