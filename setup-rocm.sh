@@ -7,11 +7,12 @@ cd ~/Downloads
 
 sudo apt update
 # Include DKMS headers
-sudo apt install -y "linux-headers-$(uname -r)" "linux-modules-extra-$(uname -r)"
+sudo apt -y install linux-headers-generic
 # Add myself to video and render
-sudo usermod -a -G render,video $LOGNAME
+sudo usermod -a -G render,video $USER
 
-wget https://repo.radeon.com/amdgpu-install/6.2/ubuntu/noble/amdgpu-install_6.2.60200-1_all.deb
-sudo apt install ./amdgpu-install_6.2.60200-1_all.deb
+wget https://repo.radeon.com/amdgpu-install/6.2.2/ubuntu/noble/amdgpu-install_6.2.60202-1_all.deb
+sudo apt install ./amdgpu-install_6.2.60202-1_all.deb
 sudo apt update
 sudo apt install -y amdgpu-dkms rocm
+sudo apt install ./amdgpu-install_6.2.60202-1_all.deb
