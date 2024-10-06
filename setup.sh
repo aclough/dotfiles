@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 
 set -e
 
@@ -41,25 +42,40 @@ ln -sf ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Cu
 # New settings changes for the Cinnamon or Gnome desktop
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
-gsettings set org.cinnamon.desktop.peripherals.touchpad send-events 'disabled'
+# Super drags windows
+gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
 # Focus follows mouse when not in xmonad
 gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
-gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 # Swap caplocks and escape
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 gsettings set org.gnome.libgnomekbd.keyboard options "['caps\tcaps:escape']"
-# Super drags windows
-gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier '<Super>'
-gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
 # Newly launched windows don't grab focus
-gsettings set org.cinnamon.desktop.wm.preferences focus-new-windows 'strict'
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
-# Cycle workspaces
-gsettings set org.cinnamon.muffin workspace-cycle true
-# But only on the main monitor
-gsettings set org.cinnamon.muffin workspaces-only-on-primary true
+# Use ctrl-alt-l for locking
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Ctrl><Alt>l']"
 
-# To analyze settings changes in the future use dconf dump / > output.txt
+# Nvim options
+ln -s ~/dotfiles/nvim ~/.config/nvim
+nvim --headless "+Lazy! update" +qa
+nvim --headless "Copilot setup" +qa
+
+# fish
+# Need conf.d for Rust install to add something to
+mkdir -p ~/.config/fish/conf.d
+ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
+
+# kitty
+mkdir -p ~/.config/kitty
+ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+
+# rofi
+mkdir -p ~/.config/rofi
+ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
+
+# rclone cloud backup
+mkdir -p ~/.config/rclone
+# Copy instead of link to prevent private info from getting into git
+cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.conf
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -97,8 +113,6 @@ rm $FILENAME
 
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
-mkdir -p ~/.config/fish
-ln -s ~/dotfiles/config.fish ~/.config/fish
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/shutdown.sh ~/.local/bin/shutdown.sh
 ln -s ~/dotfiles/suspend.sh ~/.local/bin/suspend.sh
@@ -106,17 +120,11 @@ ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
 ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
-mkdir -p ~/.config/kitty
-ln -s ~/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
-mkdir -p ~/.config/rofi
-ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
-mkdir -p ~/.config/rclone
-# Copy instead of link to prevent private info from getting into git
-cp ~/dotfiles/rclone.conf ~/.config/rclone/rclone.conf
-
-# Nvim options
-ln -s ~/dotfiles/nvim ~/.config/nvim
-nvim --headless "+Lazy! update" +qa
 
 # Start variety, should prompt for autostart
+mkdir -p ~/Pictures/Wallpapers
 variety &
+
+# Grab my sudoku solver
+cd ~/workspace
+git clone git@github.com:aclough/sudoku.git

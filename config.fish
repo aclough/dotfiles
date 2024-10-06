@@ -22,7 +22,7 @@ function fish_prompt
     if test $status -ne 0
         set_color red
     else
-        set_color FFB000 # RHR sunburst
+        set_color C7BF14 # Compliment of BD blue
     end
     printf '%s' (prompt_pwd)
     set_color normal
@@ -33,11 +33,11 @@ function fish_prompt
 end
 
 function fn
-    fd $argv
+    find -name $argv[1]
 end
 
 function fng
-    fd $argv[1] --type f -X rg -S $argv[2]
+    find -name $argv[1] -print0 2> /dev/null | xargs -0 grep $argv[2]
 end
 
 function p
