@@ -1,11 +1,11 @@
 * {
-    border-color:                #1490c6;
-    bordercolor:                 #1490c6;
+    border-color:                #0664c1;
+    bordercolor:                 #0664c1;
     foreground:                  #ffffff;
     selected-normal-foreground:  #ffffff;
-    selected-active-foreground:  #094158;
-    selected-normal-background:  #094158;
+    selected-active-foreground:  #0664c1;
+    selected-normal-background:  #0664c1;
     alternate-normal-foreground: #ffffff;
-    alternate-normal-background: #052836;
-    background:                  #052836;
+    alternate-normal-background: #00365A;
+    background:                  #00365A;
 }
