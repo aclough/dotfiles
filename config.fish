@@ -6,6 +6,12 @@ set -x HIP_VISIBLE_DEVICES 0
 
 eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
 
+if set -q KITTY_INSTALLATION_DIR
+    set --global KITTY_SHELL_INTEGRATION enabled
+    source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
+    set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
+end
+
 function parse_git_dirty
          git diff --quiet HEAD 2>&-
          if test $status = 1
