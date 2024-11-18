@@ -48,6 +48,10 @@ function a
     rg -S --colors 'path:fg:yellow' $argv 2> /dev/null
 end
 
+function a-lit
+    rg --fixed-strings --colors 'path:fg:yellow' $argv 2> /dev/null
+end
+
 function v
     nvim -p $argv
 end
