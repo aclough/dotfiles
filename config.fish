@@ -37,7 +37,7 @@ function fish_prompt
 end
 
 function fn
-    find -name $argv[1]
+    find -name $argv[1] 2> /dev/null
 end
 
 function fng
@@ -49,7 +49,7 @@ function p
 end
 
 function a
-    rg -S --colors 'path:fg:yellow' $argv
+    rg -S --colors 'path:fg:yellow' $argv 2> /dev/null
 end
 
 function v
