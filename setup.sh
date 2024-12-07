@@ -77,6 +77,11 @@ sudo apt install -y rofi
 mkdir -p ~/.config/rofi
 ln -s ~/dotfiles/rofi_config.rasi ~/.config/rofi/config.rasi
 
+# sway
+sudo apt install -y sway
+mkdir -p ~/.config/sway
+ln -s ~/dotfiles/sway_config ~/.config/sway/config
+
 # rclone cloud backup
 sudo apt install -y rclone
 mkdir -p ~/.config/rclone
