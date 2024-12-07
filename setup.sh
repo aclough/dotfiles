@@ -43,7 +43,7 @@ rm google-chrome-stable_current_amd64.deb
 #sudo apt install -y ./zoom_amd64.deb
 #rm zoom_amd64.deb
 
-# Use dcomf dump and gsettings list-recursively to get these
+# Use dconf dump and gsettings list-recursively to get these
 # Don't use touchpad if I've got another pointer availabile
 gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled
 # Focus follows mouse when not in xmonad
