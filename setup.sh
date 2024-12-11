@@ -10,7 +10,8 @@ sudo apt dist-upgrade
 sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
-naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev
+naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev \
+gnome-shell-extension-manager
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -27,6 +28,7 @@ naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev
 # nvtop: Monitor GPU usage
 # nodejs: For Github copilot
 # libboost-program-options-dev: For C++ argparse
+# gnome-shell-extension-manager: For installing Tiling Shell maybe
 
 # Optional tools I want to record here:
 # horizon-eda: PCB layout tool
