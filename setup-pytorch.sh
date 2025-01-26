@@ -1,23 +1,11 @@
 #!/bin/bash
-#
-#From https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/install-pytorch.html
 
 set -e
 
-cd ~/workspace
-pip3 install --upgrade pip wheel
-
-pip install typing_extensions==4.4.0
-
-sudo apt update
-sudo apt install -y git python3-pip python3-venv python3-dev libstdc++-12-dev
-
-curl -O https://repo.radeon.com/amdgpu-install/5.7.1/ubuntu/jammy/amdgpu-install_5.7.50701-1_all.deb
-sudo dpkg -i amdgpu-install_5.7.50701-1_all.deb
-rm *.deb
-
-sudo amdgpu-install --usecase=rocm
+sudo apt install rocminfo clinfo libamd-comgr2 libamdhip64-5 libhipblas0 libhipfft0 libhiprand1 libhipsolver0 \
+    libhipsparse0 libhsa-runtime64-1 librccl1 librocalution0 librocblas0 librocfft0 librocm-smi64-1 librocrand1 \
+    librocsolver0 librocsparse0 rocm-device-libs-17 rocm-smi hipcc
 
 sudo usermod -aG render,video $USER
 
-pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.0
