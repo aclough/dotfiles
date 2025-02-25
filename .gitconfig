@@ -1,5 +1,6 @@
 [branch]
     autosetuprebase = always
+    sort = -committerdate
 [color]
     ui = true
 [user]
@@ -7,6 +8,8 @@
     name = Andrew Clough
 [push]
     default = simple
+    autoSetupRemote = true
+    followTags = true
 [alias]
     st = status
     br = branch
@@ -17,3 +20,12 @@
     cia = commit -a --amend
 [help]
     autocorrect = 5
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
