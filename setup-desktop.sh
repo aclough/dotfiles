@@ -6,6 +6,7 @@ sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install -y steam radeontop
 
+source ~/workspace/conda/bin/activate
 pip install protonup
 
 # Maybe add advanced Radeon drivers and kernel (if this is my desktop)
