@@ -1,6 +1,6 @@
 set -x EDITOR nvim
 
-set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $HOME/.local/bin
+set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $HOME/.npm-global/bin $HOME/.local/bin
 
 set -x HIP_VISIBLE_DEVICES 0
 

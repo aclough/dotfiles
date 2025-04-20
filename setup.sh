@@ -11,7 +11,7 @@ sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
 naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev \
-gnome-shell-extension-manager
+gnome-shell-extension-manager npm
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -102,6 +102,10 @@ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 
 # Zig
 snap install zig --classic --beta
+
+# Node
+npm config set prefix ~/.npm-global
+npm install -g @anthropic-ai/claude-code
 
 # Font
 mkdir ~/.fonts
