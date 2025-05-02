@@ -113,6 +113,10 @@ function cn
     conda create --name $argv
 end
 
+function o
+    xdg-open $argv
+end
+
 function beep
     echo -en "\007"
 end
