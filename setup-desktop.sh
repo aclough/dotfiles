@@ -15,3 +15,4 @@ pip install protonup
 # sudo add-apt-repository ppa:kisak/kisak-mesa
 # For AMD power management
 
+echo "Remember to disable GPU accelerated rendering for steam under settings-> interface"
