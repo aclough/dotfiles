@@ -94,7 +94,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup component add rust-src rust-analysis rust-analyzer
 
-cargo install tealdeer battop cargo-update
+cargo install tealdeer battop cargo-update ohx
 tldr --update
 
 # Nim
