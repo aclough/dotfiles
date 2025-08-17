@@ -1,6 +1,7 @@
 set -x EDITOR nvim
 
 set PATH $PATH $HOME/.cargo/bin $HOME/.nimble/bin $HOME/.npm-global/bin $HOME/.local/bin
+source ~/activate_avante.fish # API Key
 
 set -x HIP_VISIBLE_DEVICES 0
 
