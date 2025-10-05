@@ -1,8 +1,7 @@
 -- LSP settings.
 
 -- Setup language servers.
-local lspconfig = require('lspconfig')
-lspconfig.pylsp.setup {
+vim.lsp.config {
   settings = {
     pylsp = {
       plugins = {
@@ -14,9 +13,8 @@ lspconfig.pylsp.setup {
     }
   }
 }
-lspconfig.ts_ls.setup {}
-lspconfig.rust_analyzer.setup {
-    -- Server-specific settings. See `:help lspconfig-setup`
+vim.lsp.enable('ts_ls')
+vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {},
     },
