@@ -1,7 +1,8 @@
 -- LSP settings.
 
 -- Setup language servers.
-vim.lsp.config {
+vim.lsp.enable('ts_ls')
+vim.lsp.config('pylsp', {
   settings = {
     pylsp = {
       plugins = {
@@ -12,13 +13,13 @@ vim.lsp.config {
       }
     }
   }
-}
-vim.lsp.enable('ts_ls')
+})
 vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {},
-    },
-}
+    }
+})
+vim.lsp.config('lua_ls', {})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
