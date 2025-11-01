@@ -11,7 +11,7 @@ sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
 naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev \
-gnome-shell-extension-manager npm pipx
+gnome-shell-extension-manager npm pipx python-is-python3
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -30,6 +30,7 @@ gnome-shell-extension-manager npm pipx
 # libboost-program-options-dev: For C++ argparse
 # gnome-shell-extension-manager: For installing Tiling Shell maybe
 # pipx: For poetry and other python things
+# python-is-python3: Compatibility
 
 # Get Chrome
 mkdir -p ~/.config/google-chrome/Default

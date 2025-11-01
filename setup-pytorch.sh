@@ -20,4 +20,11 @@ sudo amdgpu-install --usecase=rocm
 
 sudo usermod -aG render,video $USER
 
-pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm5.7
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.1
+
+pip3 install cython
+pip3 install mujoco
+pip3 install gymnasium
+
+# In global scope
+pipx install poetry
