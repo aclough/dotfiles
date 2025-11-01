@@ -31,9 +31,6 @@ gnome-shell-extension-manager npm pipx
 # gnome-shell-extension-manager: For installing Tiling Shell maybe
 # pipx: For poetry and other python things
 
-# Optional tools I want to record here:
-# horizon-eda: PCB layout tool
-
 # Get Chrome
 mkdir -p ~/.config/google-chrome/Default
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
@@ -104,6 +101,9 @@ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 # Zig
 snap install zig --classic --beta
 
+# Setup python
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Node
 npm config set prefix ~/.npm-global
 npm install -g @anthropic-ai/claude-code
@@ -118,13 +118,6 @@ fc-cache -fv
 # I'll want it later
 mkdir -p ~/.local/bin
 mkdir -p ~/workspace
-
-# Setup conda
-cd ~/workspace
-FILENAME=Miniconda3-latest-Linux-x86_64.sh
-wget https://repo.anaconda.com/miniconda/$FILENAME
-bash $FILENAME -b -p ~/workspace/conda
-rm $FILENAME
 
 # Take the stuff from this dotfiles folder (that I care about) and symlink it
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
