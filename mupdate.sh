@@ -9,7 +9,7 @@ rustup update
 cargo install-update -a
 choosenim update stable
 source ~/workspace/conda/bin/activate
-protonup
+#protonup
 conda update -n base -c defaults conda
 fish -c fish_update_completions
 tldr --update
