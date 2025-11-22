@@ -41,7 +41,6 @@ lazy.setup({
         dependencies = {"tpope/vim-repeat"},
         config = function(_, opts)
             local leap = require("leap")
-            leap.add_default_mappings(true)
         end,
     },
     {'alaviss/nim.nvim'}, -- starts in folds but provides syntax highlighting
