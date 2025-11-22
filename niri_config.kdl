@@ -97,6 +97,7 @@ input {
     // automatically.
     position x=1280 y=0
 }
+// Desktop at home
 output "DP-1" {
     mode "3840x2160@59.997"
     scale 1.25
@@ -172,7 +173,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fffc8"
+        active-color "9bc1e6"
 
         // Color of the ring on inactive monitors.
         //
