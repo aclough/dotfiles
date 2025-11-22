@@ -376,6 +376,9 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Semicolon hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty"; }
     Mod+N hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+B hotkey-overlay-title="Open a browser: Chrome" { spawn "google-chrome"; }
+    Mod+V hotkey-overlay-title="Open file manager: Nemo" { spawn "nemo"; }
+
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "swaylock -i ~/Pictures/Wallpapers/golden2.png"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -409,7 +412,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+Q repeat=false { close-window; }
+    Mod+C repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -449,6 +452,8 @@ binds {
     Mod+Shift+J     { focus-monitor-down; }
     Mod+Shift+K     { focus-monitor-up; }
     Mod+Shift+L     { focus-monitor-right; }
+    Mod+Y           { focus-monitor-next; }
+
 
     Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
@@ -458,13 +463,15 @@ binds {
     Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+    Mod+Ctrl+Y           { move-column-to-monitor-next; }
 
-    // Alternatively, there are commands to move just a single window:
+
+    // AlterCatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
     // ...
 
     // And you can also move a whole workspace to another monitor:
-    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
+    Mod+Alt+Y  { move-workspace-to-monitor-next; }
     // ...
 
     Mod+Page_Down      { focus-workspace-down; }
@@ -573,10 +580,10 @@ binds {
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
+    Mod+Shift+C { center-column; }
 
     // Center all fully visible columns on screen.
-    Mod+Ctrl+C { center-visible-columns; }
+    Mod+Shift+Ctrl+C { center-visible-columns; }
 
     // Finer width adjustments.
     // This command can also:
@@ -594,8 +601,8 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Ctrl+V       { toggle-window-floating; }
+    Mod+Ctrl+Shift+V { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
