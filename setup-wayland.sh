@@ -14,6 +14,8 @@ cargo install wpaperd
 mkdir -p ~/.config/wpaperd
 ln -s ~/dotfiles/wpaperd-config.toml ~/.config/wpaperd/config.toml
 
+mkdir -p ~/.config/fuzzel
+ln -s ~/dotfiles/fuzzel-config.ini ~/.config/fuzzel/fuzzel.ini
 
 sudo apt install -y libxcb-composite0-dev libxcb-res0-dev libwayland-dev pkg-config libxcb-cursor-dev
 cd ~/workspace
