@@ -97,6 +97,19 @@ input {
     // automatically.
     position x=1280 y=0
 }
+output "DP-1" {
+    mode "3840x2160@59.997"
+    scale 1.25
+    transform "normal"
+    position x=0 y=1440
+}
+
+output "HDMI-A-2" {
+    mode "3840x2160@60.0"
+    scale 1.5
+    transform "normal"
+    position x=0 y=0
+}
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
