@@ -4,7 +4,7 @@
 
 set -e
 
-sudo apt-get install -y swaylock fuzzel brightnessctl waybar pavucontrol thunar xdg-desktop-portal-gnome
+sudo apt-get install -y swaylock fuzzel brightnessctl waybar pavucontrol thunar xdg-desktop-portal-gnome wl-clipboard
 
 mkdir -p ~/.config/waybar
 ln -s ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
