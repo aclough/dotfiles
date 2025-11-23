@@ -290,6 +290,8 @@ spawn-at-startup "wpaperd"
 // Normal Ubuntu stuff
 spawn-at-startup "xdg-deskop-portal-gnome"
 spawn-at-startup "gnome-keyring"
+spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
+
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
