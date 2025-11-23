@@ -10,7 +10,7 @@ input {
     keyboard {
         xkb {
             layout "us"
-            options "compose:ralt,caps:escape"
+            options "caps:escape"
         }
         // Enable numlock on startup, omitting this setting disables it.
         numlock
@@ -20,7 +20,7 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
     touchpad {
-        // off
+        off
         tap
         // dwt
         // dwtp
@@ -111,6 +111,14 @@ output "HDMI-A-2" {
     transform "normal"
     position x=0 y=0
 }
+
+// Laptop
+output "Lenovo Group Limited 0x40A9 Unknown" {
+    scale 1.2
+    transform "normal"
+    position x=0 y=0
+}
+
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
