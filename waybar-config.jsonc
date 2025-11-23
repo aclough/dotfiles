@@ -14,13 +14,13 @@
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
-        "network",
-        "clock",
+        //"network",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
         "battery",
+        "clock",
         "tray",
         "custom/power"
     ],
