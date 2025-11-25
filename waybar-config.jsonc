@@ -10,6 +10,7 @@
         "niri/workspaces"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
         "idle_inhibitor",
@@ -20,7 +21,6 @@
         "memory",
         "temperature",
         "battery",
-        "clock",
         "tray",
         "custom/power"
     ],
@@ -32,12 +32,29 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        "icon-size": 15,
+        "spacing": 10,
+        "show-passive-items": true,
+        "reverse-direction": false,
+        "expander": true,
+        "indirect": true
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+          "mode": "year",
+          "mode-mon-col": 3,
+          "weeks-pos": "right",
+          "on-scroll": 1,
+          "format": {
+            "months": "<span color='#69b5f7'><b>{}</b></span>",
+            "days": "<span color='#97959d'><b>{}</b></span>",
+            "weeks": "<span color='#6a686e'><b>W{}</b></span>",
+            "weekdays": "<span color='#69b5f7'><b>{}</b></span>",
+            "today": "<span color='#e5dbff' background='#2b2b2c'><b><u>{}</u></b></span>"
+          }
+        },
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -83,12 +100,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-wifi": "",
+        "format-ethernet": "lan",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "on-click": "kitty -e impala",
+        "tooltip-format": "{essid} ({signalStrength}%)"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -112,13 +128,6 @@
     "custom/power": {
         "format" : "⏻ ",
         "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "/usr/share/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
-        "menu-actions": {
-            "shutdown": "shutdown",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
+        "on-click": "wlogout"
     }
 }
