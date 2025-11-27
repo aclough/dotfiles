@@ -12,11 +12,12 @@ sudo apt-get install -y swaylock fuzzel brightnessctl waybar pavucontrol thunar 
 mkdir -p ~/.config/waybar
 ln -s ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
 
-sudo apt-get install -y iwd
-cargo install wpaperd impala
+# sudo apt-get install -y iwd
+# cargo install wpaperd impala
 # Turn on iwd service now to use impala
-sudo systemctl enable --now iwd
-# Alternatively network-manager-gnome and nm-applet
+# sudo systemctl enable --now iwd
+sudo apt install -y network-manager-gnome
+# nm-applet
 
 mkdir -p ~/.config/wpaperd
 ln -s ~/dotfiles/wpaperd-config.toml ~/.config/wpaperd/config.toml
