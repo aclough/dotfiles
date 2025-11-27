@@ -41,6 +41,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%m-%d : %H-%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
           "mode": "year",
@@ -54,8 +55,7 @@
             "weekdays": "<span color='#69b5f7'><b>{}</b></span>",
             "today": "<span color='#e5dbff' background='#2b2b2c'><b><u>{}</u></b></span>"
           }
-        },
-        "format-alt": "{:%Y-%m-%d}"
+        }
     },
     "cpu": {
         "format": "{usage}% ",
@@ -69,8 +69,7 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format": "{temperatureC}°C"
     },
     "battery": {
         "states": {

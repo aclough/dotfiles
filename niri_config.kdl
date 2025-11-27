@@ -114,7 +114,7 @@ output "HDMI-A-2" {
 
 // Laptop
 output "Lenovo Group Limited 0x40A9 Unknown" {
-    scale 1.2
+    scale 1.0
     transform "normal"
     position x=0 y=0
 }
