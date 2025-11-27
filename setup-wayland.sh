@@ -9,6 +9,8 @@ sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl
 
 sudo apt-get install -y swaylock fuzzel brightnessctl waybar pavucontrol thunar xdg-desktop-portal-gnome wl-clipboard wlogout
 
+ln -s ~/dotfiles/wlogout.desktop ~/.local/share/applications/wlogout.desktop
+
 mkdir -p ~/.config/waybar
 ln -s ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
 
