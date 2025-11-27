@@ -16,6 +16,7 @@ sudo apt-get install -y iwd
 cargo install wpaperd impala
 # Turn on iwd service now to use impala
 sudo systemctl enable --now iwd
+# Alternatively network-manager-gnome and nm-applet
 
 mkdir -p ~/.config/wpaperd
 ln -s ~/dotfiles/wpaperd-config.toml ~/.config/wpaperd/config.toml
