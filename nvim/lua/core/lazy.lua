@@ -37,13 +37,8 @@ lazy.setup({
     {'Yggdroot/indentLine'}, -- Display indentation
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
     {'nvim-telescope/telescope-fzy-native.nvim'},
-    {'ggandor/leap.nvim',
-        dependencies = {"tpope/vim-repeat"},
-        config = function(_, opts)
-            local leap = require("leap")
-        end,
-    },
-    {'alaviss/nim.nvim'}, -- starts in folds but provides syntax highlighting
+    {'ggandor/leap.nvim',}, -- Fast movement
+    {'alaviss/nim.nvim'}, -- Starts in folds but provides syntax highlighting
 
 
     -- Git integration (gitsigns.nvim?)
@@ -55,3 +50,8 @@ lazy.setup({
     {'neovim/nvim-lspconfig'},
 })
 require('gitsigns').setup()
+
+vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
+vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
+
+
