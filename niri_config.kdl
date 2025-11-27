@@ -389,6 +389,8 @@ binds {
     Mod+N hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B hotkey-overlay-title="Open a browser: Chrome" { spawn "google-chrome"; }
     Mod+V hotkey-overlay-title="Open file manager: Nemo" { spawn "nemo"; }
+    Mod+E hotkey-overlay-title="Powre control: wlogout" { spawn "wlogout"; }
+
 
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn-sh "swaylock -i ~/Pictures/Wallpapers/golden2.png"; }
 
