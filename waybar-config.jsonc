@@ -40,7 +40,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%m-%d : %H-%M}",
+        "format": "{:%m-%d   %H:%M}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
           "mode": "year",
