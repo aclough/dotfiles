@@ -385,6 +385,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Semicolon hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty"; }
     Mod+N hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Alt+N { spawn-sh "fuzzel --list-executables-in-path"; }
     Mod+B hotkey-overlay-title="Open a browser: Chrome" { spawn "google-chrome"; }
     Mod+V hotkey-overlay-title="Open file manager: Nemo" { spawn "nemo"; }
     Mod+E hotkey-overlay-title="Powre control: wlogout" { spawn "wlogout"; }
@@ -434,14 +435,14 @@ binds {
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
 
-    Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+H     { move-column-left; }
-    Mod+Ctrl+J     { move-window-down; }
-    Mod+Ctrl+K     { move-window-up; }
-    Mod+Ctrl+L     { move-column-right; }
+    Mod+Alt+Left  { move-column-left; }
+    Mod+Alt+Down  { move-window-down; }
+    Mod+Alt+Up    { move-window-up; }
+    Mod+Alt+Right { move-column-right; }
+    Mod+Alt+H     { move-column-left; }
+    Mod+Alt+J     { move-window-down; }
+    Mod+Alt+K     { move-window-up; }
+    Mod+Alt+L     { move-column-right; }
 
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
@@ -452,8 +453,8 @@ binds {
 
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
+    Mod+Alt+Home { move-column-to-first; }
+    Mod+Alt+End  { move-column-to-last; }
 
     Mod+Shift+Left  { focus-monitor-left; }
     Mod+Shift+Down  { focus-monitor-down; }
@@ -474,7 +475,7 @@ binds {
     Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
-    Mod+Ctrl+Y           { move-column-to-monitor-next; }
+    Mod+Alt+Y           { move-column-to-monitor-next; }
 
 
     // AlterCatively, there are commands to move just a single window:
@@ -482,17 +483,17 @@ binds {
     // ...
 
     // And you can also move a whole workspace to another monitor:
-    Mod+Alt+Y  { move-workspace-to-monitor-next; }
+    Mod+Ctrl+Y  { move-workspace-to-monitor-next; }
     // ...
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
     Mod+U              { focus-workspace-down; }
     Mod+I              { focus-workspace-up; }
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    Mod+Alt+Page_Down { move-column-to-workspace-down; }
+    Mod+Alt+Page_Up   { move-column-to-workspace-up; }
+    Mod+Alt+U         { move-column-to-workspace-down; }
+    Mod+Alt+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -552,18 +553,18 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Alt+1 { move-column-to-workspace 1; }
+    Mod+Alt+2 { move-column-to-workspace 2; }
+    Mod+Alt+3 { move-column-to-workspace 3; }
+    Mod+Alt+4 { move-column-to-workspace 4; }
+    Mod+Alt+5 { move-column-to-workspace 5; }
+    Mod+Alt+6 { move-column-to-workspace 6; }
+    Mod+Alt+7 { move-column-to-workspace 7; }
+    Mod+Alt+8 { move-column-to-workspace 8; }
+    Mod+Alt+9 { move-column-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
-    // Mod+Ctrl+1 { move-window-to-workspace 1; }
+    // Mod+Alt+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
     // Mod+Tab { focus-workspace-previous; }
