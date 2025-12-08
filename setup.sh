@@ -32,6 +32,10 @@ gnome-shell-extension-manager npm pipx python-is-python3
 # pipx: For poetry and other python things
 # python-is-python3: Compatibility
 
+# Replace borked snap with working apt CD ripper
+sudo snap remove whipper
+sudo apt -y install whipper
+
 # Get Chrome
 mkdir -p ~/.config/google-chrome/Default
 ln -s ~/dotfiles/chrome_custom_dicionary.txt ~/.config/google-chrome/Default/Custom\ Dictionary.txt
