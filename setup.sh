@@ -116,7 +116,7 @@ npm install -g @anthropic-ai/claude-code
 # Font
 mkdir ~/.fonts
 cd ~/.fonts
-curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
+curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip
 unzip FiraCode.zip
 fc-cache -fv
 
