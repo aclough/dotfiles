@@ -386,7 +386,7 @@ binds {
     Mod+Semicolon hotkey-overlay-title="Open a Terminal: alacritty" { spawn "kitty"; }
     Mod+N hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+Alt+N { spawn-sh "fuzzel --list-executables-in-path"; }
-    Mod+B hotkey-overlay-title="Open a browser: Chrome" { spawn "google-chrome"; }
+    Mod+B hotkey-overlay-title="Open a browser: Chrome" { spawn-sh "google-chrome --disable-features=GlobalShortcutsPortal"; }
     Mod+V hotkey-overlay-title="Open file manager: Nemo" { spawn "nemo"; }
     Mod+E hotkey-overlay-title="Powre control: wlogout" { spawn "wlogout"; }
 
