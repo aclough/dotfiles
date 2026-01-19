@@ -287,6 +287,9 @@ layout {
 // Wallpapper daemon
 spawn-at-startup "wpaperd"
 
+// Notification daemon
+spawn-at-startup "mako"
+
 // Normal Ubuntu stuff
 spawn-at-startup "xdg-deskop-portal-gnome"
 spawn-at-startup "gnome-keyring"
