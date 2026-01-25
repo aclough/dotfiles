@@ -37,7 +37,7 @@ lazy.setup({
     {'Yggdroot/indentLine'}, -- Display indentation
     {'nvim-telescope/telescope.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
     {'nvim-telescope/telescope-fzy-native.nvim'},
-    {'ggandor/leap.nvim',}, -- Fast movement
+    {'https://codeberg.org/andyg/leap.nvim',}, -- Fast movement
     {'alaviss/nim.nvim'}, -- Starts in folds but provides syntax highlighting
 
 
