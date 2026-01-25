@@ -14,3 +14,4 @@ conda update -n base -c defaults conda
 fish -c fish_update_completions
 tldr --update
 nvim --headless "+Lazy! update" +qa
+claude update
