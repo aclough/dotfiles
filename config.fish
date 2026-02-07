@@ -36,6 +36,10 @@ function fish_prompt
     echo -n '> '
 end
 
+function rt
+    cd ~/workspace/rocket_tycoon
+end
+
 function fn
     find -name $argv[1] 2> /dev/null
 end
