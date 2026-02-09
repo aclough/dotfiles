@@ -137,6 +137,7 @@ ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
 mkdir -p ~/Pictures/Wallpapers
 variety &
 
-# Grab my sudoku solver
+# Grab my sudoku solver and rocket game
 cd ~/workspace
 git clone git@github.com:aclough/sudoku.git
+git clone git@github.com:aclough/rocket_game.git

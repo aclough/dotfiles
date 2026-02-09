@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/bas
 set -euo pipefail
 cd ~/dotfiles
+git pull
+cd ~/workspace/rocket_game
 git pull
 sudo apt update
 sudo apt-get dist-upgrade
