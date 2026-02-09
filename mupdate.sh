@@ -2,7 +2,7 @@
 set -euo pipefail
 cd ~/dotfiles
 git pull
-cd ~/workspace/rocket_game
+cd ~/workspace/rocket_tycoon
 git pull
 sudo apt update
 sudo apt-get dist-upgrade
