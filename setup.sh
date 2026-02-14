@@ -140,4 +140,4 @@ variety &
 # Grab my sudoku solver and rocket game
 cd ~/workspace
 git clone git@github.com:aclough/sudoku.git
-git clone git@github.com:aclough/rocket_game.git
+git clone git@github.com:aclough/rocket_game.git rocket_tycoon
