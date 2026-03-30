@@ -283,20 +283,14 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // Wallpapper daemon
 spawn-at-startup "wpaperd"
 
-// Notification daemon
-spawn-at-startup "mako"
-
 // Normal Ubuntu stuff
 spawn-at-startup "xdg-deskop-portal-gnome"
 spawn-at-startup "gnome-keyring"
-spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
-
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 hotkey-overlay {
     skip-at-startup
@@ -365,9 +359,14 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
+window-rule {
+    geometry-corner-radius 6
     clip-to-geometry true
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
 }
 
 binds {
