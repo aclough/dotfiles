@@ -7,12 +7,9 @@ set -e
 # Wayland fundamentals and build fundamentals
 sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
 
-sudo apt-get install -y swaylock fuzzel brightnessctl waybar pavucontrol thunar xdg-desktop-portal-gnome wl-clipboard wlogout
+sudo apt-get install -y swaylock fuzzel brightnessctl pavucontrol thunar xdg-desktop-portal-gnome wl-clipboard wlogout
 
 ln -s ~/dotfiles/wlogout.desktop ~/.local/share/applications/wlogout.desktop
-
-mkdir -p ~/.config/waybar
-ln -s ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
 
 # sudo apt-get install -y iwd
 # cargo install wpaperd impala
