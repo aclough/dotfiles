@@ -8,7 +8,7 @@ sudo apt dist-upgrade
 
 # Utilities and misc
 sudo apt install -y vlc fonts-firacode python3-pip \
-ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks neofetch \
+ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks fastfetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
 naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev \
 gnome-shell-extension-manager npm pipx python-is-python3
