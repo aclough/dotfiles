@@ -14,12 +14,8 @@ ln -s ~/dotfiles/wlogout.desktop ~/.local/share/applications/wlogout.desktop
 mkdir -p ~/.config/waybar
 ln -s ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
 
-# sudo apt-get install -y iwd
-# cargo install wpaperd impala
-# Turn on iwd service now to use impala
-# sudo systemctl enable --now iwd
+cargo install wpaperd
 sudo apt install -y network-manager-gnome
-# nm-applet
 
 mkdir -p ~/.config/wpaperd
 ln -s ~/dotfiles/wpaperd-config.toml ~/.config/wpaperd/config.toml
