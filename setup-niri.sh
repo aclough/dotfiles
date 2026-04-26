@@ -4,7 +4,6 @@ set -e
 
 cd ~/dotfiles
 ./setup-wayland.sh
-./setup-noctalia.sh
 
 sudo apt install -y nemo mako
 
