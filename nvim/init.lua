@@ -1,20 +1,6 @@
 vim.opt.mouse = 'a' -- Turn on mouse
 
-if vim.env.WAYLAND_DISPLAY then
-    vim.g.clipboard = {
-      name = 'wl-clipboard',
-      copy = {
-        ['+'] = 'wl-copy',
-        ['*'] = 'wl-copy',
-      },
-      paste = {
-        ['+'] = 'wl-paste',
-        ['*'] = 'wl-paste',
-      },
-      cache_enabled = 0,
-    }
-end
-vim.opt.clipboard = 'unnamedplus' -- Use system clipboard by default
+vim.opt.clipboard = 'unnamed' -- Use system clipboard by default
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
