@@ -28,6 +28,9 @@ sudo cp resources/niri-shutdown.target /etc/systemd/user/
 # For config
 sudo apt-get install -y swaylock fuzzel
 
+# For brightnessctl
+sudo usermod -aG video $USER
+
 mkdir -p ~/.config/niri
 ln -s ~/dotfiles/niri_config.kdl ~/.config/niri/config.kdl
 
