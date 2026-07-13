@@ -7,8 +7,8 @@ vim.opt.termguicolors = true
 vim.cmd.colorscheme('jellybeans-nvim')
 
 -- Basic text
-vim.o.textwidth = 120
-vim.wo.colorcolumn = '120'
+vim.o.textwidth = 80
+vim.wo.colorcolumn = '80'
 vim.opt.formatoptions:remove { "t", "c" }
 vim.opt.formatoptions:append { "q", "l" }
 
