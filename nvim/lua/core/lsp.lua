@@ -8,7 +8,7 @@ vim.lsp.config('pylsp', {
       plugins = {
         pycodestyle = {
           ignore = {'W391', 'E303'},
-          maxLineLength = 100
+          maxLineLength = 80
         }
       }
     }
