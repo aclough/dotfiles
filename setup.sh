@@ -59,6 +59,8 @@ gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
 # Use ctrl-alt-l for locking
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Ctrl><Alt>l']"
+# Allow middle click to paste
+gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true
 
 # Nvim options
 sudo add-apt-repository ppa:neovim-ppa/unstable
