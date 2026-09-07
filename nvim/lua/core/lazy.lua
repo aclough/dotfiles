@@ -23,7 +23,19 @@ function lazy.setup(plugins)
 end
 
 lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-lazy.opts = {}
+-- Lazy resets the runtimepath to just $VIMRUNTIME and the config dir. On
+-- Debian/Ubuntu the bundled treesitter parsers (vimdoc, lua, etc.) live in a
+-- separate arch-specific dir (e.g. /usr/lib/x86_64-linux-gnu/nvim), so keep
+-- any default rtp entry that contains a parser/ directory.
+local parser_paths = {}
+for _, dir in ipairs(vim.api.nvim_list_runtime_paths()) do
+    if vim.loop.fs_stat(dir .. '/parser') and dir ~= vim.env.VIMRUNTIME then
+        table.insert(parser_paths, dir)
+    end
+end
+lazy.opts = {
+    performance = { rtp = { paths = parser_paths } },
+}
 
 lazy.setup({
     {'kamykn/spelunker.vim'}, -- Spelling
