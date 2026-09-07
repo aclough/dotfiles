@@ -100,14 +100,14 @@ input {
 // Desktop at home
 output "DP-1" {
     mode "3840x2160@59.997"
-    scale 1.25
+    scale 1.00
     transform "normal"
-    position x=0 y=1440
+    position x=0 y=2160
 }
 
 output "HDMI-A-2" {
     mode "3840x2160@60.0"
-    scale 1.5
+    scale 1.0
     transform "normal"
     position x=0 y=0
 }
@@ -291,8 +291,7 @@ spawn-at-startup "wpaperd"
 spawn-at-startup "mako"
 
 // Normal Ubuntu stuff
-spawn-at-startup "xdg-deskop-portal-gnome"
-spawn-at-startup "gnome-keyring"
+spawn-at-startup "xdg-desktop-portal-gnome"
 spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
