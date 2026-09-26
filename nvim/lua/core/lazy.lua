@@ -1,7 +1,7 @@
 local lazy = {}
 
 function lazy.install(path)
-    if not vim.loop.fs_stat(path) then
+    if not vim.uv.fs_stat(path) then
         print('Installing lazy.nvim....')
         vim.fn.system({
             'git',
@@ -29,7 +29,7 @@ lazy.path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 -- any default rtp entry that contains a parser/ directory.
 local parser_paths = {}
 for _, dir in ipairs(vim.api.nvim_list_runtime_paths()) do
-    if vim.loop.fs_stat(dir .. '/parser') and dir ~= vim.env.VIMRUNTIME then
+    if vim.uv.fs_stat(dir .. '/parser') and dir ~= vim.env.VIMRUNTIME then
         table.insert(parser_paths, dir)
     end
 end
@@ -43,6 +43,7 @@ lazy.setup({
     {'airblade/vim-rooter'}, -- set CWD based on .git or other clues
     {'lewis6991/gitsigns.nvim',
         event = {"BufReadPre", "BufNewFile"},
+        opts = {}, -- lazy calls setup() when the event fires
     },
     {'metalelf0/jellybeans-nvim', dependencies = {'rktjmp/lush.nvim'}},
     {'nvim-lualine/lualine.nvim'}, -- Status line
@@ -61,7 +62,6 @@ lazy.setup({
     -- LSP stuff config in lsp.lua
     {'neovim/nvim-lspconfig'},
 })
-require('gitsigns').setup()
 
 vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
 vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')

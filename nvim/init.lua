@@ -33,13 +33,16 @@ map_key('n', '<C-L>', 'gt')
 -- Q repeats last macro
 map_key('n', 'Q', '@@')
 
--- Y should behave like other capitals
-map_key('n', 'Y', 'y$')
-
--- Remove trailing whitespace
+-- Remove trailing whitespace on save, without clobbering the search
+-- pattern, jumplist or cursor position.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
-  command = [[%s/\s\+$//e]],
+  callback = function()
+    if not vim.bo.modifiable then return end
+    local view = vim.fn.winsaveview()
+    vim.cmd([[keeppatterns keepjumps %s/\s\+$//e]])
+    vim.fn.winrestview(view)
+  end,
 })
 
 require('core/lazy')
