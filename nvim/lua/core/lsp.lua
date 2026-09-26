@@ -1,7 +1,6 @@
 -- LSP settings.
 
 -- Setup language servers.
-vim.lsp.enable('ts_ls')
 vim.lsp.config('pylsp', {
   settings = {
     pylsp = {
@@ -21,6 +20,9 @@ vim.lsp.config('rust_analyzer', {
 })
 vim.lsp.config('lua_ls', {})
 
+-- vim.lsp.config() only stores settings; servers must also be enabled.
+vim.lsp.enable({ 'pylsp', 'rust_analyzer', 'lua_ls', 'ts_ls' })
+
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -35,6 +37,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+        -- Built-in LSP autocompletion (pops up as you type)
+        local client = vim.lsp.get_client_by_id(ev.data.client_id)
+        if client and client:supports_method('textDocument/completion') then
+            vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+        end
 
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
