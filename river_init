@@ -1,0 +1,150 @@
+#!/bin/sh
+
+# river-classic configuration. Runs once when river starts; everything is a
+# riverctl call. See river(1), riverctl(1) and rivertile(1).
+#
+# Bindings follow the old xmonad.hs (Super = mod):
+#   Super+J/K focus, Super+Alt+J/K swap, Super+Return zoom to master,
+#   Super+H/L master ratio, Super+U/I prev/next tag, Super+Y next screen,
+#   Shift variants send the window, Alt variants send it and follow.
+
+TAGS=$HOME/dotfiles/river-tags.sh
+
+# ---------------------------------------------------------------------------
+# Applications
+# ---------------------------------------------------------------------------
+riverctl map normal Super Semicolon spawn kitty
+riverctl map normal Super N         spawn fuzzel
+riverctl map normal Super+Alt N     spawn 'fuzzel --list-executables-in-path'
+riverctl map normal Super B         spawn 'google-chrome --disable-features=GlobalShortcutsPortal'
+riverctl map normal Super V         spawn 'nemo ~'
+riverctl map normal Super E         spawn wlogout
+riverctl map normal Super+Control L spawn 'swaylock -i ~/Pictures/Wallpapers/golden2.png'
+
+# Screenshots (whole screen / drag a region) into ~/workspace like before
+riverctl map normal Super P       spawn 'grim "$HOME/workspace/Screenshot_from_$(date +%Y-%m-%d_%H-%M-%S).png"'
+riverctl map normal Super+Shift P spawn 'grim -g "$(slurp)" "$HOME/workspace/Screenshot_from_$(date +%Y-%m-%d_%H-%M-%S).png"'
+
+# ---------------------------------------------------------------------------
+# Windows
+# ---------------------------------------------------------------------------
+riverctl map normal Super C close
+
+riverctl map normal Super J     focus-view next
+riverctl map normal Super K     focus-view previous
+riverctl map normal Super+Alt J swap next
+riverctl map normal Super+Alt K swap previous
+
+# Swap focused window with the master
+riverctl map normal Super Return zoom
+
+# Master area ratio / count (xmonad's M-h, M-l, M-comma, M-period)
+riverctl map normal Super H      send-layout-cmd rivertile "main-ratio -0.03"
+riverctl map normal Super L      send-layout-cmd rivertile "main-ratio +0.03"
+riverctl map normal Super Comma  send-layout-cmd rivertile "main-count +1"
+riverctl map normal Super Period send-layout-cmd rivertile "main-count -1"
+
+# Stand-in for xmonad's Full layout, and float/sink (xmonad's M-t)
+riverctl map normal Super F toggle-fullscreen
+riverctl map normal Super T toggle-float
+
+# Super + mouse buttons to move / resize / float
+riverctl map-pointer normal Super BTN_LEFT   move-view
+riverctl map-pointer normal Super BTN_RIGHT  resize-view
+riverctl map-pointer normal Super BTN_MIDDLE toggle-float
+
+# ---------------------------------------------------------------------------
+# Tags (used as 9 numbered workspaces, cycling handled by river-tags.sh)
+# ---------------------------------------------------------------------------
+for i in 1 2 3 4 5 6 7 8 9
+do
+    riverctl map normal Super       "$i" spawn "$TAGS view $i"
+    riverctl map normal Super+Shift "$i" spawn "$TAGS shift $i"
+    riverctl map normal Super+Alt   "$i" spawn "$TAGS shiftview $i"
+done
+
+riverctl map normal Super U       spawn "$TAGS view prev"
+riverctl map normal Super I       spawn "$TAGS view next"
+riverctl map normal Super+Shift U spawn "$TAGS shift prev"
+riverctl map normal Super+Shift I spawn "$TAGS shift next"
+riverctl map normal Super+Alt U   spawn "$TAGS shiftview prev"
+riverctl map normal Super+Alt I   spawn "$TAGS shiftview next"
+
+# Jump back to the previously focused tag
+riverctl map normal Super Tab focus-previous-tags
+
+# ---------------------------------------------------------------------------
+# Outputs (xmonad's nextScreen / shiftNextScreen)
+# ---------------------------------------------------------------------------
+riverctl map normal Super Y       focus-output next
+riverctl map normal Super+Shift Y send-to-output next
+riverctl map normal Super+Alt Y   spawn 'riverctl send-to-output next && riverctl focus-output next'
+
+# ---------------------------------------------------------------------------
+# Session
+# ---------------------------------------------------------------------------
+riverctl map normal Super+Shift E exit
+riverctl map normal Control+Alt Delete exit
+
+# Media keys, also while locked
+for mode in normal locked
+do
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-'
+    riverctl map $mode None XF86AudioMute         spawn 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
+    riverctl map $mode None XF86AudioMicMute      spawn 'wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle'
+    riverctl map $mode None XF86AudioPlay         spawn 'playerctl play-pause'
+    riverctl map $mode None XF86AudioStop         spawn 'playerctl stop'
+    riverctl map $mode None XF86AudioPrev         spawn 'playerctl previous'
+    riverctl map $mode None XF86AudioNext         spawn 'playerctl next'
+    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl --class=backlight set +10%'
+    riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl --class=backlight set 10%-'
+done
+
+# ---------------------------------------------------------------------------
+# Input
+# ---------------------------------------------------------------------------
+riverctl keyboard-layout -options caps:escape us
+riverctl set-repeat 50 300
+riverctl focus-follows-cursor normal
+riverctl set-cursor-warp on-focus-change   # like xmonad's updatePointer
+
+# Touchpad (device names from `riverctl list-inputs`; pattern is a glob)
+riverctl input '*ouchpad*' tap enabled
+riverctl input '*ouchpad*' natural-scroll enabled
+
+# ---------------------------------------------------------------------------
+# Appearance
+# ---------------------------------------------------------------------------
+riverctl background-color 0x1a1a1a
+riverctl border-width 4
+riverctl border-color-focused   0x9bc1e6
+riverctl border-color-unfocused 0x505050
+riverctl border-color-urgent    0x9b0000
+
+# Use river's borders instead of client-side decorations
+riverctl rule-add ssd
+riverctl rule-add -app-id 'pavucontrol' float
+
+# ---------------------------------------------------------------------------
+# Outputs: desktop monitors stacked vertically, as in the niri config.
+# Fails harmlessly on the laptop.
+# ---------------------------------------------------------------------------
+wlr-randr --output HDMI-A-2 --mode 3840x2160@60 --pos 0,0 \
+          --output DP-1 --mode 3840x2160@59.997 --pos 0,2160 >/dev/null 2>&1 || true
+
+# ---------------------------------------------------------------------------
+# Startup
+# ---------------------------------------------------------------------------
+# Let portals, dbus-activated apps and user services see the display
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP
+systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP
+
+riverctl spawn wpaperd
+riverctl spawn mako
+riverctl spawn waybar
+riverctl spawn /usr/libexec/polkit-mate-authentication-agent-1
+
+# Layout: one master window on the left at 50%, like xmonad's Tall 1 (1/2)
+riverctl default-layout rivertile
+rivertile -view-padding 8 -outer-padding 8 -main-ratio 0.5 -main-count 1 &

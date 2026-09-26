@@ -7,7 +7,9 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "niri/workspaces"
+        // Waybar skips whichever of these doesn't match the running compositor
+        "niri/workspaces",
+        "river/tags"
     ],
     "modules-center": [
         "clock"
@@ -24,6 +26,10 @@
         "tray",
         "custom/power"
     ],
+    "river/tags": {
+        "num-tags": 9,
+        "hide-vacant": true
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
