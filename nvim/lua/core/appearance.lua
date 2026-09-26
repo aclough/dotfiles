@@ -9,22 +9,19 @@ vim.cmd.colorscheme('jellybeans-nvim')
 -- Basic text
 vim.o.textwidth = 80
 vim.wo.colorcolumn = '80'
-vim.opt.formatoptions:remove { "t", "c" }
-vim.opt.formatoptions:append { "q", "l" }
+-- Don't auto-wrap code/comments at textwidth (string args; tables silently
+-- fail for flag options).
+vim.opt.formatoptions:remove('tc')
+vim.opt.formatoptions:append('ql')
 
 vim.o.showbreak = '+++'
 
 -- For git
 vim.wo.signcolumn = 'yes'
 
--- Lazy redraw
-vim.o.lazyredraw = true
-
 -- Whitespace
 vim.opt.list = true
-vim.opt.listchars.tab = "▸"
-vim.opt.listchars.trail = "⋅"
-vim.opt.listchars.nbsp = "⋅"
+vim.opt.listchars = { tab = '▸ ', trail = '⋅', nbsp = '⋅' }
 
 -- Spelling
 vim.o.spell = false
