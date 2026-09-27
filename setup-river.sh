@@ -54,7 +54,7 @@ git fetch --tags
 git checkout "$RIVER_TAG"
 rm -rf out
 "$ZIG_DIR/zig" build -Doptimize=ReleaseSafe -Dxwayland --prefix "$PWD/out" install
-sudo cp out/bin/river out/bin/riverctl out/bin/rivertile /usr/local/bin/
+sudo install -m 755 out/bin/river out/bin/riverctl out/bin/rivertile /usr/local/bin/
 sudo mkdir -p /usr/local/share/man/man1 /usr/local/share/man/man5
 sudo cp out/share/man/man1/*.1 /usr/local/share/man/man1/
 sudo cp out/share/man/man5/*.5 /usr/local/share/man/man5/ 2>/dev/null || true
