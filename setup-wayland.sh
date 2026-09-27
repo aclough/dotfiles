@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Safe to re-run: symlinks are forced and the clone is skipped if present.
+
 # For installing all the stuff I might need to run a wayland session outside a desktop environment
 
 set -e
@@ -9,23 +11,26 @@ sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl
 
 sudo apt-get install -y swaylock fuzzel brightnessctl waybar pavucontrol thunar xdg-desktop-portal-gnome wl-clipboard wlogout
 
-ln -s ~/dotfiles/wlogout.desktop ~/.local/share/applications/wlogout.desktop
+mkdir -p ~/.local/share/applications
+ln -sf ~/dotfiles/wlogout.desktop ~/.local/share/applications/wlogout.desktop
 
 mkdir -p ~/.config/waybar
-ln -s ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
+ln -sf ~/dotfiles/waybar-config.jsonc ~/.config/waybar/config.jsonc
 
 cargo install wpaperd
 sudo apt install -y network-manager-gnome
 
 mkdir -p ~/.config/wpaperd
-ln -s ~/dotfiles/wpaperd-config.toml ~/.config/wpaperd/config.toml
+ln -sf ~/dotfiles/wpaperd-config.toml ~/.config/wpaperd/config.toml
 
 mkdir -p ~/.config/fuzzel
-ln -s ~/dotfiles/fuzzel-config.ini ~/.config/fuzzel/fuzzel.ini
+ln -sf ~/dotfiles/fuzzel-config.ini ~/.config/fuzzel/fuzzel.ini
 
 sudo apt install -y libxcb-composite0-dev libxcb-res0-dev libwayland-dev pkg-config libxcb-cursor-dev
 cd ~/workspace
-git clone https://github.com/Supreeeme/xwayland-satellite
+if [ ! -d xwayland-satellite ]; then
+    git clone https://github.com/Supreeeme/xwayland-satellite
+fi
 cd xwayland-satellite
 cargo build --release
 # We want this system-wide
