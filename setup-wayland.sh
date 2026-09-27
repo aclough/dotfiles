@@ -34,4 +34,5 @@ fi
 cd xwayland-satellite
 cargo build --release
 # We want this system-wide
-sudo cp target/release/xwayland-satellite /usr/local/bin
+# install unlinks first, so this works even while the old binary is running
+sudo install -m 755 target/release/xwayland-satellite /usr/local/bin/xwayland-satellite
