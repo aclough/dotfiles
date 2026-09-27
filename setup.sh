@@ -11,7 +11,8 @@ sudo apt install -y vlc fonts-firacode python3-pip \
 ripgrep fd-find curl variety calibre clangd libssl-dev gnome-tweaks fastfetch \
 shellcheck sox black python3-pylsp python3-neovim fzy git pkg-config libssl-dev \
 naev tig usb-creator-gtk gparted nvtop nodejs libboost-program-options-dev \
-gnome-shell-extension-manager npm pipx python-is-python3 wev glow
+gnome-shell-extension-manager npm pipx python-is-python3 wev glow \
+pulseaudio-utils
 # shellcheck:  For neovim checking
 # sox:  For the `play` command
 # black:  Python formatter
@@ -33,6 +34,7 @@ gnome-shell-extension-manager npm pipx python-is-python3 wev glow
 # python-is-python3: Compatibility
 # wev: For figuring out keybindings
 # glow: Markdown reader
+# pulseaudio-utils: For combined sink
 
 # Replace borked snap with working apt CD ripper
 sudo snap remove whipper
@@ -136,6 +138,7 @@ ln -s ~/dotfiles/restart.sh ~/.local/bin/restart.sh
 ln -s ~/dotfiles/mupdate.sh ~/.local/bin/mupdate.sh
 ln -s ~/dotfiles/backup.sh ~/.local/bin/backup.sh
 ln -s ~/dotfiles/restore_backup.sh ~/.local/bin/restore_backup.sh
+ln -s ~/dotfiles/set-combined-audio.sh ~/.local/bin/set-combined-audio.sh
 
 # Start variety, should prompt for autostart
 mkdir -p ~/Pictures/Wallpapers
