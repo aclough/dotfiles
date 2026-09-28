@@ -52,6 +52,10 @@ lazy.setup({
     {'nvim-telescope/telescope-fzy-native.nvim'},
     {'https://codeberg.org/andyg/leap.nvim',}, -- Fast movement
     {'alaviss/nim.nvim'}, -- Starts in folds but provides syntax highlighting
+    {'MeanderingProgrammer/render-markdown.nvim',
+        ft = {'markdown'},
+        opts = {}, -- uses the markdown parsers bundled with neovim
+    },
 
 
     -- Git integration (gitsigns.nvim?)
