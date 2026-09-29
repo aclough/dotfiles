@@ -36,6 +36,10 @@ function fish_prompt
     echo -n '> '
 end
 
+function c
+    claude --permission-mode auto $argv
+end
+
 function rt
     cd ~/workspace/rocket_tycoon
 end
