@@ -65,8 +65,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Ctrl>
 gsettings set org.gnome.desktop.interface gtk-enable-primary-paste true
 
 # Nvim options
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt update
 sudo apt -y install neovim
 ln -s ~/dotfiles/nvim ~/.config/nvim
 nvim --headless "+Lazy! update" +qa
