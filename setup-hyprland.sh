@@ -4,7 +4,7 @@
 
 set -e
 
-sudo apt install -y hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
+sudo apt install -y hyprland hyprland-qtutils xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
     xwayland nemo mako-notifier mate-polkit grim slurp playerctl
 
 mkdir -p ~/.config/hypr ~/.config/mako ~/.local/bin
