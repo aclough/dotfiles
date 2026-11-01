@@ -10,9 +10,8 @@ set +e
 rustup update
 cargo install-update -a
 choosenim update stable
-source ~/workspace/conda/bin/activate
-#protonup
-conda update -n base -c defaults conda
+uv self update
+uv pip install --upgrade --python ~/workspace/pytorch/.venv torch torchvision --index-url https://download.pytorch.org/whl/rocm7.1
 fish -c fish_update_completions
 tldr --update
 nvim --headless "+Lazy! update" +qa

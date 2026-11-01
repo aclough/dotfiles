@@ -109,16 +109,13 @@ function pyfmt
     black -l79 -S $argv
 end
 
-function ci
-    eval /home/aclough/workspace/conda/bin/conda "shell.fish" "hook" $argv | source
-end
-
-function ca
-    conda activate $argv
-end
-
-function cn
-    conda create --name $argv
+# Activate the project's uv venv, or the shared pytorch one if there isn't one
+function va
+    if test -f .venv/bin/activate.fish
+        source .venv/bin/activate.fish
+    else
+        source ~/workspace/pytorch/.venv/bin/activate.fish
+    end
 end
 
 function o
