@@ -15,4 +15,3 @@ ln -sfn ~/dotfiles/screenshot.sh ~/.local/bin/screenshot.sh
 Hyprland --verify-config
 
 echo "Log out and pick Hyprland at the login screen."
-echo "To peek first, run 'Hyprland' from a terminal inside niri for a nested window."
